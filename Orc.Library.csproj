@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C9BEFCA6-9E84-4662-B862-BDF733CF5DC8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Orc.Library</RootNamespace>
+    <AssemblyName>Orc.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dictionaries\Actions.cs" />
+    <Compile Include="Dictionaries\AdditionalData.cs" />
+    <Compile Include="Dictionaries\AllocateItems.cs" />
+    <Compile Include="Dictionaries\CalculationResults.cs" />
+    <Compile Include="Dictionaries\CalendarEntries.cs" />
+    <Compile Include="Dictionaries\Calendars.cs" />
+    <Compile Include="Dictionaries\Components.cs" />
+    <Compile Include="Dictionaries\ConfigurationFile.cs" />
+    <Compile Include="Dictionaries\Counterparts.cs" />
+    <Compile Include="Dictionaries\CustomerFields.cs" />
+    <Compile Include="Dictionaries\CustomerIds.cs" />
+    <Compile Include="Dictionaries\CustomerPortfolios.cs" />
+    <Compile Include="Dictionaries\CustomerValues.cs" />
+    <Compile Include="Dictionaries\DividendKinds.cs" />
+    <Compile Include="Dictionaries\Dividends.cs" />
+    <Compile Include="Dictionaries\DynamicParameters.cs" />
+    <Compile Include="Dictionaries\EnumeratedValues.cs" />
+    <Compile Include="Dictionaries\FieldnameValues.cs" />
+    <Compile Include="Dictionaries\FullInstrumentList.cs" />
+    <Compile Include="Dictionaries\HistoryEntries.cs" />
+    <Compile Include="Dictionaries\InsertedTrades.cs" />
+    <Compile Include="Dictionaries\InstrumentAttributes.cs" />
+    <Compile Include="Dictionaries\InstrumentId.cs" />
+    <Compile Include="Dictionaries\InstrumentList.cs" />
+    <Compile Include="Dictionaries\Order.cs" />
+    <Compile Include="Dictionaries\OrderDepthLevels.cs" />
+    <Compile Include="Dictionaries\OrderReplies.cs" />
+    <Compile Include="Dictionaries\Parameters.cs" />
+    <Compile Include="Dictionaries\KindRestrictions.cs" />
+    <Compile Include="Dictionaries\MarketContracts.cs" />
+    <Compile Include="Dictionaries\MoneyReplies.cs" />
+    <Compile Include="Dictionaries\MonitorOrderConditions.cs" />
+    <Compile Include="Dictionaries\PortfolioPositions.cs" />
+    <Compile Include="Dictionaries\Portfolios.cs" />
+    <Compile Include="Dictionaries\PortfolioComponents.cs" />
+    <Compile Include="Dictionaries\PositionSnapshots.cs" />
+    <Compile Include="Dictionaries\QuoteParameters.cs" />
+    <Compile Include="Dictionaries\ReferencePriceDownloads.cs" />
+    <Compile Include="Dictionaries\ReferencePriceEntries.cs" />
+    <Compile Include="Dictionaries\ReferencePriceEntriesUnderlying.cs" />
+    <Compile Include="Dictionaries\Trade.cs" />
+    <Compile Include="Dictionaries\TradeReply.cs" />
+    <Compile Include="Enums\Activate.cs" />
+    <Compile Include="Enums\ApplyBaseOffsetLogic.cs" />
+    <Compile Include="Enums\AssetType.cs" />
+    <Compile Include="Enums\BetaLogic.cs" />
+    <Compile Include="Enums\DayConvention.cs" />
+    <Compile Include="Enums\DividendKind.cs" />
+    <Compile Include="Enums\DownloadMode.cs" />
+    <Compile Include="Enums\EnumType.cs" />
+    <Compile Include="Enums\ExpiryType.cs" />
+    <Compile Include="Enums\FeedAction.cs" />
+    <Compile Include="Enums\Flag.cs" />
+    <Compile Include="Enums\GroupResultsBy.cs" />
+    <Compile Include="Enums\HistoryAction.cs" />
+    <Compile Include="Enums\MarketOrderStatus.cs" />
+    <Compile Include="Enums\MarketService.cs" />
+    <Compile Include="Enums\MessageType.cs" />
+    <Compile Include="Enums\MoneyKind.cs" />
+    <Compile Include="Enums\MonitorCondition.cs" />
+    <Compile Include="Enums\MonitorType.cs" />
+    <Compile Include="Enums\OrderExecutionStyle.cs" />
+    <Compile Include="Enums\OrderKind.cs" />
+    <Compile Include="Enums\OrderRequest.cs" />
+    <Compile Include="Enums\OrderStatus.cs" />
+    <Compile Include="Enums\OrderValidate.cs" />
+    <Compile Include="Enums\Origin.cs" />
+    <Compile Include="Enums\Parameter.cs" />
+    <Compile Include="Enums\ParameterUpdateType.cs" />
+    <Compile Include="Enums\PriceCondition.cs" />
+    <Compile Include="Enums\QuoteAction.cs" />
+    <Compile Include="Enums\RateType.cs" />
+    <Compile Include="Enums\RepeatMode.cs" />
+    <Compile Include="Enums\SearchMode.cs" />
+    <Compile Include="Enums\SettlementStyle.cs" />
+    <Compile Include="Enums\SimulationMode.cs" />
+    <Compile Include="Enums\SpreadTable.cs" />
+    <Compile Include="Enums\StrikeConversion.cs" />
+    <Compile Include="Enums\SuggestLogic.cs" />
+    <Compile Include="Enums\SuggestVolumeLogic.cs" />
+    <Compile Include="Enums\SuppressReply.cs" />
+    <Compile Include="Enums\BuySell.cs" />
+    <Compile Include="Enums\TradingPowerStatus.cs" />
+    <Compile Include="Enums\UnderlyingRateMode.cs" />
+    <Compile Include="Enums\UnderlyingRestriction.cs" />
+    <Compile Include="Enums\Validity.cs" />
+    <Compile Include="Enums\VolatilityDayConvention.cs" />
+    <Compile Include="Enums\VolatilityTimeMode.cs" />
+    <Compile Include="Enums\VolumeCondition.cs" />
+    <Compile Include="Enums\VwapExecutionType.cs" />
+    <Compile Include="Messages\Client\MoneyMessages.cs" />
+    <Compile Include="Messages\Client\CustomerMessages.cs" />
+    <Compile Include="Messages\Client\CounterpartMessages.cs" />
+    <Compile Include="Messages\Client\CalendarMessages.cs" />
+    <Compile Include="Messages\Client\ClientMessage.cs" />
+    <Compile Include="Messages\Client\CurrencyMessages.cs" />
+    <Compile Include="Messages\Client\DividendMessages.cs" />
+    <Compile Include="Messages\Client\EnumGetMessage.cs" />
+    <Compile Include="Messages\Client\InstrumentGetMessage.cs" />
+    <Compile Include="Messages\Client\LoginMessage.cs" />
+    <Compile Include="Messages\Client\LogoutMessage.cs" />
+    <Compile Include="Messages\Client\OrderGetMessage.cs" />
+    <Compile Include="Messages\Client\PingMessage.cs" />
+    <Compile Include="Messages\Client\PortfolioMessages.cs" />
+    <Compile Include="Messages\Client\PriceGetMessage.cs" />
+    <Compile Include="Messages\Client\TradeMessages.cs" />
+    <Compile Include="Messages\Client\FeedToggleMessages.cs" />
+    <Compile Include="Messages\MessageInfo.cs" />
+    <Compile Include="Messages\Server\CalendarReply.cs" />
+    <Compile Include="Messages\Server\DividendCollection.cs" />
+    <Compile Include="Messages\Server\EnumValueCollection.cs" />
+    <Compile Include="Messages\Server\InstrumentFeed.cs" />
+    <Compile Include="Messages\Server\InstrumentReply.cs" />
+    <Compile Include="Messages\Server\LoginReply.cs" />
+    <Compile Include="Messages\Server\MoneyFeed.cs" />
+    <Compile Include="Messages\Server\OrcMessage.cs" />
+    <Compile Include="Messages\Server\PingMessage.cs" />
+    <Compile Include="Messages\Server\PortfolioCollection.cs" />
+    <Compile Include="Messages\Server\PriceFeed.cs" />
+    <Compile Include="Messages\Server\ReplyInfo.cs" />
+    <Compile Include="Messages\Server\SubscriptionReply.cs" />
+    <Compile Include="Messages\Server\TradeCreateReply.cs" />
+    <Compile Include="Messages\Server\TradeFeed.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
