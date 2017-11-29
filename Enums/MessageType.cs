@@ -121,6 +121,25 @@ namespace Orc.Library.Enums
         PORTFOLIO_SUMMATION_CREATE,
         PORTFOLIO_ZERO_CHANGE_VALUES,
         trade_allocate,
-        trading_power
+        trading_power,
+        SFC_FEED_MAPPING,
+        QUOTE,
+        QUOTE_PARAMETERS_GET,
+        QUOTE_PARAMETERS_SET,
+        QUOTE_REQUEST,
+        QUOTED_PARAMETERS_GET,
+        SPREADTABLE_DOWNLOAD,
+        SPREADTABLE_ENTRIES_DELETE,
+        SPREADTABLE_ENTRIES_INSERT,
+        SPREADTABLE_GET,
+        SPREADTABLE_INSERT,
+        instrument_cleanup_expired,
+        instrument_dynamic_parameter_delete,
+        instrument_dynamic_parameters_set,
+        instrument_group_parameters_get,
+        instrument_group_parameters_set,
+        instrument_multiple_flag_set,
+        instrument_multiple_parameter_set,
+        instrument_set_as_preferred
     }
 }

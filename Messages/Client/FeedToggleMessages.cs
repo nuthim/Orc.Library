@@ -11,6 +11,7 @@ namespace Orc.Library.Messages.Client
         public bool? Enable { get; set; }
     }
 
+    [DataContract(Name = "dividend_feed_toggle", Namespace = "")]
     public class DividendFeedToggleMessage : SubscriptionMessage
     {
         [DataMember(Name = "market")]
@@ -22,6 +23,7 @@ namespace Orc.Library.Messages.Client
         }
     }
 
+    [DataContract(Name = "money_feed_toggle", Namespace = "")]
     public class MoneySubscriptionMessage : SubscriptionMessage
     {
         public MoneySubscriptionMessage()
@@ -30,6 +32,7 @@ namespace Orc.Library.Messages.Client
         }
     }
 
+    [DataContract(Name = "news_feed_toggle", Namespace = "")]
     public class NewsSubscriptionMessage : SubscriptionMessage
     {
         public NewsSubscriptionMessage()
@@ -38,6 +41,7 @@ namespace Orc.Library.Messages.Client
         }
     }
 
+    [DataContract(Name = "trade_feed_toggle", Namespace = "")]
     public class TradeSubscriptionMessage : SubscriptionMessage
     {
         [DataMember(Name = "market")]
@@ -61,6 +65,7 @@ namespace Orc.Library.Messages.Client
         }
     }
 
+    [DataContract(Name = "underlying_feed_toggle", Namespace = "")]
     public class UnderlyingSubscriptionMessage : SubscriptionMessage
     {
         public UnderlyingSubscriptionMessage()
