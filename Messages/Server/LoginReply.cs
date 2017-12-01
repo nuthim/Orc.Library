@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 
 namespace Orc.Library.Messages.Server
 {
-    public class LoginReply : OrcMessage
+    public class LoginReply : ServerMessage
     {
         [DataMember(Name = "login_id")]
         public string UserName { get; set; }

@@ -22,7 +22,7 @@ namespace Orc.Library.Messages.Client
 
         public InstrumentAttributesSetMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.instrument_attributes_set);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_ATTRIBUTES_SET);
         }
     }
 
@@ -37,7 +37,7 @@ namespace Orc.Library.Messages.Client
 
         public InstrumentCleanupExpiredMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.instrument_cleanup_expired);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_CLEANUP_EXPIRED);
         }
     }
 
@@ -61,7 +61,7 @@ namespace Orc.Library.Messages.Client
 
         public InstrumentCreateMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.instrument_create);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_CREATE);
         }
     }
 
@@ -82,7 +82,7 @@ namespace Orc.Library.Messages.Client
 
         public InstrumentDeleteMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.instrument_delete);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_DELETE);
         }
     }
 
@@ -181,7 +181,7 @@ namespace Orc.Library.Messages.Client
 
         public InstrumentDownloadMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.instrument_download);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_DOWNLOAD);
         }
     }
 
@@ -199,7 +199,7 @@ namespace Orc.Library.Messages.Client
 
         public InstrumentDynamicParameterDeleteMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.instrument_dynamic_parameter_delete);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_DYNAMIC_PARAMETER_DELETE);
         }
     }
 
@@ -217,7 +217,7 @@ namespace Orc.Library.Messages.Client
 
         public InstrumentDynamicParametersSetMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.instrument_dynamic_parameters_set);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_DYNAMIC_PARAMETERS_SET);
         }
     }
 
@@ -235,7 +235,7 @@ namespace Orc.Library.Messages.Client
 
         public InstrumentGetMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.instrument_get);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_GET);
         }
     }
 
@@ -293,12 +293,12 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "strikeprice_max", Order = 17)]
         public double? StrikePriceMax { get; set; }
 
-        [DataMember(Name = "symbol", Order = 18)]
+        [DataMember(Name = "underlying", Order = 18)]
         public string UnderlyingPattern { get; set; }
 
         public InstrumentGroupParametersGetMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.instrument_group_parameters_get);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_GROUP_PARAMETERS_GET);
         }
     }
 
@@ -379,7 +379,7 @@ namespace Orc.Library.Messages.Client
 
         public InstrumentGroupParametersSetMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.instrument_group_parameters_set);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_GROUP_PARAMETERS_SET);
         }
     }
 
@@ -403,7 +403,7 @@ namespace Orc.Library.Messages.Client
 
         public InstrumentMultipleFlagSetMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.instrument_multiple_flag_set);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_MULTIPLE_FLAG_SET);
         }
     }
 
@@ -430,7 +430,7 @@ namespace Orc.Library.Messages.Client
 
         public InstrumentMultipleParameterSetMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.instrument_multiple_parameter_set);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_MULTIPLE_PARAMETER_SET);
         }
     }
 
@@ -451,7 +451,7 @@ namespace Orc.Library.Messages.Client
 
         public InstrumentParametersSetMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.instrument_parameters_set);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_PARAMETERS_SET);
         }
     }
 
@@ -470,7 +470,7 @@ namespace Orc.Library.Messages.Client
 
         public InstrumentSetAsPreferredMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.instrument_set_as_preferred);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_SET_AS_PREFERRED);
         }
     }
 

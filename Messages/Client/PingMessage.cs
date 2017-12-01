@@ -9,7 +9,7 @@ namespace Orc.Library.Messages.Client
     {
         public PingMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.ping);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.PING);
         }
     }
 }

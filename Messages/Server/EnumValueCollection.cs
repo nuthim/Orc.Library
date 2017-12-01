@@ -4,7 +4,7 @@ using Orc.Library.Dictionaries;
 
 namespace Orc.Library.Messages.Server
 {
-    public class EnumValueCollection : OrcMessage
+    public class EnumValueCollection : ServerMessage
     {
         [DataMember(Name = "requested_enum")]
         public string EnumType { get; set; }

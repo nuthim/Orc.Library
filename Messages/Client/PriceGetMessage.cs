@@ -13,7 +13,7 @@ namespace Orc.Library.Messages.Client
 
         public PriceGetMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.price_get);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.PRICE_GET);
         }
     }
 }

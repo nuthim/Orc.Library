@@ -3,7 +3,8 @@ using System.Runtime.Serialization;
 
 namespace Orc.Library.Messages.Server
 {
-    public class OrcMessage
+    [DataContract(Namespace = "")]
+    public class ServerMessage
     {
         public Guid Id => ReplyInfo?.Id ?? MessageInfo?.Id ?? Guid.Empty;
 
@@ -18,6 +19,5 @@ namespace Orc.Library.Messages.Server
 
         [DataMember(Name = "error_description")]
         public string ErrorDescription { get; set; }
-
     }
 }

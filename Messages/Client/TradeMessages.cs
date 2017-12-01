@@ -21,7 +21,7 @@ namespace Orc.Library.Messages.Client
 
         public TradeAllocateMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.trade_allocate);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.TRADE_ALLOCATE);
         }
     }
 
@@ -45,7 +45,7 @@ namespace Orc.Library.Messages.Client
 
         public TradeDeleteMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.trade_delete);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.TRADE_DELETE);
         }
     }
 
@@ -66,7 +66,7 @@ namespace Orc.Library.Messages.Client
 
         public TradeGetMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.trade_get);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.TRADE_GET);
         }
     }
 
@@ -82,7 +82,7 @@ namespace Orc.Library.Messages.Client
 
         public TradeHistoryGetMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.trade_history_get);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.TRADE_HISTORY_GET);
         }
     }
 
@@ -106,7 +106,7 @@ namespace Orc.Library.Messages.Client
 
         public TradeInsertMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.trade_insert);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.TRADE_INSERT);
         }
     }
 
@@ -130,7 +130,7 @@ namespace Orc.Library.Messages.Client
 
         public TradeModifyMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.trade_modify);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.TRADE_MODIFY);
         }
     }
 
@@ -215,7 +215,7 @@ namespace Orc.Library.Messages.Client
 
         public TradeRangeGetMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.trade_range_get);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.TRADE_RANGE_GET);
         }
     }
 
@@ -233,7 +233,7 @@ namespace Orc.Library.Messages.Client
 
         public TradeVerifyMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.trade_verify);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.TRADE_VERIFY);
         }
     }
 
@@ -263,7 +263,7 @@ namespace Orc.Library.Messages.Client
 
         public TradingPowerMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.trading_power);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.TRADING_POWER);
         }
     }
 }

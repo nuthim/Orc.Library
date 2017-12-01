@@ -15,7 +15,7 @@ namespace Orc.Library.Messages.Client
 
         public OrderGetMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.order_get);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.ORDER_GET);
         }
     }
 }

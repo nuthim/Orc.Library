@@ -17,7 +17,7 @@ namespace Orc.Library.Messages.Client
 
         public PortfolioCleanupMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.portfolio_cleanup);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.PORTFOLIO_CLEANUP);
         }
     }
 
@@ -41,7 +41,7 @@ namespace Orc.Library.Messages.Client
 
         public PortfolioComponentAddMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.portfolio_component_add);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.PORTFOLIO_COMPONENT_ADD);
         }
     }
 
@@ -65,7 +65,7 @@ namespace Orc.Library.Messages.Client
 
         public PortfolioComponentRemoveMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.portfolio_component_remove);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.PORTFOLIO_COMPONENT_REMOVE);
         }
     }
 
@@ -89,7 +89,7 @@ namespace Orc.Library.Messages.Client
 
         public PortfolioCreateMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.portfolio_create);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.PORTFOLIO_CREATE);
         }
     }
 
@@ -105,7 +105,7 @@ namespace Orc.Library.Messages.Client
 
         public PortfolioDeleteMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.portfolio_delete);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.PORTFOLIO_DELETE);
         }
     }
 
@@ -121,7 +121,7 @@ namespace Orc.Library.Messages.Client
 
         public PortfolioDescribeMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.portfolio_describe);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.PORTFOLIO_DESCRIBE);
         }
     }
 
@@ -132,7 +132,7 @@ namespace Orc.Library.Messages.Client
     public class PortfolioDownloadMessage : ClientMessage
     {
         [DataMember(Name = "portfolio_name", Order = 1)]
-        public string Pattern { get; set; }
+        public string PortfolioNamePattern { get; set; }
 
         [DataMember(Name = "ignore_case", Order = 2)]
         public bool? IgnoreCase { get; set; }
@@ -142,7 +142,7 @@ namespace Orc.Library.Messages.Client
 
         public PortfolioDownloadMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.portfolio_download);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.PORTFOLIO_DOWNLOAD);
         }
     }
 
@@ -157,7 +157,7 @@ namespace Orc.Library.Messages.Client
 
         public PortfolioEmptyMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.portfolio_empty);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.PORTFOLIO_EMPTY);
         }
     }
 
@@ -185,7 +185,7 @@ namespace Orc.Library.Messages.Client
 
         public PortfolioGetMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.portfolio_get);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.PORTFOLIO_GET);
         }
     }
 
@@ -214,7 +214,7 @@ namespace Orc.Library.Messages.Client
     [DataContract(Name = "portfolio_kind_restriction_get", Namespace = "")]
     public class PortfolioKindRestrictionGetMessage : ClientMessage
     {
-        [DataMember(Name = "portfolio_name", IsRequired = true)]
+        [DataMember(Name = "portfolio_name")]
         public string PortfolioName { get; set; }
 
         public PortfolioKindRestrictionGetMessage()
@@ -242,9 +242,10 @@ namespace Orc.Library.Messages.Client
     }
 
     /// <summary>
-    /// Update a money/bookkeeping position for a portfolio (without having to add a transaction, which you have to if you use money_insert). 
-    /// This message will only update the sell side of the money position.Doing an absolute change, the sell side will be set to the specified 
+    /// Update a money/bookkeeping position for a portfolio (without having to add a transaction, which you have to if you use <see cref="MoneyInsertMessage"/>). 
+    /// <para>This message will only update the sell side of the money position. Doing an absolute change, the sell side will be set to the specified 
     /// amount and the buy side will be zeroed.
+    /// </para>
     /// </summary>
     [DataContract(Name = "portfolio_money_position_update", Namespace = "")]
     public class PortfolioMoneyPositionUpdateMessage : ClientMessage
@@ -256,7 +257,7 @@ namespace Orc.Library.Messages.Client
         public string PortfolioName { get; set; }
 
         [DataMember(Name = "underlying", Order = 3)]
-        public string underlying { get; set; }
+        public string Underlying { get; set; }
 
         [DataMember(Name = "amount", IsRequired = true, Order = 4)]
         public double? Amount { get; set; }
@@ -265,7 +266,7 @@ namespace Orc.Library.Messages.Client
         public string Currency { get; set; }
 
         [DataMember(Name = "absolute_change", Order = 6)]
-        public bool? AbsoluteChange { get; set; }
+        public bool? IsAbsoluteChange { get; set; }
 
         [DataMember(Name = "settlement_date", Order = 7)]
         public DateTime? SettlementDate { get; set; }
@@ -289,7 +290,7 @@ namespace Orc.Library.Messages.Client
         public PortfolioPosition PortfolioPosition { get; set; }
 
         [DataMember(Name = "absolute_change", Order = 3)]
-        public bool? AbsoluteChange { get; set; }
+        public bool? IsAbsoluteChange { get; set; }
 
         [DataMember(Name = "update_cash", Order = 4)]
         public bool? UpdateCash { get; set; }
@@ -300,6 +301,14 @@ namespace Orc.Library.Messages.Client
         }
     }
 
+    /// <summary>
+    /// Use to reset a portfolio. When resetting a portfolio, the values in the following fields of the portfolio positions are set to zero: 
+    /// change_in_accrued, change_in_commission, change_in_invested and change_in_volume. In addition the current market and theoretical values are stored. 
+    /// <para>Reset the portfolio every day to view your profit/loss per day. If a summation portfolio is specified reset is done for each of the normal 
+    /// portfolios that the summation portfolio consists of. To only set change_in_accrued, change_in_commission, change_in_invested and change_in_volume 
+    /// values to zero the message <see cref="PortfolioZeroChangeValuesMessage"/> can be used instead.
+    /// </para>
+    /// </summary>
     [DataContract(Name = "portfolio_reset", Namespace = "")]
     public class PortfolioResetMessage : ClientMessage
     {
@@ -363,13 +372,13 @@ namespace Orc.Library.Messages.Client
 
         public PortfolioUpdateMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.portfolio_update);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.PORTFOLIO_UPDATE);
         }
     }
 
     /// <summary>
     /// Zero the change_in_accrued, change_in_commission, change_in_invested, change_in_volume values of a portfolio. To also store values 
-    /// of theoretical values needed to calculate profit/loss per day the message PORTFOLIO_RESET should be used instead.
+    /// of theoretical values needed to calculate profit/loss per day the message <see cref="PortfolioResetMessage"/> should be used instead.
     /// </summary>
     [DataContract(Name = "portfolio_zero_change_values", Namespace = "")]
     public class PortfolioZeroChangeValuesMessage : ClientMessage

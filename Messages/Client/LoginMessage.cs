@@ -5,7 +5,7 @@ using Orc.Library.Enums;
 namespace Orc.Library.Messages.Client
 {
 
-    [DataContract(Name = "login", Namespace = "")]
+    [DataContract(Name = "LOGIN", Namespace = "")]
     public class LoginMessage : ClientMessage
     {
         [DataMember(Name = "login_id", IsRequired = true, Order = 1)]
@@ -25,7 +25,7 @@ namespace Orc.Library.Messages.Client
 
         public LoginMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.login);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.LOGIN);
         }
     }
 }

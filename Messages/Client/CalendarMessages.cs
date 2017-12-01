@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Orc.Library.Enums;
 using Orc.Library.Dictionaries;
@@ -6,107 +6,139 @@ using Orc.Library.Dictionaries;
 namespace Orc.Library.Messages.Client
 {
 
-    [DataContract(Name = "calendar_get", Namespace = "")]
-    public class CalendarGetMessage : ClientMessage
-    {
-        [DataMember(Name = "calendar", IsRequired = true)]
-        public string Calendar { get; set; }
-
-        public CalendarGetMessage()
-        {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.CUSTOMER_GET);
-        }
-    }
-
-    [DataContract(Name = "calendar_insert", Namespace = "")]
-    public class CalendarInsertMessage : ClientMessage
-    {
-        [DataMember(Name = "calendar", IsRequired = true)]
-        public string Calendar { get; set; }
-
-        public CalendarInsertMessage()
-        {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.calendar_insert);
-        }
-    }
-
-
-    [DataContract(Name = "calendar_update", Namespace = "")]
-    public class CalendarUpdateMessage : ClientMessage
-    {
-        [DataMember(Name = "calendar", IsRequired = true, Order = 1)]
-        public string Calendar { get; set; }
-
-        [DataMember(Name = "new_calendar", IsRequired = true, Order = 2)]
-        public string NewCalendar { get; set; }
-
-        public CalendarUpdateMessage()
-        {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.CUSTOMER_UPDATE);
-        }
-    }
-
-    [DataContract(Name = "calendar_set_default", Namespace = "")]
-    public class CalendarSetDefaultMessage : ClientMessage
-    {
-        [DataMember(Name = "calendar", IsRequired = true)]
-        public string Calendar { get; set; }
-
-        public CalendarSetDefaultMessage()
-        {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.calendar_set_default);
-        }
-    }
-
-    [DataContract(Name = "calendar_delete", Namespace = "")]
+    [DataContract(Name = "CALENDAR_DELETE", Namespace = "")]
     public class CalendarDeleteMessage : ClientMessage
     {
+        /// <summary>
+        /// The name of the calendar
+        /// </summary>
         [DataMember(Name = "calendar", IsRequired = true)]
+        [StringLength(64)]
         public string Calendar { get; set; }
 
-        public CalendarDeleteMessage()
+        public CalendarDeleteMessage() : base(MessageType.CALENDAR_DELETE)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.CUSTOMER_VALUE_GET);
+
         }
     }
 
-
-    [DataContract(Name = "calendar_entries_delete", Namespace = "")]
-    public class CalendarEntriesDeleteMessage : ClientMessage
-    {
-        [DataMember(Name = "calendar", IsRequired = true, Order = 1)]
-        public string Calendar { get; set; }
-
-        [DataMember(Name = "calendar_entries", IsRequired = true, Order = 2)]
-        public CalendarEntries Entries { get; set; }
-
-        public CalendarEntriesDeleteMessage()
-        {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.calendar_entries_delete);
-        }
-    }
-
-    [DataContract(Name = "calendar_entries_insert", Namespace = "")]
-    public class CalendarEntriesInsertMessage : ClientMessage
-    {
-        [DataMember(Name = "calendar", IsRequired = true, Order = 1)]
-        public string Calendar { get; set; }
-
-        [DataMember(Name = "calendar_entries", IsRequired = true, Order = 2)]
-        public CalendarEntries Entries { get; set; }
-
-        public CalendarEntriesInsertMessage()
-        {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.calendar_entries_insert);
-        }
-    }
-
-    [DataContract(Name = "calendar_download", Namespace = "")]
+    [DataContract(Name = "CALENDAR_DOWNLOAD", Namespace = "")]
     public class CalendarDownloadMessage : ClientMessage
     {
-        public CalendarDownloadMessage()
+        public CalendarDownloadMessage() : base(MessageType.CALENDAR_DOWNLOAD)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.calendar_download);
+
         }
     }
+
+    [DataContract(Name = "CALENDAR_ENTRIES_DELETE", Namespace = "")]
+    public class CalendarEntriesDeleteMessage : ClientMessage
+    {
+        /// <summary>
+        /// The name of the calendar
+        /// </summary>
+        [DataMember(Name = "calendar", IsRequired = true, Order = 1)]
+        [StringLength(64)]
+        public string Calendar { get; set; }
+
+        [DataMember(Name = "calendar_entries", IsRequired = true, Order = 2)]
+        public CalendarEntries Entries { get; set; }
+
+        public CalendarEntriesDeleteMessage() : base(MessageType.CALENDAR_ENTRIES_DELETE)
+        {
+
+        }
+    }
+
+    [DataContract(Name = "CALENDAR_ENTRIES_INSERT", Namespace = "")]
+    public class CalendarEntriesInsertMessage : ClientMessage
+    {
+        /// <summary>
+        /// The name of the calendar
+        /// </summary>
+        [DataMember(Name = "calendar", IsRequired = true, Order = 1)]
+        [StringLength(64)]
+        public string Calendar { get; set; }
+
+        [DataMember(Name = "calendar_entries", IsRequired = true, Order = 2)]
+        public CalendarEntries Entries { get; set; }
+
+        public CalendarEntriesInsertMessage() : base(MessageType.CALENDAR_ENTRIES_INSERT)
+        {
+
+        }
+    }
+
+    [DataContract(Name = "CALENDAR_GET", Namespace = "")]
+    public class CalendarGetMessage : ClientMessage
+    {
+        /// <summary>
+        /// The name of the calendar
+        /// </summary>
+        [DataMember(Name = "calendar", IsRequired = true)]
+        [StringLength(64)]
+        public string Calendar { get; set; }
+
+        public CalendarGetMessage() : base(MessageType.CALENDAR_GET)
+        {
+            
+        }
+    }
+
+    [DataContract(Name = "CALENDAR_INSERT", Namespace = "")]
+    public class CalendarInsertMessage : ClientMessage
+    {
+        /// <summary>
+        /// The name of the calendar
+        /// </summary>
+        [DataMember(Name = "calendar", IsRequired = true)]
+        [StringLength(64)]
+        public string Calendar { get; set; }
+
+        public CalendarInsertMessage() : base(MessageType.CALENDAR_INSERT)
+        {
+            
+        }
+    }
+
+    [DataContract(Name = "CALENDAR_SET_DEFAULT", Namespace = "")]
+    public class CalendarSetDefaultMessage : ClientMessage
+    {
+        /// <summary>
+        /// The name of the calendar
+        /// </summary>
+        [DataMember(Name = "calendar", IsRequired = true)]
+        [StringLength(64)]
+        public string Calendar { get; set; }
+
+        public CalendarSetDefaultMessage() : base(MessageType.CALENDAR_SET_DEFAULT)
+        {
+
+        }
+    }
+
+    [DataContract(Name = "CALENDAR_UPDATE", Namespace = "")]
+    public class CalendarUpdateMessage : ClientMessage
+    {
+        /// <summary>
+        /// The name of the calendar
+        /// </summary>
+        [DataMember(Name = "calendar", IsRequired = true, Order = 1)]
+        [StringLength(64)]
+        public string Calendar { get; set; }
+
+        /// <summary>
+        /// The name of the new calendar
+        /// </summary>
+        [DataMember(Name = "new_calendar", IsRequired = true, Order = 2)]
+        [StringLength(64)]
+        public string NewCalendar { get; set; }
+
+        public CalendarUpdateMessage() : base(MessageType.CALENDAR_UPDATE)
+        {
+           
+        }
+    }
+
+
 }

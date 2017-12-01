@@ -9,7 +9,7 @@ namespace Orc.Library.Messages.Client
     {
         public LogoutMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.logout);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.LOGOUT);
         }
     }
 }

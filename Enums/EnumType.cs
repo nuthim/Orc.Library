@@ -23,6 +23,9 @@ namespace Orc.Library.Enums
         [EnumMember(Value = "dividend_kind")]
         DividendKind,
 
+        /// <summary>
+        /// Corresponds to the Orc Trader name of the market.
+        /// </summary>
         [EnumMember(Value = "short_market_name")]
         ShortMarketName
     }

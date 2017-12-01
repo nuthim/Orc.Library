@@ -1,4 +1,3 @@
-using System;
 using Orc.Library.Enums;
 using Orc.Library.Dictionaries;
 using System.Runtime.Serialization;
@@ -10,22 +9,22 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Delete all dividends for a given instrument.
     /// </summary>
-    [DataContract(Name = "dividend_delete", Namespace = "")]
+    [DataContract(Name = "DIVIDEND_DELETE", Namespace = "")]
     public class DividendDeleteMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true)]
         public InstrumentId InstrumentId { get; set; }
 
-        public DividendDeleteMessage()
+        public DividendDeleteMessage() : base(MessageType.DIVIDEND_DELETE)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.dividend_delete);
+
         }
     }
 
     /// <summary>
     /// Get all dividends for an instrument
     /// </summary>
-    [DataContract(Name = "dividend_get", Namespace = "")]
+    [DataContract(Name = "DIVIDEND_GET", Namespace = "")]
     public class DividendGetMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
@@ -34,17 +33,21 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "dividendkinds", IsRequired = true, Order = 2)]
         public DividendKinds DividendKinds { get; set; }
 
-        public DividendGetMessage()
+        public DividendGetMessage() : base(MessageType.DIVIDEND_GET)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.dividend_get);
+
         }
     }
 
 
     /// <summary>
     /// Add a single dividend for an instrument
+    /// <para>Should only be used when adding a single dividend for an instrument. If you are adding several dividends, 
+    /// <see cref="DividendUpdateMessage"/>(possibly together with <see cref="DividendGetMessage"/>) should be used instead. 
+    /// <see cref="DividendUpdateMessage"/> is more efficient regarding to performance.
+    /// </para>
     /// </summary>
-    [DataContract(Name = "dividend_insert", Namespace = "")]
+    [DataContract(Name = "DIVIDEND_INSERT", Namespace = "")]
     public class DividendInsertMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
@@ -53,16 +56,17 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "dividend", IsRequired = true, Order = 2)]
         public Dividend Dividend { get; set; }
 
-        public DividendInsertMessage()
+        public DividendInsertMessage() : base(MessageType.DIVIDEND_INSERT)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.dividend_insert);
+
         }
     }
 
     /// <summary>
-    /// Update (replace) dividends and/or operations for a given instrument. The type to be replaced depends on the dividend message, if the message includes both types, both types are replaced.
+    /// Update (replace) dividends and/or operations for a given instrument. The type to be replaced depends on the dividend message, 
+    /// if the message includes both types, both types are replaced.
     /// </summary>
-    [DataContract(Name = "dividend_update", Namespace = "")]
+    [DataContract(Name = "DIVIDEND_UPDATE", Namespace = "")]
     public class DividendUpdateMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
@@ -77,9 +81,9 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "update_for_all_kinds", IsRequired = true, Order = 3)]
         public bool UpdateAllKinds { get; set; }
 
-        public DividendUpdateMessage()
+        public DividendUpdateMessage() : base(MessageType.DIVIDEND_UPDATE)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.dividend_update);
+
         }
     }
 }

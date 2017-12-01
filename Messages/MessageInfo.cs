@@ -4,23 +4,35 @@ using System.Runtime.Serialization;
 
 namespace Orc.Library.Messages
 {
-    public class MessageInfo
+    [DataContract(Name = "message_info", Namespace = "")]
+    public class MessageInfo : IEquatable<MessageInfo>
     {
-        [DataMember(Name = "message_type", IsRequired = true)]
+        [DataMember(Name = "message_type", IsRequired = true, Order = 1)]
         public MessageType MessageType { get; set; }
 
-        [DataMember(Name = "private", IsRequired = true)]
-        public Guid Id { get; set; }
+        [DataMember(Name = "private", Order = 2)]
+        public Guid? Id { get; set; }
 
-        public MessageInfo()
+        public MessageInfo(MessageType messageType) : this(null, messageType)
         {
             
         }
 
-        public MessageInfo(Guid id, MessageType messageType)
+        public MessageInfo(Guid? id, MessageType messageType)
         {
             Id = id;
             MessageType = messageType;
+        }
+
+        public bool Equals(MessageInfo other)
+        {
+            if (other == null)
+                return false;
+
+            if (ReferenceEquals(this, other))
+                return true;
+
+            return MessageType == other.MessageType && Equals(Id, other.Id);
         }
     }
 }

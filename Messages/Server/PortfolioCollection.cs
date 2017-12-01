@@ -4,7 +4,7 @@ using Orc.Library.Dictionaries;
 
 namespace Orc.Library.Messages.Server
 {
-    public class PortfolioCollection : OrcMessage
+    public class PortfolioCollection : ServerMessage
     {
 
         [DataMember(Name = "portfolios")]

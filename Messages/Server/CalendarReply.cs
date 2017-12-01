@@ -1,10 +1,9 @@
 ﻿using System.Runtime.Serialization;
-using Orc.Library.Enums;
 
 
 namespace Orc.Library.Messages.Server
 {
-    public class CalendarCollection : OrcMessage
+    public class CalendarCollection : ServerMessage
     {
         [DataMember(Name = "calendars")]
         public string[] Calendars { get; set; }
@@ -13,7 +12,7 @@ namespace Orc.Library.Messages.Server
         public string DefaultCalendar { get; set; }
     }
 
-    public class CalendarReply : OrcMessage
+    public class CalendarReply : ServerMessage
     {
         [DataMember(Name = "calendar")]
         public string Calendar { get; set; }

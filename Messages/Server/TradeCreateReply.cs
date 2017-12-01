@@ -3,7 +3,7 @@
 
 namespace Orc.Library.Messages.Server
 {
-    public class TradeCreateReply : OrcMessage
+    public class TradeCreateReply : ServerMessage
     {
         [DataMember(Name = "trade_tag")]
         public int TradeTag { get; set; }

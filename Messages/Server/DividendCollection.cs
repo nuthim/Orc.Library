@@ -4,7 +4,7 @@
 
 namespace Orc.Library.Messages.Server
 {
-    public class DividendCollection : OrcMessage
+    public class DividendCollection : ServerMessage
     {
         public InstrumentId instrument_id { get; set; }
 

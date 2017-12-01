@@ -16,7 +16,7 @@ namespace Orc.Library.Messages.Client
 
         public MoneyDeleteMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.money_delete);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.MONEY_DELETE);
         }
     }
 
@@ -61,7 +61,7 @@ namespace Orc.Library.Messages.Client
 
         public MoneyInsertMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.money_insert);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.MONEY_INSERT);
         }
     }
 
@@ -91,7 +91,7 @@ namespace Orc.Library.Messages.Client
 
         public MoneyDownloadMessage()
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.money_range_get);
+            Info = new MessageInfo(Guid.NewGuid(), MessageType.MONEY_RANGE_GET);
         }
     }
 }

@@ -1,9 +1,12 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Runtime.Serialization;
 using Orc.Library.Enums;
+
 
 namespace Orc.Library.Messages.Client
 {
-    public abstract class ClientMessage
+    [DataContract(Namespace = "")]
+    public abstract class ClientMessage : IEquatable<ClientMessage>
     {
         [DataMember(Name = "message_info", IsRequired = true, Order = 1)]
         public MessageInfo Info { get; set; }
@@ -17,5 +20,25 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "suppress_reply", Order = 4)]
         public SuppressReply? SuppressReply { get; set; }
 
+        protected ClientMessage()
+        {
+
+        }
+
+        protected ClientMessage(MessageType messageType)
+        {
+            Info = new MessageInfo(messageType);
+        }
+
+        public bool Equals(ClientMessage other)
+        {
+            if (other == null)
+                return false;
+
+            if (ReferenceEquals(this, other))
+                return true;
+
+            return Info == other.Info && Debug == other.Debug && Log == other.Log && SuppressReply == other.SuppressReply;
+        }
     }
 }

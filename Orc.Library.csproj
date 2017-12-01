@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
@@ -145,6 +146,7 @@
     <Compile Include="Messages\Client\InstrumentMessages.cs" />
     <Compile Include="Messages\Client\LoginMessage.cs" />
     <Compile Include="Messages\Client\LogoutMessage.cs" />
+    <Compile Include="Messages\Client\NewsMessages.cs" />
     <Compile Include="Messages\Client\OrderGetMessage.cs" />
     <Compile Include="Messages\Client\PingMessage.cs" />
     <Compile Include="Messages\Client\PortfolioMessages.cs" />
@@ -163,7 +165,7 @@
     <Compile Include="Messages\Server\InstrumentReply.cs" />
     <Compile Include="Messages\Server\LoginReply.cs" />
     <Compile Include="Messages\Server\MoneyFeed.cs" />
-    <Compile Include="Messages\Server\OrcMessage.cs" />
+    <Compile Include="Messages\Server\ServerMessage.cs" />
     <Compile Include="Messages\Server\PingMessage.cs" />
     <Compile Include="Messages\Server\PortfolioCollection.cs" />
     <Compile Include="Messages\Server\PriceFeed.cs" />
