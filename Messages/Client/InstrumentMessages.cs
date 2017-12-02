@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Orc.Library.Dictionaries;
 using Orc.Library.Enums;
@@ -17,12 +18,15 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
         public InstrumentId Instrument { get; set; }
 
+        /// <summary>
+        /// All keys in the instrument_attributes dictionary are optional for this request.
+        /// </summary>
         [DataMember(Name = "instrument_attributes", IsRequired = true, Order = 2)]
         public InstrumentAttributes InstrumentAttributes { get; set; }
 
-        public InstrumentAttributesSetMessage()
+        public InstrumentAttributesSetMessage() : base(MessageType.INSTRUMENT_ATTRIBUTES_SET)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_ATTRIBUTES_SET);
+
         }
     }
 
@@ -32,12 +36,15 @@ namespace Orc.Library.Messages.Client
     [DataContract(Name = "instrument_cleanup_expired", Namespace = "")]
     public class InstrumentCleanupExpiredMessage : ClientMessage
     {
+        /// <summary>
+        /// The expiration date of the instrument
+        /// </summary>
         [DataMember(Name = "expirydate")]
         public DateTime? ExpiryDate { get; set; }
 
-        public InstrumentCleanupExpiredMessage()
+        public InstrumentCleanupExpiredMessage() : base(MessageType.INSTRUMENT_CLEANUP_EXPIRED)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_CLEANUP_EXPIRED);
+
         }
     }
 
@@ -59,9 +66,9 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "parameters", Order = 2)]
         public Parameters Parameters { get; set; }
 
-        public InstrumentCreateMessage()
+        public InstrumentCreateMessage() : base(MessageType.INSTRUMENT_CREATE)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_CREATE);
+
         }
     }
 
@@ -77,12 +84,15 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
         public InstrumentId Instrument { get; set; }
 
+        /// <summary>
+        /// Specify if you should get an error if the contract you want to delete is used as basecontract. Default: false.
+        /// </summary>
         [DataMember(Name = "error_if_basecontract", Order = 2)]
         public bool? ErrorIfBaseContract { get; set; }
 
-        public InstrumentDeleteMessage()
+        public InstrumentDeleteMessage() : base(MessageType.INSTRUMENT_DELETE)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_DELETE);
+
         }
     }
 
@@ -95,16 +105,27 @@ namespace Orc.Library.Messages.Client
     [DataContract(Name = "instrument_download", Namespace = "")]
     public class InstrumentDownloadMessage : ClientMessage
     {
+        /// <summary>
+        /// Tag of basecontract to match.
+        /// </summary>
         [DataMember(Name = "basecontract", Order = 1)]
         public int? BaseContract { get; set; }
 
+        /// <summary>
+        /// This key enables selective download of instruments of one asset type.
+        /// </summary>
         [DataMember(Name = "assettype", Order = 2)]
         public AssetType? AssetType { get; set; }
 
+        /// <summary>
+        /// This key enables selective download of instruments of one currency
+        /// </summary>
         [DataMember(Name = "currency", Order = 3)]
+        [StringLength(3, MinimumLength = 3)]
         public string Currency { get; set; }
 
         [DataMember(Name = "customer_unique_id", Order = 4)]
+        [StringLength(64)]
         public string CustomerUniqueIdPattern { get; set; }
 
         [DataMember(Name = "download_mode", Order = 5)]
@@ -113,30 +134,52 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "enforced_customer_unique_id", Order = 6)]
         public string EnforcedCustomerUniqueIdPattern { get; set; }
 
+        /// <summary>
+        /// Reuters Exchange Mnemonic.
+        /// </summary>
         [DataMember(Name = "exchange", Order = 7)]
+        [StringLength(3, MinimumLength = 3)]
         public string Exchange { get; set; }
 
+        /// <summary>
+        /// Last expirydate to match
+        /// </summary>
         [DataMember(Name = "expirydate_end", Order = 8)]
         public DateTime? ExpirydateEnd { get; set; }
 
+        /// <summary>
+        /// First expirydate to match
+        /// </summary>
         [DataMember(Name = "expirydate_start", Order = 9)]
         public DateTime? ExpirydateStart { get; set; }
 
         [DataMember(Name = "feedcode", Order = 10)]
+        [StringLength(32)]
         public string FeedCodePattern { get; set; }
 
+        /// <summary>
+        /// Set this key to 'true' in order to download instruments ignoring the case for the string based keys. Default is 'false'.
+        /// </summary>
         [DataMember(Name = "ignore_case", Order = 11)]
         public bool? IgnoreCase { get; set; }
 
         [DataMember(Name = "isincode", Order = 12)]
+        [StringLength(16)]
         public string IsinCodePattern { get; set; }
 
         [DataMember(Name = "issuer", Order = 13)]
         public string Issuer { get; set; }
 
+        /// <summary>
+        /// If true, quote the contract selection in clean price. Else, include the accrued interest rate of the contract in the quoted price.
+        /// </summary>
         [DataMember(Name = "is_clean_quoted", Order = 14)]
         public bool? IsCleanQuoted { get; set; }
 
+        /// <summary>
+        /// Set this key in order to receive replies in several messages. Default behaviour is that the Orc Protocol sends all replies in one message.
+        /// The recommended value for this key is 1000. If the reply is split up, this will also be indicated by the boolean flag more_replies in the reply_to dictionary.
+        /// </summary>
         [DataMember(Name = "items_per_message", Order = 15)]
         public int? ItemsPerMessage { get; set; }
 
@@ -146,12 +189,21 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "market", Order = 17)]
         public string Market { get; set; }
 
+        /// <summary>
+        /// Max strikeprice to match
+        /// </summary>
         [DataMember(Name = "strikeprice_max", Order = 18)]
         public double? StrikePriceMax { get; set; }
 
+        /// <summary>
+        /// Min strikeprice to match
+        /// </summary>
         [DataMember(Name = "strikeprice_min", Order = 19)]
         public double? StrikePriceMin { get; set; }
 
+        /// <summary>
+        /// Applicable on markets with submarkets. Use this key to limit the downloaded information to only one submarket.
+        /// </summary>
         [DataMember(Name = "submarket", Order = 20)]
         public string SubMarket { get; set; }
 
@@ -159,14 +211,23 @@ namespace Orc.Library.Messages.Client
         public SuggestVolumeLogic? SuggestVolumeLogic { get; set; }
 
         [DataMember(Name = "symbol", Order = 22)]
+        [StringLength(32)]
         public string Symbol { get; set; }
 
+        /// <summary>
+        /// The name of a tick rule.
+        /// </summary>
         [DataMember(Name = "tick_rule", Order = 23)]
         public string TickRule { get; set; }
 
         [DataMember(Name = "underlying", Order = 24)]
+        [StringLength(32)]
         public string UnderlyingPattern { get; set; }
 
+        /// <summary>
+        /// To only download instruments that have been created or modified within the specified time period.
+        /// _to defaults to now and _from defaults to include the first created instrument.
+        /// </summary>
         [DataMember(Name = "date_changed_from", Order = 25)]
         public DateTime? DateChangedFrom { get; set; }
 
@@ -179,9 +240,9 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "time_changed_to", Order = 28)]
         public TimeSpan? TimeChangedTo { get; set; }
 
-        public InstrumentDownloadMessage()
+        public InstrumentDownloadMessage() : base(MessageType.INSTRUMENT_DOWNLOAD)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_DOWNLOAD);
+
         }
     }
 
@@ -194,12 +255,15 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
         public InstrumentId Instrument { get; set; }
 
+        /// <summary>
+        /// The name of the dynamic parameter.
+        /// </summary>
         [DataMember(Name = "name", IsRequired = true, Order = 2)]
-        public string ParameterName { get; set; }
+        public string Name { get; set; }
 
-        public InstrumentDynamicParameterDeleteMessage()
+        public InstrumentDynamicParameterDeleteMessage() : base(MessageType.INSTRUMENT_DYNAMIC_PARAMETER_DELETE)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_DYNAMIC_PARAMETER_DELETE);
+
         }
     }
 
@@ -215,9 +279,9 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "name", IsRequired = true, Order = 2)]
         public DynamicParameters Parameters { get; set; }
 
-        public InstrumentDynamicParametersSetMessage()
+        public InstrumentDynamicParametersSetMessage() : base(MessageType.INSTRUMENT_DYNAMIC_PARAMETERS_SET)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_DYNAMIC_PARAMETERS_SET);
+
         }
     }
 
@@ -230,12 +294,15 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "instrument_id", Order = 1)]
         public InstrumentId Instrument { get; set; }
 
+        /// <summary>
+        /// Request the Orcs description of the contract from the connected Orc. Default: false
+        /// </summary>
         [DataMember(Name = "with_orc_description", Order = 2)]
         public bool RequestOrcDescription { get; set; }
 
-        public InstrumentGetMessage()
+        public InstrumentGetMessage() : base( MessageType.INSTRUMENT_GET)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_GET);
+
         }
     }
 
@@ -245,37 +312,63 @@ namespace Orc.Library.Messages.Client
     [DataContract(Name = "instrument_group_parameters_get", Namespace = "")]
     public class InstrumentGroupParametersGetMessage : ClientMessage
     {
+        /// <summary>
+        /// Set this key to 'true' in order to ignore the case for string based keys in this message. Default is 'false'.
+        /// </summary>
         [DataMember(Name = "additional_data", Order = 2)]
-        public bool? IgnoreCase { get; set; }
+        public bool? AdditionalData { get; set; }
 
+        /// <summary>
+        /// Set this string in order to get parameters for instruments of one single asset type.
+        /// </summary>
         [DataMember(Name = "assettype", Order = 3)]
         public AssetType? AssetType { get; set; }
 
+        /// <summary>
+        /// Tag of basecontract to match.
+        /// </summary>
         [DataMember(Name = "basecontract", Order = 4)]
         public int? BaseContract { get; set; }
 
+        /// <summary>
+        /// Set this string in order to get parameters for instruments of one single currency
+        /// </summary>
         [DataMember(Name = "currency", Order = 5)]
+        [StringLength(3, MinimumLength = 3)]
         public string Currency { get; set; }
 
         [DataMember(Name = "customer_unique_id", Order = 6)]
+        [StringLength(64)]
         public string CustomerUniqueIdPattern { get; set; }
 
         [DataMember(Name = "enforced_customer_unique_id", Order = 7)]
         public string EnforcedCustomerUniqueIdPattern { get; set; }
 
+        /// <summary>
+        /// First expirydate to match
+        /// </summary>
         [DataMember(Name = "expirydate_start", Order = 8)]
         public DateTime? ExpirydateStart { get; set; }
 
+        /// <summary>
+        /// Last expirydate to match
+        /// </summary>
         [DataMember(Name = "expirydate_end", Order = 9)]
         public DateTime? ExpirydateEnd { get; set; }
 
         [DataMember(Name = "isincode", Order = 10)]
+        [StringLength(16)]
         public string IsinCodePattern { get; set; }
 
         [DataMember(Name = "symbol", Order = 11)]
+        [StringLength(32)]
         public string Symbol { get; set; }
-
+        
+        /// <summary>
+        /// Reuters Exchange Mnemonic.
+        /// </summary>
         [DataMember(Name = "exchange", Order = 12)]
+        [StringLength(3, MinimumLength = 3)]
         public string Exchange { get; set; }
 
         [DataMember(Name = "issuer", Order = 13)]
@@ -287,18 +380,25 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "market", Order = 15)]
         public string Market { get; set; }
 
+        /// <summary>
+        /// Min strikeprice to match
+        /// </summary>
         [DataMember(Name = "strikeprice_min", Order = 16)]
         public double? StrikePriceMin { get; set; }
 
+        /// <summary>
+        /// Max strikeprice to match
+        /// </summary>
         [DataMember(Name = "strikeprice_max", Order = 17)]
         public double? StrikePriceMax { get; set; }
 
         [DataMember(Name = "underlying", Order = 18)]
+        [StringLength(32)]
         public string UnderlyingPattern { get; set; }
 
-        public InstrumentGroupParametersGetMessage()
+        public InstrumentGroupParametersGetMessage() : base(MessageType.INSTRUMENT_GROUP_PARAMETERS_GET)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_GROUP_PARAMETERS_GET);
+
         }
     }
 
@@ -314,37 +414,66 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "parameters", IsRequired = true, Order = 1)]
         public Parameters Parameters { get; set; }
 
+        /// <summary>
+        /// Set this key to 'true' in order to ignore the case for string based keys in this message. Default is 'false'.
+        /// </summary>
         [DataMember(Name = "additional_data", Order = 2)]
-        public bool? IgnoreCase { get; set; }
+        public bool? AdditionalData { get; set; }
 
+        /// <summary>
+        /// Set this string in order to set parameters for instruments of one single asset type.
+        /// </summary>
         [DataMember(Name = "assettype", Order = 3)]
         public AssetType? AssetType { get; set; }
 
+        /// <summary>
+        /// Tag of basecontract to match.
+        /// </summary>
         [DataMember(Name = "basecontract", Order = 4)]
         public int? BaseContract { get; set; }
 
+        /// <summary>
+        /// Set this string in order to set parameters for instruments of one single currency.
+        /// </summary>
         [DataMember(Name = "currency", Order = 5)]
+        [StringLength(3, MinimumLength = 3)]
         public string Currency { get; set; }
 
         [DataMember(Name = "customer_unique_id", Order = 6)]
+        [StringLength(64)]
         public string CustomerUniqueIdPattern { get; set; }
 
         [DataMember(Name = "enforced_customer_unique_id", Order = 7)]
         public string EnforcedCustomerUniqueIdPattern { get; set; }
 
+        /// <summary>
+        /// First expirydate to match
+        /// </summary>
         [DataMember(Name = "expirydate_start", Order = 8)]
         public DateTime? ExpirydateStart { get; set; }
 
+        /// <summary>
+        /// Last expirydate to match
+        /// </summary>
         [DataMember(Name = "expirydate_end", Order = 9)]
         public DateTime? ExpirydateEnd { get; set; }
 
         [DataMember(Name = "isincode", Order = 10)]
+        [StringLength(16)]
         public string IsinCodePattern { get; set; }
 
+        /// <summary>
+        /// A symbol string.
+        /// </summary>
         [DataMember(Name = "symbol", Order = 11)]
+        [StringLength(32)]
         public string Symbol { get; set; }
 
+        /// <summary>
+        /// Reuters Exchange Mnemonic
+        /// </summary>
         [DataMember(Name = "exchange", Order = 12)]
+        [StringLength(3, MinimumLength = 3)]
         public string Exchange { get; set; }
 
         [DataMember(Name = "issuer", Order = 13)]
@@ -356,15 +485,26 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "market", Order = 15)]
         public string Market { get; set; }
 
+        /// <summary>
+        /// Min strikeprice to match
+        /// </summary>
         [DataMember(Name = "strikeprice_min", Order = 16)]
         public double? StrikePriceMin { get; set; }
 
+        /// <summary>
+        /// Max strikeprice to match
+        /// </summary>
         [DataMember(Name = "strikeprice_max", Order = 17)]
         public double? StrikePriceMax { get; set; }
 
         [DataMember(Name = "underlying", Order = 18)]
+        [StringLength(32)]
         public string UnderlyingPattern { get; set; }
 
+        /// <summary>
+        /// To only include instruments that have been created or modified within the specified time period. 
+        /// _to defaults to now and _from defaults to include the first created instrument.
+        /// </summary>
         [DataMember(Name = "date_changed_from", Order = 19)]
         public DateTime? DateChangedFrom { get; set; }
 
@@ -377,9 +517,9 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "time_changed_to", Order = 22)]
         public TimeSpan? TimeChangedTo { get; set; }
 
-        public InstrumentGroupParametersSetMessage()
+        public InstrumentGroupParametersSetMessage() : base(MessageType.INSTRUMENT_GROUP_PARAMETERS_SET)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_GROUP_PARAMETERS_SET);
+
         }
     }
 
@@ -392,18 +532,27 @@ namespace Orc.Library.Messages.Client
     [DataContract(Name = "instrument_multiple_flag_set", Namespace = "")]
     public class InstrumentMultipleFlagSetMessage : ClientMessage
     {
+        /// <summary>
+        /// List of the instruments to be updated. The maximum number of instruments for the instrument list is 1024.
+        /// </summary>
         [DataMember(Name = "instrument_list", IsRequired = true, Order = 1)]
         public InstrumentList Instruments { get; set; }
 
+        /// <summary>
+        /// Name of the contract flag to be updated.
+        /// </summary>
         [DataMember(Name = "flag", IsRequired = true, Order = 2)]
         public Flag Flag { get; set; }
 
+        /// <summary>
+        /// Value of the flag to be updated.
+        /// </summary>
         [DataMember(Name = "value", IsRequired = true, Order = 3)]
         public bool? Value { get; set; }
 
-        public InstrumentMultipleFlagSetMessage()
+        public InstrumentMultipleFlagSetMessage() : base(MessageType.INSTRUMENT_MULTIPLE_FLAG_SET)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_MULTIPLE_FLAG_SET);
+
         }
     }
 
@@ -416,21 +565,33 @@ namespace Orc.Library.Messages.Client
     [DataContract(Name = "instrument_multiple_parameter_set", Namespace = "")]
     public class InstrumentMultipleParameterSetMessage : ClientMessage
     {
+        /// <summary>
+        /// List of the instruments to be updated. The maximum number of instruments for the instrument list is 1024.
+        /// </summary>
         [DataMember(Name = "instrument_list", IsRequired = true, Order = 1)]
         public InstrumentList Instruments { get; set; }
 
+        /// <summary>
+        /// Name of the contract parameter to be updated.
+        /// </summary>
         [DataMember(Name = "parameter", IsRequired = true, Order = 2)]
         public Parameter Parameter { get; set; }
 
+        /// <summary>
+        /// Value of the parameter to be updated.
+        /// </summary>
         [DataMember(Name = "value", IsRequired = true, Order = 3)]
         public double? Value { get; set; }
 
+        /// <summary>
+        /// Update type. Default is "Absolute"
+        /// </summary>
         [DataMember(Name = "parameter_update_type", Order = 4)]
         public ParameterUpdateType? UpdateType { get; set; }
 
-        public InstrumentMultipleParameterSetMessage()
+        public InstrumentMultipleParameterSetMessage() : base(MessageType.INSTRUMENT_MULTIPLE_PARAMETER_SET)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_MULTIPLE_PARAMETER_SET);
+
         }
     }
 
@@ -449,9 +610,9 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "parameters", IsRequired = true, Order = 2)]
         public Parameters Parameters { get; set; }
 
-        public InstrumentParametersSetMessage()
+        public InstrumentParametersSetMessage() : base(MessageType.INSTRUMENT_PARAMETERS_SET)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_PARAMETERS_SET);
+
         }
     }
 
@@ -468,9 +629,9 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "instrument_id", IsRequired = true)]
         public InstrumentId Instrument { get; set; }
 
-        public InstrumentSetAsPreferredMessage()
+        public InstrumentSetAsPreferredMessage() : base(MessageType.INSTRUMENT_SET_AS_PREFERRED)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.INSTRUMENT_SET_AS_PREFERRED);
+            
         }
     }
 

@@ -147,7 +147,7 @@
     <Compile Include="Messages\Client\LoginMessage.cs" />
     <Compile Include="Messages\Client\LogoutMessage.cs" />
     <Compile Include="Messages\Client\NewsMessages.cs" />
-    <Compile Include="Messages\Client\OrderGetMessage.cs" />
+    <Compile Include="Messages\Client\OrderMessages.cs" />
     <Compile Include="Messages\Client\PingMessage.cs" />
     <Compile Include="Messages\Client\PortfolioMessages.cs" />
     <Compile Include="Messages\Client\PriceGetMessage.cs" />

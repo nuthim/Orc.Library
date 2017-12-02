@@ -2,6 +2,7 @@
 using Orc.Library.Dictionaries;
 using Orc.Library.Enums;
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
 namespace Orc.Library.Messages.Client
@@ -259,6 +260,7 @@ namespace Orc.Library.Messages.Client
         public double? OrderPrice { get; set; }
 
         [DataMember(Name = "currency", Order = 6)]
+        [StringLength(3, MinimumLength = 3)]
         public string Currency { get; set; }
 
         public TradingPowerMessage()
