@@ -12,7 +12,7 @@ namespace Orc.Library.Messages.Client
     public class PriceFeedBroadcastMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
-        public InstrumentId Instrument { get; set; }
+        public InstrumentId InstrumentId { get; set; }
 
         /// <summary>
         /// Default: No value. Existing value will remain.

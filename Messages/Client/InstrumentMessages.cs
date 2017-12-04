@@ -16,7 +16,7 @@ namespace Orc.Library.Messages.Client
     public class InstrumentAttributesSetMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
-        public InstrumentId Instrument { get; set; }
+        public InstrumentId InstrumentId { get; set; }
 
         /// <summary>
         /// All keys in the instrument_attributes dictionary are optional for this request.
@@ -82,7 +82,7 @@ namespace Orc.Library.Messages.Client
     public class InstrumentDeleteMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
-        public InstrumentId Instrument { get; set; }
+        public InstrumentId InstrumentId { get; set; }
 
         /// <summary>
         /// Specify if you should get an error if the contract you want to delete is used as basecontract. Default: false.
@@ -253,7 +253,7 @@ namespace Orc.Library.Messages.Client
     public class InstrumentDynamicParameterDeleteMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
-        public InstrumentId Instrument { get; set; }
+        public InstrumentId InstrumentId { get; set; }
 
         /// <summary>
         /// The name of the dynamic parameter.
@@ -274,7 +274,7 @@ namespace Orc.Library.Messages.Client
     public class InstrumentDynamicParametersSetMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
-        public InstrumentId Instrument { get; set; }
+        public InstrumentId InstrumentId { get; set; }
 
         [DataMember(Name = "name", IsRequired = true, Order = 2)]
         public DynamicParameters Parameters { get; set; }
@@ -292,7 +292,7 @@ namespace Orc.Library.Messages.Client
     public class InstrumentGetMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", Order = 1)]
-        public InstrumentId Instrument { get; set; }
+        public InstrumentId InstrumentId { get; set; }
 
         /// <summary>
         /// Request the Orcs description of the contract from the connected Orc. Default: false
@@ -605,7 +605,7 @@ namespace Orc.Library.Messages.Client
     public class InstrumentParametersSetMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
-        public InstrumentId Instrument { get; set; }
+        public InstrumentId InstrumentId { get; set; }
 
         [DataMember(Name = "parameters", IsRequired = true, Order = 2)]
         public Parameters Parameters { get; set; }
@@ -627,7 +627,7 @@ namespace Orc.Library.Messages.Client
     public class InstrumentSetAsPreferredMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true)]
-        public InstrumentId Instrument { get; set; }
+        public InstrumentId InstrumentId { get; set; }
 
         public InstrumentSetAsPreferredMessage() : base(MessageType.INSTRUMENT_SET_AS_PREFERRED)
         {

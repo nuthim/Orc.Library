@@ -11,7 +11,7 @@ namespace Orc.Library.Messages.Client
     public class PriceGetMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true)]
-        public InstrumentId Instrument { get; set; }
+        public InstrumentId InstrumentId { get; set; }
 
         public PriceGetMessage() : base(MessageType.PRICE_GET)
         {

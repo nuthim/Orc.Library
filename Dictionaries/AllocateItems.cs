@@ -14,7 +14,7 @@ namespace Orc.Library.Dictionaries
     public class AllocateItem
     {
         [DataMember(Name = "instrument_id")]
-        public InstrumentId Instrument { get; set; }
+        public InstrumentId InstrumentId { get; set; }
 
         [DataMember(Name = "unique_trade_id")]
         public string UniqueTradeId { get; set; }
@@ -32,7 +32,7 @@ namespace Orc.Library.Dictionaries
         public int? Bic { get; set; }
 
         [DataMember(Name = "buy_or_sell")]
-        public BuySell? TradeSide { get; set; }
+        public BuySell? BuyOrSell { get; set; }
 
         [DataMember(Name = "accrued")]
         public double? Accrued { get; set; }

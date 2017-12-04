@@ -20,6 +20,6 @@ namespace Orc.Library.Dictionaries
         public string Value { get; set; }
 
         [DataMember(Name = "instrument_id")]
-        public InstrumentId Instrument { get; set; }
+        public InstrumentId InstrumentId { get; set; }
     }
 }

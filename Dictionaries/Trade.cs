@@ -7,7 +7,7 @@ namespace Orc.Library.Dictionaries
     public class Trade
     {
         [DataMember(Name = "buy_or_sell")]
-        public BuySell TradeSide { get; set; }
+        public BuySell BuyOrSell { get; set; }
 
         [DataMember(Name = "instrument_id")]
         public InstrumentId InstrumentId { get; set; }

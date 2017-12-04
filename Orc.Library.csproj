@@ -82,9 +82,13 @@
     <Compile Include="Dictionaries\ReferencePriceDownloads.cs" />
     <Compile Include="Dictionaries\ReferencePriceEntries.cs" />
     <Compile Include="Dictionaries\ReferencePriceEntriesUnderlying.cs" />
-    <Compile Include="Dictionaries\SpreadtableEntries.cs" />
+    <Compile Include="Dictionaries\SimulatedPrices.cs" />
+    <Compile Include="Dictionaries\SimulatedVolatilities.cs" />
+    <Compile Include="Dictionaries\SpreadTableEntries.cs" />
+    <Compile Include="Dictionaries\TickRuleEntries.cs" />
     <Compile Include="Dictionaries\Trade.cs" />
     <Compile Include="Dictionaries\TradeReply.cs" />
+    <Compile Include="Dictionaries\UnderlyingFilters.cs" />
     <Compile Include="Enums\Activate.cs" />
     <Compile Include="Enums\ApplyBaseOffsetLogic.cs" />
     <Compile Include="Enums\AssetType.cs" />
@@ -154,8 +158,13 @@
     <Compile Include="Messages\Client\QuoteMessages.cs" />
     <Compile Include="Messages\Client\SfcMessages.cs" />
     <Compile Include="Messages\Client\SpreadTableMessages.cs" />
+    <Compile Include="Messages\Client\StressTestMessage.cs" />
+    <Compile Include="Messages\Client\TickRuleMessages.cs" />
     <Compile Include="Messages\Client\TradeMessages.cs" />
     <Compile Include="Messages\Client\FeedToggleMessages.cs" />
+    <Compile Include="Messages\Client\UnderlyingMessages.cs" />
+    <Compile Include="Messages\Client\VolatilityMessages.cs" />
+    <Compile Include="Messages\Client\YieldMessages.cs" />
     <Compile Include="Messages\MessageInfo.cs" />
     <Compile Include="Messages\Client\PriceFeedBroadcastMessage.cs" />
     <Compile Include="Messages\Server\CalendarReply.cs" />
@@ -173,6 +182,7 @@
     <Compile Include="Messages\Server\SubscriptionReply.cs" />
     <Compile Include="Messages\Server\TradeCreateReply.cs" />
     <Compile Include="Messages\Server\TradeFeed.cs" />
+    <Compile Include="Messages\Client\TheoriticalCalculationMessages.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

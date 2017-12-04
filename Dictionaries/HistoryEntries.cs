@@ -30,7 +30,7 @@ namespace Orc.Library.Dictionaries
         public string User { get; set; }
 
         [DataMember(Name = "buy_or_sell")]
-        public BuySell? TradeSide { get; set; }
+        public BuySell? BuyOrSell { get; set; }
 
         [DataMember(Name = "price")]
         public double? Price { get; set; }

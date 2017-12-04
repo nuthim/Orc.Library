@@ -220,7 +220,7 @@ namespace Orc.Library.Messages.Client
         /// Default false. If true, separates positions by buy/sell.
         /// </summary>
         [DataMember(Name = "buy_or_sell_separate", Order = 3)]
-        public bool? SeparateByTradeSide { get; set; }
+        public bool? SeparateByBuyOrSell { get; set; }
 
         /// <summary>
         /// When specified, only the position for that instrument will be fetched.

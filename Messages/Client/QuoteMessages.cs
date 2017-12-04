@@ -1,5 +1,4 @@
-﻿using System;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
 using Orc.Library.Dictionaries;
 using Orc.Library.Enums;
 
@@ -7,26 +6,29 @@ namespace Orc.Library.Messages.Client
 {
 
     /// <summary>
-    /// Send a quote transaction with the QUOTE message.
+    /// Send a quote transaction
     /// </summary>
-    [DataContract(Name = "quote", Namespace = "")]
+    [DataContract(Name = "QUOTE", Namespace = "")]
     public class QuoteMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
-        public InstrumentId Instrument { get; set; }
+        public InstrumentId InstrumentId { get; set; }
 
         [DataMember(Name = "action", IsRequired = true, Order = 2)]
         public QuoteAction? QuoteAction { get; set; }
 
+        /// <summary>
+        /// If set to "true", quoting will be handled asynchronously. Default is "false".
+        /// </summary>
         [DataMember(Name = "asynch", Order = 3)]
         public bool? Asynch { get; set; }
 
         [DataMember(Name = "additional_data", Order = 4)]
         public AdditionalData AdditionalData { get; set; }
 
-        public QuoteMessage()
+        public QuoteMessage() : base(MessageType.QUOTE)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.QUOTE);
+
         }
     }
 
@@ -34,57 +36,63 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get quote parameters.
     /// </summary>
-    [DataContract(Name = "quote_parameters_get", Namespace = "")]
+    [DataContract(Name = "QUOTE_PARAMETERS_GET", Namespace = "")]
     public class QuoteParametersGetMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
-        public InstrumentId Instrument { get; set; }
+        public InstrumentId InstrumentId { get; set; }
 
+        /// <summary>
+        /// If set to "true", this message will be handled asynchronously. Default is "false".
+        /// </summary>
         [DataMember(Name = "asynch", Order = 2)]
         public bool? Asynch { get; set; }
 
-        public QuoteParametersGetMessage()
+        public QuoteParametersGetMessage() : base(MessageType.QUOTE_PARAMETERS_GET)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.QUOTE_PARAMETERS_GET);
+
         }
     }
 
     /// <summary>
     /// Set quote parameters.
     /// </summary>
-    [DataContract(Name = "quote_parameters_set", Namespace = "")]
+    [DataContract(Name = "QUOTE_PARAMETERS_SET", Namespace = "")]
     public class QuoteParametersSetMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
-        public InstrumentId Instrument { get; set; }
+        public InstrumentId InstrumentId { get; set; }
 
-        [DataMember(Name = "quote_parameters", Order = 2)]
+        [DataMember(Name = "quote_parameters", IsRequired = true, Order = 2)]
         public QuoteParameters QuoteParameters { get; set; }
 
+        /// <summary>
+        /// If set to "true", this message will be handled asynchronously. Default is "false".
+        /// </summary>
         [DataMember(Name = "asynch", Order = 3)]
         public bool? Asynch { get; set; }
 
-        public QuoteParametersSetMessage()
+        public QuoteParametersSetMessage() : base(MessageType.QUOTE_PARAMETERS_SET)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.QUOTE_PARAMETERS_SET);
+
         }
     }
 
     /// <summary>
     /// Use this message to send a quote request.
     /// </summary>
-    [DataContract(Name = "quote_request", Namespace = "")]
+    [DataContract(Name = "QUOTE_REQUEST", Namespace = "")]
     public class QuoteRequestMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
-        public InstrumentId Instrument { get; set; }
+        public InstrumentId InstrumentId { get; set; }
 
         [DataMember(Name = "buy_or_sell", Order = 2)]
-        public BuySell? TradeSide { get; set; }
+        public BuySell? BuyOrSell { get; set; }
 
-        public QuoteRequestMessage()
+        public QuoteRequestMessage() : base(MessageType.QUOTE_REQUEST)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.QUOTE_REQUEST);
+
         }
     }
 
@@ -92,18 +100,21 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get the quote parameters for quotes that are sent to the market.
     /// </summary>
-    [DataContract(Name = "quoted_parameters_get", Namespace = "")]
+    [DataContract(Name = "QUOTED_PARAMETERS_GET", Namespace = "")]
     public class QuotedParametersGetMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
-        public InstrumentId Instrument { get; set; }
+        public InstrumentId InstrumentId { get; set; }
 
+        /// <summary>
+        /// If set to "true", this message will be handled asynchronously. Default is "false".
+        /// </summary>
         [DataMember(Name = "asynch", Order = 2)]
         public bool? Asynch { get; set; }
 
-        public QuotedParametersGetMessage()
+        public QuotedParametersGetMessage() : base(MessageType.QUOTED_PARAMETERS_GET)
         {
-            Info = new MessageInfo(Guid.NewGuid(), MessageType.QUOTED_PARAMETERS_GET);
+
         }
     }
 }

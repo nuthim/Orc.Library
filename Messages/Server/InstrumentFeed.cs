@@ -8,7 +8,7 @@ namespace Orc.Library.Messages.Server
     public class InstrumentFeed : ServerMessage
     {
         [DataMember(Name = "instrument_id")]
-        public InstrumentId Instrument { get; set; }
+        public InstrumentId InstrumentId { get; set; }
 
         [DataMember(Name = "instrument_attributes")]
         public InstrumentAttributes Attributes { get; set; }

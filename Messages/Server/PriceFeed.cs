@@ -7,6 +7,6 @@ namespace Orc.Library.Messages.Server
     public class PriceGetReply : ServerMessage
     {
         [DataMember(Name = "instrument_id")]
-        public InstrumentId Instrument { get; set; }
+        public InstrumentId InstrumentId { get; set; }
     }
 }

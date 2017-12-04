@@ -23,7 +23,7 @@ namespace Orc.Library.Dictionaries
         public string Currency { get; set; }
 
         [DataMember(Name = "buy_or_sell")]
-        public BuySell? TradeSide { get; set; }
+        public BuySell? BuyOrSell { get; set; }
 
         [DataMember(Name = "settlement_date")]
         public DateTime? SettlementDate { get; set; }

@@ -48,7 +48,7 @@ namespace Orc.Library.Dictionaries
         public DateTime? SettlementDate { get; set; }
 
         [DataMember(Name = "buy_or_sell")]
-        public BuySell? TradeSide { get; set; }
+        public BuySell? BuyOrSell { get; set; }
 
         [DataMember(Name = "trade_date")]
         public DateTime? TradeDate { get; set; }

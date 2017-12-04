@@ -13,7 +13,7 @@ namespace Orc.Library.Dictionaries
     public class Component
     {
         [DataMember(Name = "instrument_id")]
-        public InstrumentId Instrument { get; set; }
+        public InstrumentId InstrumentId { get; set; }
 
         [DataMember(Name = "volume")]
         public double? Volume { get; set; }

@@ -28,7 +28,7 @@ namespace Orc.Library.Dictionaries
         public double? Accrued { get; set; }
 
         [DataMember(Name = "buy_or_sell]")]
-        public BuySell? TradeSide { get; set; }
+        public BuySell? BuyOrSell { get; set; }
 
         [DataMember(Name = "change_in_accrued")]
         public double? ChangeInAccrued { get; set; }

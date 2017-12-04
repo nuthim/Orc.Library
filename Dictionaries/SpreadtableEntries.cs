@@ -5,21 +5,21 @@ using System.Runtime.Serialization;
 namespace Orc.Library.Dictionaries
 {
     [CollectionDataContract(Name = "spreadtable_entries", ItemName = "spreadtable_entry", Namespace = "")]
-    public class SpreadtableEntries : List<SpreadtableEntry>
+    public class SpreadTableEntries : List<SpreadTableEntry>
     {
 
     }
 
     [DataContract(Name = "spreadtable_entry", Namespace = "")]
-    public class SpreadtableEntry
+    public class SpreadTableEntry
     {
-        [DataMember(Name = "lower")]
+        [DataMember(Name = "lower", Order = 1)]
         public double? Lower { get; set; }
 
-        [DataMember(Name = "spread")]
+        [DataMember(Name = "spread", Order = 2)]
         public double? Spread { get; set; }
 
-        [DataMember(Name = "type")]
+        [DataMember(Name = "type", Order = 3)]
         public string Type { get; set; }
     }
 }
