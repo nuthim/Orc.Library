@@ -6,7 +6,7 @@ namespace Orc.Library.Dictionaries
 {
 
     [CollectionDataContract(Name = "reference_price_entries_per_underlying", ItemName = "reference_price_entries", Namespace = "")]
-    public class ReferencePriceEntriesUnderlying : List<ReferencePriceEntries>
+    public class ReferencePriceEntriesPerUnderlying : List<ReferencePriceEntries>
     {
 
     }

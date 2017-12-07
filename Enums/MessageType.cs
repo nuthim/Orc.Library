@@ -156,6 +156,9 @@ namespace Orc.Library.Enums
         ORDER_ACTIVATE,
         ORDER_DELETE,
         ORDER_INSERT,
-        ORDER_MODIFY
+        ORDER_MODIFY,
+        YIELD_CURVE_DEFAULT,
+        VOLATILITY_RAW_CURVE_INSERT,
+        REFERENCE_PRICE_DOWNLOAD
     }
 }
