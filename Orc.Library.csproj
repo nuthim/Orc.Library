@@ -90,6 +90,7 @@
     <Compile Include="Dictionaries\Trade.cs" />
     <Compile Include="Dictionaries\TradeReply.cs" />
     <Compile Include="Dictionaries\UnderlyingFilters.cs" />
+    <Compile Include="Dictionaries\UnderlyingRateCurveEntries.cs" />
     <Compile Include="Dictionaries\VolatilityCurveParameters.cs" />
     <Compile Include="Dictionaries\VolatilityCurvePoints.cs" />
     <Compile Include="Dictionaries\VolatilityCurves.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Enums\AssetType.cs" />
     <Compile Include="Enums\BetaLogic.cs" />
     <Compile Include="Enums\BoundaryMode.cs" />
+    <Compile Include="Enums\DateOrDays.cs" />
     <Compile Include="Enums\DayConvention.cs" />
     <Compile Include="Enums\Direction.cs" />
     <Compile Include="Enums\DividendKind.cs" />
