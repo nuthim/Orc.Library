@@ -101,7 +101,7 @@ namespace Orc.Library.Messages.Client
     /// Get bookkeeping transactions for given date range.
     /// </summary>
     [DataContract(Name = "money_range_get", Namespace = "")]
-    public class MoneyDownloadMessage : ClientMessage
+    public class MoneyRangeGetMessage : ClientMessage
     {
         /// <summary>
         /// The first day to fetch order status from.
@@ -131,7 +131,7 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "time_changed_to")]
         public TimeSpan? TimeChangedTo { get; set; }
 
-        public MoneyDownloadMessage() : base(MessageType.MONEY_RANGE_GET)
+        public MoneyRangeGetMessage() : base(MessageType.MONEY_RANGE_GET)
         {
 
         }

@@ -245,7 +245,7 @@ namespace Orc.Library.Messages.Client
         public string CustomerId { get; set; }
 
         [DataMember(Name = "fieldname_values", IsRequired = true, Order = 2)]
-        public FieldnameValues FieldNameValues { get; set; }
+        public FieldNameValues FieldNameValues { get; set; }
 
         public CustomerValueUpdateMessage() : base(MessageType.CUSTOMER_VALUE_UPDATE)
         {

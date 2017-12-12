@@ -2,7 +2,7 @@ using System;
 using System.Runtime.Serialization;
 using Orc.Library.Enums;
 
-namespace Orc.Library.Messages.Server
+namespace Orc.Library.Messages
 {
     [DataContract(Name = "reply_to", Namespace = "")]
     public class ReplyInfo : MessageInfo

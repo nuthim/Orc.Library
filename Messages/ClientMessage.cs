@@ -2,8 +2,7 @@
 using System.Runtime.Serialization;
 using Orc.Library.Enums;
 
-
-namespace Orc.Library.Messages.Client
+namespace Orc.Library.Messages
 {
     [DataContract(Namespace = "")]
     public abstract class ClientMessage : IEquatable<ClientMessage>

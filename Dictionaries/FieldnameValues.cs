@@ -4,13 +4,13 @@ using System.Runtime.Serialization;
 namespace Orc.Library.Dictionaries
 {
     [CollectionDataContract(Name = "fieldname_values", ItemName = "fieldname_value", Namespace = "")]
-    public class FieldnameValues : List<FieldnameValue>
+    public class FieldNameValues : List<FieldNameValue>
     {
         
     }
 
     [DataContract(Name = "fieldname_value", Namespace = "")]
-    public class FieldnameValue
+    public class FieldNameValue
     {
         [DataMember(Name = "fieldname")]
         public string FieldName { get; set; }

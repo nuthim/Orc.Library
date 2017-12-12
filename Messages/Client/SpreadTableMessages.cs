@@ -9,7 +9,7 @@ namespace Orc.Library.Messages.Client
     /// Get all spread tables.
     /// </summary>
     [DataContract(Name = "SPREADTABLE_DOWNLOAD", Namespace = "")]
-    public class SpreadtableDownloadMessage : ClientMessage
+    public class SpreadTableDownloadMessage : ClientMessage
     {
         /// <summary>
         /// Name of the spreadtable.
@@ -23,7 +23,7 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "direction", IsRequired = true, Order = 3)]
         public Direction? Direction { get; set; }
 
-        public SpreadtableDownloadMessage() : base(MessageType.SPREADTABLE_DOWNLOAD)
+        public SpreadTableDownloadMessage() : base(MessageType.SPREADTABLE_DOWNLOAD)
         {
 
         }
@@ -33,7 +33,7 @@ namespace Orc.Library.Messages.Client
     /// Delete spread table entries.
     /// </summary>
     [DataContract(Name = "SPREADTABLE_ENTRIES_DELETE", Namespace = "")]
-    public class SpreadtableEntriesDeleteMessage : ClientMessage
+    public class SpreadTableEntriesDeleteMessage : ClientMessage
     {
         /// <summary>
         /// Name of the spreadtable.
@@ -44,7 +44,7 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "spreadtable_entries", IsRequired = true, Order = 2)]
         public SpreadTableEntries SpreadTableEntries { get; set; }
 
-        public SpreadtableEntriesDeleteMessage() : base(MessageType.SPREADTABLE_ENTRIES_DELETE)
+        public SpreadTableEntriesDeleteMessage() : base(MessageType.SPREADTABLE_ENTRIES_DELETE)
         {
 
         }
@@ -55,7 +55,7 @@ namespace Orc.Library.Messages.Client
     /// Insert spread table entries.
     /// </summary>
     [DataContract(Name = "SPREADTABLE_ENTRIES_INSERT", Namespace = "")]
-    public class SpreadtableEntriesInsertMessage : ClientMessage
+    public class SpreadTableEntriesInsertMessage : ClientMessage
     {
         /// <summary>
         /// Name of the spreadtable.
@@ -66,7 +66,7 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "spreadtable_entries", IsRequired = true, Order = 2)]
         public SpreadTableEntries SpreadTableEntries { get; set; }
 
-        public SpreadtableEntriesInsertMessage() : base(MessageType.SPREADTABLE_ENTRIES_INSERT)
+        public SpreadTableEntriesInsertMessage() : base(MessageType.SPREADTABLE_ENTRIES_INSERT)
         {
 
         }
@@ -77,7 +77,7 @@ namespace Orc.Library.Messages.Client
     /// Get the values for a specified spread table.
     /// </summary>
     [DataContract(Name = "SPREADTABLE_GET", Namespace = "")]
-    public class SpreadtableGetMessage : ClientMessage
+    public class SpreadTableGetMessage : ClientMessage
     {
         /// <summary>
         /// Name of the spreadtable.
@@ -94,7 +94,7 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "direction", IsRequired = true, Order = 4)]
         public Direction? Direction { get; set; }
 
-        public SpreadtableGetMessage() : base(MessageType.SPREADTABLE_GET)
+        public SpreadTableGetMessage() : base(MessageType.SPREADTABLE_GET)
         {
 
         }
@@ -105,7 +105,7 @@ namespace Orc.Library.Messages.Client
     /// Insert a spread table.
     /// </summary>
     [DataContract(Name = "SPREADTABLE_INSERT", Namespace = "")]
-    public class SpreadtableInsertMessage : ClientMessage
+    public class SpreadTableInsertMessage : ClientMessage
     {
         /// <summary>
         /// Name of the spreadtable.
@@ -119,7 +119,7 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "direction", IsRequired = true, Order = 3)]
         public Direction? Direction { get; set; }
 
-        public SpreadtableInsertMessage() : base(MessageType.SPREADTABLE_INSERT)
+        public SpreadTableInsertMessage() : base(MessageType.SPREADTABLE_INSERT)
         {
 
         }

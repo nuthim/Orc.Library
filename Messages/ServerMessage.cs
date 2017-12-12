@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Orc.Library.Messages.Server
+
+namespace Orc.Library.Messages
 {
     [DataContract(Namespace = "")]
     public class ServerMessage

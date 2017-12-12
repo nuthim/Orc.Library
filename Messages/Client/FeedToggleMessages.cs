@@ -12,7 +12,7 @@ namespace Orc.Library.Messages.Client
     /// </summary>
     public interface ISubscriptionMessage
     {
-        bool? Enable { get; set; }
+        bool? Toggle { get; set; }
     }
 
     /// <summary>
@@ -22,7 +22,7 @@ namespace Orc.Library.Messages.Client
     public class DividendFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true, Order = 1)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         /// <summary>
         /// Market to receive dividend feed from
@@ -47,7 +47,7 @@ namespace Orc.Library.Messages.Client
     public class InstrumentFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true, Order = 1)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         /// <summary>
         /// This key enables selective download of instruments of one asset type.
@@ -179,10 +179,10 @@ namespace Orc.Library.Messages.Client
     /// If you switch on the market status feed for a specific market, this feed can only be switched off by specifying that market
     /// </summary>
     [DataContract(Name = "MARKET_STATUS_TOGGLE", Namespace = "")]
-    public class MarketStatusFeedToggleMessage : ClientMessage, ISubscriptionMessage
+    public class MarketStatusToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true, Order = 1)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         /// <summary>
         /// Market to receive dividend feed from
@@ -190,7 +190,7 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "market", Order = 2)]
         public string Market { get; set; }
 
-        public MarketStatusFeedToggleMessage() : base(MessageType.MARKET_STATUS_TOGGLE)
+        public MarketStatusToggleMessage() : base(MessageType.MARKET_STATUS_TOGGLE)
         {
 
         }
@@ -203,7 +203,7 @@ namespace Orc.Library.Messages.Client
     public class MoneyFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         public MoneyFeedToggleMessage() : base(MessageType.MONEY_FEED_TOGGLE)
         {
@@ -218,7 +218,7 @@ namespace Orc.Library.Messages.Client
     public class NewsFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         public NewsFeedToggleMessage() : base(MessageType.NEWS_FEED_TOGGLE)
         {
@@ -236,7 +236,7 @@ namespace Orc.Library.Messages.Client
         public InstrumentId InstrumentId { get; set; }
 
         [DataMember(Name = "toggle", IsRequired = true, Order = 2)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         /// <summary>
         /// Set this to "true" in order to receive full depth. Full depth is configurable and defaults to 20, instead of a 
@@ -258,7 +258,7 @@ namespace Orc.Library.Messages.Client
     public class OrderFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true, Order = 1)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         /// <summary>
         /// Several values may be specified as a comma-separated list.
@@ -300,7 +300,7 @@ namespace Orc.Library.Messages.Client
     public class PortfolioPositionFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true, Order = 1)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         /// <summary>
         /// The name of the portfolio in the Orc. When specified, you will receive on that portfolio. Note that summation portfolios are not supported by this message.
@@ -328,7 +328,7 @@ namespace Orc.Library.Messages.Client
         public string Portfolio { get; set; }
 
         [DataMember(Name = "toggle", IsRequired = true, Order = 2)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         public PortfolioResetFeedToggleMessage() : base(MessageType.PORTFOLIO_RESET_FEED_TOGGLE)
         {
@@ -346,7 +346,7 @@ namespace Orc.Library.Messages.Client
         public InstrumentId InstrumentId { get; set; }
 
         [DataMember(Name = "toggle", IsRequired = true, Order = 2)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         /// <summary>
         /// Set this to true" in order to receive three separate price feeds: BEST_PRICE_FEED, STATISTICS_FEED, CONTRACT_STATUS_FEED
@@ -387,7 +387,7 @@ namespace Orc.Library.Messages.Client
     public class QuoteFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true, Order = 1)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         /// <summary>
         /// Market to receive quote feed from
@@ -411,7 +411,7 @@ namespace Orc.Library.Messages.Client
     public class QuoteRequestFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true, Order = 1)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         [DataMember(Name = "market", IsRequired = true, Order = 2)]
         public string Market { get; set; }
@@ -429,7 +429,7 @@ namespace Orc.Library.Messages.Client
     public class ReferencePriceFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         public ReferencePriceFeedToggleMessage() : base(MessageType.REFERENCE_PRICE_FEED_TOGGLE)
         {
@@ -444,7 +444,7 @@ namespace Orc.Library.Messages.Client
     public class SpreadTableFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         public SpreadTableFeedToggleMessage() : base(MessageType.SPREADTABLE_FEED_TOGGLE)
         {
@@ -459,7 +459,7 @@ namespace Orc.Library.Messages.Client
     public class TextTickerFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         public TextTickerFeedToggleMessage() : base(MessageType.TEXT_TICKER_FEED_TOGGLE)
         {
@@ -484,7 +484,7 @@ namespace Orc.Library.Messages.Client
         public InstrumentId InstrumentId { get; set; }
 
         [DataMember(Name = "toggle", IsRequired = true, Order = 4)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         public TradeTickerToggleMessage() : base(MessageType.TRADETICKER_TOGGLE)
         {
@@ -500,7 +500,7 @@ namespace Orc.Library.Messages.Client
     public class TradeFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true, Order = 1)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         /// <summary>
         /// You can specify a market to receive trade feed from.
@@ -544,7 +544,7 @@ namespace Orc.Library.Messages.Client
     public class UnderlyingFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         public UnderlyingFeedToggleMessage() : base(MessageType.UNDERLYING_FEED_TOGGLE)
         {
@@ -559,7 +559,7 @@ namespace Orc.Library.Messages.Client
     public class UnderlyingRateCurveFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         public UnderlyingRateCurveFeedToggleMessage() : base(MessageType.UNDERLYING_RATECURVE_FEED_TOGGLE)
         {
@@ -574,7 +574,7 @@ namespace Orc.Library.Messages.Client
     public class VolatilifyRawSurfaceFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true, Order = 1)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         /// <summary>
         /// Default "true". Set this key to "false" in order to remove unassociated underlyings from the reference_price_entries_per_underlying dictionary.
@@ -595,7 +595,7 @@ namespace Orc.Library.Messages.Client
     public class YieldRateCurveFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true)]
-        public bool? Enable { get; set; }
+        public bool? Toggle { get; set; }
 
         public YieldRateCurveFeedToggleMessage() : base(MessageType.YIELD_CURVE_FEED_TOGGLE)
         {
