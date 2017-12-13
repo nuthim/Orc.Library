@@ -10,7 +10,7 @@ namespace Orc.Library.Messages.Client
     /// This function calculates a stresstest matrix (scenario analysis) for a number of actions, prices and volatilities. 
     /// Note that the calculations are based on a given portfolio.
     /// </summary>
-    [DataContract(Name = "STRESSTEST", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.STRESSTEST), Namespace = "")]
     public class StressTestMessage : ClientMessage
     {
         /// <summary>

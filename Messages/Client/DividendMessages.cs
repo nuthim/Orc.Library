@@ -9,7 +9,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Delete all dividends for a given instrument.
     /// </summary>
-    [DataContract(Name = "DIVIDEND_DELETE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.DIVIDEND_DELETE), Namespace = "")]
     public class DividendDeleteMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true)]
@@ -24,7 +24,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get all dividends for an instrument
     /// </summary>
-    [DataContract(Name = "DIVIDEND_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.DIVIDEND_GET), Namespace = "")]
     public class DividendGetMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
@@ -47,7 +47,7 @@ namespace Orc.Library.Messages.Client
     /// <see cref="DividendUpdateMessage"/> is more efficient regarding to performance.
     /// </para>
     /// </summary>
-    [DataContract(Name = "DIVIDEND_INSERT", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.DIVIDEND_INSERT), Namespace = "")]
     public class DividendInsertMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
@@ -66,7 +66,7 @@ namespace Orc.Library.Messages.Client
     /// Update (replace) dividends and/or operations for a given instrument. The type to be replaced depends on the dividend message, 
     /// if the message includes both types, both types are replaced.
     /// </summary>
-    [DataContract(Name = "DIVIDEND_UPDATE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.DIVIDEND_UPDATE), Namespace = "")]
     public class DividendUpdateMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]

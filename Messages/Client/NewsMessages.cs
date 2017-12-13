@@ -6,7 +6,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// This message allows you to get news from, for example, SFC.
     /// </summary>
-    [DataContract(Name = "NEWS_ARTICLE_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.NEWS_ARTICLE_GET), Namespace = "")]
     public class NewsArticleGetMessage : ClientMessage
     {
         [DataMember(Name = "identifier", IsRequired = true)]
@@ -21,7 +21,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Send information to the text ticker in Orc Trader. 
     /// </summary>
-    [DataContract(Name = "NEWS_BROADCAST", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.NEWS_BROADCAST), Namespace = "")]
     public class NewsBroadcastMessage : ClientMessage
     {
         /// <summary>

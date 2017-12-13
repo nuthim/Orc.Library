@@ -10,7 +10,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Move a trade in an atomic operation.
     /// </summary>
-    [DataContract(Name = "TRADE_ALLOCATE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.TRADE_ALLOCATE), Namespace = "")]
     public class TradeAllocateMessage : ClientMessage
     {
         /// <summary>
@@ -31,7 +31,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Delete a specified trade.
     /// </summary>
-    [DataContract(Name = "TRADE_DELETE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.TRADE_DELETE), Namespace = "")]
     public class TradeDeleteMessage : ClientMessage
     {
         /// <summary>
@@ -64,7 +64,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Requests all information about a given trade
     /// </summary>
-    [DataContract(Name = "TRADE_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.TRADE_GET), Namespace = "")]
     public class TradeGetMessage : ClientMessage
     {
         /// <summary>
@@ -92,7 +92,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Retrieve the trade history.
     /// </summary>
-    [DataContract(Name = "TRADE_HISTORY_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.TRADE_HISTORY_GET), Namespace = "")]
     public class TradeHistoryGetMessage : ClientMessage
     {
         /// <summary>
@@ -111,7 +111,7 @@ namespace Orc.Library.Messages.Client
     /// Insert a new trade.
     /// In order to make the Orc Trader calculate fees on inserted trades, select the Trade handling option in the Server Links panel for the OP interface.
     /// </summary>
-    [DataContract(Name = "TRADE_INSERT", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.TRADE_INSERT), Namespace = "")]
     public class TradeInsertMessage : ClientMessage
     {
         [DataMember(Name = "trade", IsRequired = true, Order = 1)]
@@ -145,7 +145,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Modifies a trade.
     /// </summary>
-    [DataContract(Name = "TRADE_MODIFY", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.TRADE_MODIFY), Namespace = "")]
     public class TradeModifyMessage : ClientMessage
     {
         /// <summary>
@@ -182,7 +182,7 @@ namespace Orc.Library.Messages.Client
     /// creation date and time. Normally, this coincides with the date and time of the trade as assigned by the market, unless the Orc server system clock or the timezone 
     /// is different from that of the market. It is possible to query upon market time and date instead if preferred.
     /// </summary>
-    [DataContract(Name = "TRADE_RANGE_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.TRADE_RANGE_GET), Namespace = "")]
     public class TradeRangeGetMessage : ClientMessage
     {
         /// <summary>
@@ -307,7 +307,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Verify a specified trade. This message can also act on money transactions.
     /// </summary>
-    [DataContract(Name = "TRADE_VERIFY", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.TRADE_VERIFY), Namespace = "")]
     public class TradeVerifyMessage : ClientMessage
     {
         /// <summary>
@@ -331,7 +331,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Calculate the trading power for a portfolio with the possibility to check if an order will go through.
     /// </summary>
-    [DataContract(Name = "TRADING_POWER", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.TRADING_POWER), Namespace = "")]
     public class TradingPowerMessage : ClientMessage
     {
         [DataMember(Name = "portfolio", IsRequired = true, Order = 1)]

@@ -10,7 +10,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// This message removes all positions for deleted contracts for the specified portfolio.
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_CLEANUP", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_CLEANUP), Namespace = "")]
     public class PortfolioCleanupMessage : ClientMessage
     {
         /// <summary>
@@ -29,7 +29,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Add a portfolio to a summation portfolio.
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_COMPONENT_ADD", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_COMPONENT_ADD), Namespace = "")]
     public class PortfolioComponentAddMessage : ClientMessage
     {
         /// <summary>
@@ -55,7 +55,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Remove a portfolio from a summation portfolio.
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_COMPONENT_REMOVE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_COMPONENT_REMOVE), Namespace = "")]
     public class PortfolioComponentRemoveMessage : ClientMessage
     {
         /// <summary>
@@ -81,7 +81,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Create a new empty portfolio.
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_CREATE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_CREATE), Namespace = "")]
     public class PortfolioCreateMessage : ClientMessage
     {
         /// <summary>
@@ -114,7 +114,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Delete a portfolio and its positions.
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_DELETE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_DELETE), Namespace = "")]
     public class PortfolioDeleteMessage : ClientMessage
     {
         /// <summary>
@@ -134,7 +134,7 @@ namespace Orc.Library.Messages.Client
     /// Get a portfolio and if it is a summation portfolio, also its portfolio components. 
     /// If the summation portfolio contains summation portfolios, you will not get these components, only the top level portfolio's components.
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_DESCRIBE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_DESCRIBE), Namespace = "")]
     public class PortfolioDescribeMessage : ClientMessage
     {
         /// <summary>
@@ -153,7 +153,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get all portfolios.
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_DOWNLOAD", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_DOWNLOAD), Namespace = "")]
     public class PortfolioDownloadMessage : ClientMessage
     {
         [DataMember(Name = "portfolio_name", Order = 1)]
@@ -180,7 +180,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Remove all positions from a portfolio and leave the portfolio empty.
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_EMPTY", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_EMPTY), Namespace = "")]
     public class PortfolioEmptyMessage : ClientMessage
     {
         /// <summary>
@@ -200,7 +200,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get all positions for a given portfolio.
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_GET), Namespace = "")]
     public class PortfolioGetMessage : ClientMessage
     {
         /// <summary>
@@ -245,7 +245,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Remove the kind restrictions for a portfolio.
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_KIND_RESTRICTION_DELETE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_KIND_RESTRICTION_DELETE), Namespace = "")]
     public class PortfolioKindRestrictionDeleteMessage : ClientMessage
     {
         /// <summary>
@@ -267,7 +267,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get kind restrictions for a portfolio.
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_KIND_RESTRICTION_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_KIND_RESTRICTION_GET), Namespace = "")]
     public class PortfolioKindRestrictionGetMessage : ClientMessage
     {
         /// <summary>
@@ -286,7 +286,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Insert a kind restriction for a portfolio.
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_KIND_RESTRICTION_INSERT", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_KIND_RESTRICTION_INSERT), Namespace = "")]
     public class PortfolioKindRestrictionInsertMessage : ClientMessage
     {
         /// <summary>
@@ -311,7 +311,7 @@ namespace Orc.Library.Messages.Client
     /// amount and the buy side will be zeroed.
     /// </para>
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_MONEY_POSITION_UPDATE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_MONEY_POSITION_UPDATE), Namespace = "")]
     public class PortfolioMoneyPositionUpdateMessage : ClientMessage
     {
         [DataMember(Name = "kind", IsRequired = true, Order = 1)]
@@ -359,7 +359,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Update a portfolio position given by the portfolio_name and the instrument_id part of the portfolio_position directory
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_POSITION_UPDATE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_POSITION_UPDATE), Namespace = "")]
     public class PortfolioPositionUpdateMessage : ClientMessage
     {
         /// <summary>
@@ -398,7 +398,7 @@ namespace Orc.Library.Messages.Client
     /// values to zero the message <see cref="PortfolioZeroChangeValuesMessage"/> can be used instead.
     /// </para>
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_RESET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_RESET), Namespace = "")]
     public class PortfolioResetMessage : ClientMessage
     {
         /// <summary>
@@ -417,7 +417,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get information on previously performed portfolio resets. The message allows returning the position snapshots for a particular portfolio.
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_RESET_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_RESET_GET), Namespace = "")]
     public class PortfolioResetGetMessage : ClientMessage
     {
         /// <summary>
@@ -436,7 +436,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Create a new empty summation portfolio.
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_SUMMATION_CREATE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_SUMMATION_CREATE), Namespace = "")]
     public class PortfolioSummationCreateMessage : ClientMessage
     {
         /// <summary>
@@ -456,7 +456,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Update an existing portfolio.
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_UPDATE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_UPDATE), Namespace = "")]
     public class PortfolioUpdateMessage : ClientMessage
     {
         /// <summary>
@@ -492,7 +492,7 @@ namespace Orc.Library.Messages.Client
     /// Zero the change_in_accrued, change_in_commission, change_in_invested, change_in_volume values of a portfolio. To also store values 
     /// of theoretical values needed to calculate profit/loss per day the message <see cref="PortfolioResetMessage"/> should be used instead.
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_ZERO_CHANGE_VALUES", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_ZERO_CHANGE_VALUES), Namespace = "")]
     public class PortfolioZeroChangeValuesMessage : ClientMessage
     {
         /// <summary>

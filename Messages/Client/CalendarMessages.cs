@@ -6,7 +6,7 @@ using Orc.Library.Dictionaries;
 namespace Orc.Library.Messages.Client
 {
 
-    [DataContract(Name = "CALENDAR_DELETE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CALENDAR_DELETE), Namespace = "")]
     public class CalendarDeleteMessage : ClientMessage
     {
         /// <summary>
@@ -22,7 +22,7 @@ namespace Orc.Library.Messages.Client
         }
     }
 
-    [DataContract(Name = "CALENDAR_DOWNLOAD", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CALENDAR_DOWNLOAD), Namespace = "")]
     public class CalendarDownloadMessage : ClientMessage
     {
         public CalendarDownloadMessage() : base(MessageType.CALENDAR_DOWNLOAD)
@@ -31,7 +31,7 @@ namespace Orc.Library.Messages.Client
         }
     }
 
-    [DataContract(Name = "CALENDAR_ENTRIES_DELETE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CALENDAR_ENTRIES_DELETE), Namespace = "")]
     public class CalendarEntriesDeleteMessage : ClientMessage
     {
         /// <summary>
@@ -50,7 +50,7 @@ namespace Orc.Library.Messages.Client
         }
     }
 
-    [DataContract(Name = "CALENDAR_ENTRIES_INSERT", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CALENDAR_ENTRIES_INSERT), Namespace = "")]
     public class CalendarEntriesInsertMessage : ClientMessage
     {
         /// <summary>
@@ -69,7 +69,7 @@ namespace Orc.Library.Messages.Client
         }
     }
 
-    [DataContract(Name = "CALENDAR_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CALENDAR_GET), Namespace = "")]
     public class CalendarGetMessage : ClientMessage
     {
         /// <summary>
@@ -85,7 +85,7 @@ namespace Orc.Library.Messages.Client
         }
     }
 
-    [DataContract(Name = "CALENDAR_INSERT", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CALENDAR_INSERT), Namespace = "")]
     public class CalendarInsertMessage : ClientMessage
     {
         /// <summary>
@@ -101,7 +101,7 @@ namespace Orc.Library.Messages.Client
         }
     }
 
-    [DataContract(Name = "CALENDAR_SET_DEFAULT", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CALENDAR_SET_DEFAULT), Namespace = "")]
     public class CalendarSetDefaultMessage : ClientMessage
     {
         /// <summary>
@@ -117,7 +117,7 @@ namespace Orc.Library.Messages.Client
         }
     }
 
-    [DataContract(Name = "CALENDAR_UPDATE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CALENDAR_UPDATE), Namespace = "")]
     public class CalendarUpdateMessage : ClientMessage
     {
         /// <summary>

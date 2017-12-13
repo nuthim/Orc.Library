@@ -9,7 +9,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Delete a bookkeeping transaction in the ORC System.
     /// </summary>
-    [DataContract(Name = "money_delete", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.MONEY_DELETE), Namespace = "")]
     public class MoneyDeleteMessage : ClientMessage
     {
         /// <summary>
@@ -27,7 +27,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Insert a bookkeeping transaction into the ORC System.
     /// </summary>
-    [DataContract(Name = "money_insert", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.MONEY_INSERT), Namespace = "")]
     public class MoneyInsertMessage : ClientMessage
     {
         [DataMember(Name = "kind", IsRequired = true, Order = 1)]
@@ -100,7 +100,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get bookkeeping transactions for given date range.
     /// </summary>
-    [DataContract(Name = "money_range_get", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.MONEY_RANGE_GET), Namespace = "")]
     public class MoneyRangeGetMessage : ClientMessage
     {
         /// <summary>

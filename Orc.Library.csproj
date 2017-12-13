@@ -183,11 +183,12 @@
     <Compile Include="Messages\Server\DividendReplies.cs" />
     <Compile Include="Messages\Server\EnumGetReply.cs" />
     <Compile Include="Messages\Server\FeedToggleReplies.cs" />
-    <Compile Include="Messages\Server\InstrumentFeed.cs" />
-    <Compile Include="Messages\Server\InstrumentReply.cs" />
+    <Compile Include="Messages\Server\InstrumentReplies.cs" />
     <Compile Include="Messages\Server\LoginReply.cs" />
+    <Compile Include="Messages\Server\LogoutReply.cs" />
     <Compile Include="Messages\Server\MoneyFeed.cs" />
     <Compile Include="Messages\ServerMessage.cs" />
+    <Compile Include="Messages\Server\MoneyReplies.cs" />
     <Compile Include="Messages\Server\NewsReplies.cs" />
     <Compile Include="Messages\Server\PingMessage.cs" />
     <Compile Include="Messages\Server\PortfolioCollection.cs" />

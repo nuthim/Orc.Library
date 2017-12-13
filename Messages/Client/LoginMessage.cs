@@ -6,14 +6,14 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// The login message is the first message to be sent from the client to the Orc Protocol server.
     /// </summary>
-    [DataContract(Name = "LOGIN", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.LOGIN), Namespace = "")]
     public class LoginMessage : ClientMessage
     {
         /// <summary>
         /// User identification for the Orc Protocol
         /// </summary>
         [DataMember(Name = "login_id", IsRequired = true, Order = 1)]
-        public string UserName { get; set; }
+        public string LoginId { get; set; }
 
         /// <summary>
         /// A password to verify the user. Default: empty string.

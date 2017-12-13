@@ -8,7 +8,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Send a quote transaction
     /// </summary>
-    [DataContract(Name = "QUOTE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.QUOTE), Namespace = "")]
     public class QuoteMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
@@ -36,7 +36,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get quote parameters.
     /// </summary>
-    [DataContract(Name = "QUOTE_PARAMETERS_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.QUOTE_PARAMETERS_GET), Namespace = "")]
     public class QuoteParametersGetMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
@@ -57,7 +57,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Set quote parameters.
     /// </summary>
-    [DataContract(Name = "QUOTE_PARAMETERS_SET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.QUOTE_PARAMETERS_SET), Namespace = "")]
     public class QuoteParametersSetMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
@@ -81,7 +81,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Use this message to send a quote request.
     /// </summary>
-    [DataContract(Name = "QUOTE_REQUEST", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.QUOTE_REQUEST), Namespace = "")]
     public class QuoteRequestMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
@@ -100,7 +100,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get the quote parameters for quotes that are sent to the market.
     /// </summary>
-    [DataContract(Name = "QUOTED_PARAMETERS_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.QUOTED_PARAMETERS_GET), Namespace = "")]
     public class QuotedParametersGetMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]

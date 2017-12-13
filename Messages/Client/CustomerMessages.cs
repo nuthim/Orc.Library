@@ -8,7 +8,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Delete a customerid and ALL associated values (information about what portfolios and all other values).
     /// </summary>
-    [DataContract(Name = "CUSTOMER_DELETE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CUSTOMER_DELETE), Namespace = "")]
     public class CustomerDeleteMessage : ClientMessage
     {
         [DataMember(Name = "customer_id", IsRequired = true)]
@@ -24,7 +24,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Delete a customer information field AND all existing values for this field.
     /// </summary>
-    [DataContract(Name = "CUSTOMER_FIELD_DELETE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CUSTOMER_FIELD_DELETE), Namespace = "")]
     public class CustomerFieldDeleteMessage : ClientMessage
     {
         [DataMember(Name = "fieldname", IsRequired = true)]
@@ -40,7 +40,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get all available customer information fields.
     /// </summary>
-    [DataContract(Name = "CUSTOMER_FIELD_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CUSTOMER_FIELD_GET), Namespace = "")]
     public class CustomerFieldGetMessage : ClientMessage
     {
         public CustomerFieldGetMessage() : base(MessageType.CUSTOMER_FIELD_GET)
@@ -52,7 +52,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Insert a new customer information field. 
     /// </summary>
-    [DataContract(Name = "CUSTOMER_FIELD_INSERT", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CUSTOMER_FIELD_INSERT), Namespace = "")]
     public class CustomerFieldInsertMessage : ClientMessage
     {
         [DataMember(Name = "fieldname", IsRequired = true, Order = 1)]
@@ -80,7 +80,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Update a customer information field.
     /// </summary>
-    [DataContract(Name = "CUSTOMER_FIELD_UPDATE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CUSTOMER_FIELD_UPDATE), Namespace = "")]
     public class CustomerFieldUpdateMessage : ClientMessage
     {
         [DataMember(Name = "fieldname", IsRequired = true, Order = 1)]
@@ -106,7 +106,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get all customerids.
     /// </summary>
-    [DataContract(Name = "CUSTOMER_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CUSTOMER_GET), Namespace = "")]
     public class CustomerGetMessage : ClientMessage
     {
         /// <summary>
@@ -131,7 +131,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Add a new customerid.
     /// </summary>
-    [DataContract(Name = "CUSTOMER_INSERT", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CUSTOMER_INSERT), Namespace = "")]
     public class CustomerInsertMessage : ClientMessage
     {
         [DataMember(Name = "customer_id", IsRequired = true)]
@@ -147,7 +147,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Change customerid to a new customerid, but keep all connections to portfolios and values.
     /// </summary>
-    [DataContract(Name = "CUSTOMER_UPDATE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CUSTOMER_UPDATE), Namespace = "")]
     public class CustomerUpdateMessage : ClientMessage
     {
         [DataMember(Name = "customer_id", IsRequired = true, Order = 1)]
@@ -167,7 +167,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Delete all or one value for a customer
     /// </summary>
-    [DataContract(Name = "CUSTOMER_VALUE_DELETE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CUSTOMER_VALUE_DELETE), Namespace = "")]
     public class CustomerValueDeleteMessage : ClientMessage
     {
         [DataMember(Name = "customer_id", IsRequired = true, Order = 1)]
@@ -187,7 +187,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get all or one value(s) for a customer
     /// </summary>
-    [DataContract(Name = "CUSTOMER_VALUE_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CUSTOMER_VALUE_GET), Namespace = "")]
     public class CustomerValueGetMessage : ClientMessage
     {
         [DataMember(Name = "customer_id", IsRequired = true, Order = 1)]
@@ -207,7 +207,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Search through all values.
     /// </summary>
-    [DataContract(Name = "CUSTOMER_VALUE_SEARCH", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CUSTOMER_VALUE_SEARCH), Namespace = "")]
     public class CustomerValueSearchMessage : ClientMessage
     {
         [DataMember(Name = "customer_id", Order = 1)]
@@ -237,7 +237,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Update/insert values for a given customer
     /// </summary>
-    [DataContract(Name = "CUSTOMER_VALUE_UPDATE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CUSTOMER_VALUE_UPDATE), Namespace = "")]
     public class CustomerValueUpdateMessage : ClientMessage
     {
         [DataMember(Name = "customer_id", IsRequired = true, Order = 1)]
@@ -256,7 +256,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Delete all or one connection(s) between a customer and portfolio(s).
     /// </summary>
-    [DataContract(Name = "CUSTOMER_PORTFOLIO_DELETE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CUSTOMER_PORTFOLIO_DELETE), Namespace = "")]
     public class CustomerPortfolioDeleteMessage : ClientMessage
     {
         [DataMember(Name = "customer_id", IsRequired = true, Order = 1)]
@@ -279,7 +279,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get customer/portfolio connections.
     /// </summary>
-    [DataContract(Name = "CUSTOMER_PORTFOLIO_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CUSTOMER_PORTFOLIO_GET), Namespace = "")]
     public class CustomerPortfolioGetMessage : ClientMessage
     {
         [DataMember(Name = "customer_id", Order = 1)]
@@ -302,7 +302,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Insert a connection between a customer and a portfolio.
     /// </summary>
-    [DataContract(Name = "CUSTOMER_PORTFOLIO_INSERT", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CUSTOMER_PORTFOLIO_INSERT), Namespace = "")]
     public class CustomerPortfolioInsertMessage : ClientMessage
     {
         [DataMember(Name = "customer_id", IsRequired = true, Order = 1)]

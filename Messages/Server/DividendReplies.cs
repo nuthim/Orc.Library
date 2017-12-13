@@ -1,11 +1,12 @@
 ﻿using Orc.Library.Dictionaries;
 using System.Runtime.Serialization;
+using Orc.Library.Enums;
 
 
 namespace Orc.Library.Messages.Server
 {
 
-    [DataContract(Name = "DIVIDEND_DELETE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.DIVIDEND_DELETE), Namespace = "")]
     public class DividendDeleteReply : ServerMessage
     {
         [DataMember(Name = "instrument_id")]
@@ -13,7 +14,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "DIVIDEND_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.DIVIDEND_GET), Namespace = "")]
     public class DividendGetReply : ServerMessage
     {
         [DataMember(Name = "instrument_id", Order = 1)]
@@ -24,7 +25,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "DIVIDEND_INSERT", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.DIVIDEND_INSERT), Namespace = "")]
     public class DividendInsertReply : ServerMessage
     {
         [DataMember(Name = "instrument_id")]
@@ -32,7 +33,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "DIVIDEND_UPDATE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.DIVIDEND_UPDATE), Namespace = "")]
     public class DividendUpdateReply : ServerMessage
     {
         [DataMember(Name = "instrument_id")]

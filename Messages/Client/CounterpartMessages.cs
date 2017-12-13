@@ -6,7 +6,7 @@ using Orc.Library.Enums;
 namespace Orc.Library.Messages.Client
 {
 
-    [DataContract(Name = "COUNTERPART_ADD", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.COUNTERPART_ADD), Namespace = "")]
     public class CounterpartAddMessage : ClientMessage
     {
         /// <summary>
@@ -23,7 +23,7 @@ namespace Orc.Library.Messages.Client
     }
 
 
-    [DataContract(Name = "COUNTERPART_DOWNLOAD", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.COUNTERPART_DOWNLOAD), Namespace = "")]
     public class CounterpartDownloadMessage : ClientMessage
     {
         public CounterpartDownloadMessage() : base(MessageType.COUNTERPART_DOWNLOAD)
@@ -33,7 +33,7 @@ namespace Orc.Library.Messages.Client
     }
 
 
-    [DataContract(Name = "COUNTERPART_REMOVE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.COUNTERPART_REMOVE), Namespace = "")]
     public class CounterpartRemoveMessage : ClientMessage
     {
         /// <summary>

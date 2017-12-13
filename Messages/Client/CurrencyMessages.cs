@@ -4,7 +4,7 @@ using Orc.Library.Enums;
 
 namespace Orc.Library.Messages.Client
 {
-    [DataContract(Name = "CURRENCY_CREATE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.CURRENCY_CREATE), Namespace = "")]
     public class CurrencyCreateMessage : ClientMessage
     {
         /// <summary>

@@ -8,7 +8,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Set specified yield curve as default yield curve for the currency.
     /// </summary>
-    [DataContract(Name = "YIELD_CURVE_DEFAULT", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.YIELD_CURVE_DEFAULT), Namespace = "")]
     public class YieldCurveDefaultMessage : ClientMessage
     {
         /// <summary>
@@ -34,7 +34,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Delete a given yield curve.
     /// </summary>
-    [DataContract(Name = "YIELD_CURVE_DELETE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.YIELD_CURVE_DELETE), Namespace = "")]
     public class YieldCurveDeteteMessage : ClientMessage
     {
         /// <summary>
@@ -60,7 +60,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Download all yield curves.
     /// </summary>
-    [DataContract(Name = "YIELD_CURVE_DOWNLOAD", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.YIELD_CURVE_DOWNLOAD), Namespace = "")]
     public class YieldCurveDownloadMessage : ClientMessage
     {
         public YieldCurveDownloadMessage() : base(MessageType.YIELD_CURVE_DOWNLOAD)
@@ -72,7 +72,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get a specified yield curve.
     /// </summary>
-    [DataContract(Name = "YIELD_CURVE_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.YIELD_CURVE_GET), Namespace = "")]
     public class YieldCurveGetMessage : ClientMessage
     {
         /// <summary>
@@ -98,7 +98,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Inserts a new yield curve (identified by its name) into the Orc.
     /// </summary>
-    [DataContract(Name = "YIELD_CURVE_INSERT", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.YIELD_CURVE_INSERT), Namespace = "")]
     public class YieldCurveInsertMessage : ClientMessage
     {
         /// <summary>
@@ -127,7 +127,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Update a yield curve.
     /// </summary>
-    [DataContract(Name = "YIELD_CURVE_UPDATE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.YIELD_CURVE_UPDATE), Namespace = "")]
     public class YieldCurveUpdateMessage : ClientMessage
     {
         /// <summary>

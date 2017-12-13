@@ -9,7 +9,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Set specified yield curve as default yield curve for the currency.
     /// </summary>
-    [DataContract(Name = "VOLATILITY_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.VOLATILITY_GET), Namespace = "")]
     public class VolatilityGetMessage : ClientMessage
     {
         /// <summary>
@@ -67,7 +67,7 @@ namespace Orc.Library.Messages.Client
     /// Update a volatility surface in the database by inserting new volatility curves, using the internal format of the Orc System. 
     /// Update of reference prices is optional and new prices specified will replace all previous reference prices.
     /// </summary>
-    [DataContract(Name = "VOLATILITY_RAW_CURVE_INSERT", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.VOLATILITY_RAW_CURVE_INSERT), Namespace = "")]
     public class VolatilityRawCurveInsertMessage : ClientMessage
     {
         /// <summary>
@@ -108,7 +108,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get a volatility surface using the internal Orc System format.
     /// </summary>
-    [DataContract(Name = "VOLATILITY_RAW_SURFACE_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.VOLATILITY_RAW_SURFACE_GET), Namespace = "")]
     public class VolatilityRawSurfaceGetMessage : ClientMessage
     {
         /// <summary>
@@ -135,7 +135,7 @@ namespace Orc.Library.Messages.Client
     /// Insert a volatility surface into the database using the internal format of the Orc System. Refer to the Orc User Manual for more information.
     /// You must specify all curves of the surface (i.e. for all expiries).
     /// </summary>
-    [DataContract(Name = "VOLATILITY_RAW_SURFACE_INSERT", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.VOLATILITY_RAW_SURFACE_INSERT), Namespace = "")]
     public class VolatilityRawSurfaceInsertMessage : ClientMessage
     {
         /// <summary>
@@ -178,7 +178,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Delete the specified volatility surface.
     /// </summary>
-    [DataContract(Name = "VOLATILITY_SURFACE_DELETE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.VOLATILITY_SURFACE_DELETE), Namespace = "")]
     public class VolatilitySurfaceDeleteMessage : ClientMessage
     {
         /// <summary>
@@ -200,7 +200,7 @@ namespace Orc.Library.Messages.Client
     /// requesting the implied volatilities using the theoretical_calculation message, then using the volatility_surface_insert message to fit the 
     /// volatility surface.
     /// </summary>
-    [DataContract(Name = "VOLATILITY_SURFACE_INSERT", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.VOLATILITY_SURFACE_INSERT), Namespace = "")]
     public class VolatilitySurfaceInsertMessage : ClientMessage
     {
         /// <summary>
@@ -247,7 +247,7 @@ namespace Orc.Library.Messages.Client
         }
     }
 
-    [DataContract(Name = "REFERENCE_PRICE_SET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.REFERENCE_PRICE_SET), Namespace = "")]
     public class ReferencePriceSetMessage : ClientMessage
     {
         /// <summary>
@@ -275,7 +275,7 @@ namespace Orc.Library.Messages.Client
     }
 
 
-    [DataContract(Name = "REFERENCE_PRICE_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.REFERENCE_PRICE_GET), Namespace = "")]
     public class ReferencePriceGetMessage : ClientMessage
     {
         /// <summary>
@@ -298,7 +298,7 @@ namespace Orc.Library.Messages.Client
         }
     }
 
-    [DataContract(Name = "REFERENCE_PRICE_DOWNLOAD", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.REFERENCE_PRICE_DOWNLOAD), Namespace = "")]
     public class ReferencePriceDownloadMessage : ClientMessage
     {
         public ReferencePriceDownloadMessage() : base(MessageType.REFERENCE_PRICE_DOWNLOAD)
@@ -308,7 +308,7 @@ namespace Orc.Library.Messages.Client
     }
 
 
-    [DataContract(Name = "VOLATILITY_SURFACE_DOWNLOAD", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.VOLATILITY_SURFACE_DOWNLOAD), Namespace = "")]
     public class VolatilitySurfaceDownloadMessage : ClientMessage
     {
         public VolatilitySurfaceDownloadMessage() : base(MessageType.VOLATILITY_SURFACE_DOWNLOAD)
@@ -318,7 +318,7 @@ namespace Orc.Library.Messages.Client
     }
 
 
-    [DataContract(Name = "VOLATILITY_MODEL_DOWNLOAD", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.VOLATILITY_MODEL_DOWNLOAD), Namespace = "")]
     public class VolatilityModelDownloadMessage : ClientMessage
     {
         public VolatilityModelDownloadMessage() : base(MessageType.VOLATILITY_MODEL_DOWNLOAD)

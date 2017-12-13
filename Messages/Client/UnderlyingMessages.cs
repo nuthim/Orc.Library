@@ -9,7 +9,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Removes one or more underlying covariance entries.
     /// </summary>
-    [DataContract(Name = "UNDERLYING_COVARIANCE_DELETE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.UNDERLYING_COVARIANCE_DELETE), Namespace = "")]
     public class UnderlyingCovarianceDeleteMessage : ClientMessage
     {
         /// <summary>
@@ -39,7 +39,7 @@ namespace Orc.Library.Messages.Client
     /// where either underlying1 or underlying2 matches the specified underlying1 are returned.
     /// </param>
     /// </summary>
-    [DataContract(Name = "UNDERLYING_COVARIANCE_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.UNDERLYING_COVARIANCE_GET), Namespace = "")]
     public class UnderlyingCovarianceGetMessage : ClientMessage
     {
         /// <summary>
@@ -63,7 +63,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Updates (or adds if new) an underlying covariance entry.
     /// </summary>
-    [DataContract(Name = "UNDERLYING_COVARIANCE_UPDATE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.UNDERLYING_COVARIANCE_UPDATE), Namespace = "")]
     public class UnderlyingCovarianceUpdateMessage : ClientMessage
     {
         /// <summary>
@@ -93,7 +93,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Download underlyings
     /// </summary>
-    [DataContract(Name = "UNDERLYING_DOWNLOAD", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.UNDERLYING_DOWNLOAD), Namespace = "")]
     public class UnderlyingDownloadMessage : ClientMessage
     {
         /// <summary>
@@ -119,7 +119,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Delete an underlying rate curve.
     /// </summary>
-    [DataContract(Name = "UNDERLYING_RATECURVE_DELETE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.UNDERLYING_RATECURVE_DELETE), Namespace = "")]
     public class UnderlyingRateCurveDeleteMessage : ClientMessage
     {
         /// <summary>
@@ -154,7 +154,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Delete an underlying rate curve.
     /// </summary>
-    [DataContract(Name = "UNDERLYING_RATECURVE_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.UNDERLYING_RATECURVE_GET), Namespace = "")]
     public class UnderlyingRateCurveGetMessage : ClientMessage
     {
         /// <summary>
@@ -180,7 +180,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Update an underlying rate curve.
     /// </summary>
-    [DataContract(Name = "UNDERLYING_RATECURVE_UPDATE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.UNDERLYING_RATECURVE_UPDATE), Namespace = "")]
     public class UnderlyingRateCurveUpdateMessage : ClientMessage
     {
         /// <summary>
@@ -205,7 +205,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// This message enables you to set the beta and betabase of an underlying.
     /// </summary>
-    [DataContract(Name = "UNDERLYING_UPDATE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.UNDERLYING_UPDATE), Namespace = "")]
     public class UnderlyingUpdateMessage : ClientMessage
     {
         /// <summary>

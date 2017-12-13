@@ -7,7 +7,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Only custom tick rules can be deleted (i.e. for market [none]).
     /// </summary>
-    [DataContract(Name = "TICK_RULE_DELETE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.TICK_RULE_DELETE), Namespace = "")]
     public class TickRuleDeleteMessage : ClientMessage
     {
         /// <summary>
@@ -31,7 +31,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get all tick.
     /// </summary>
-    [DataContract(Name = "TICK_RULE_DOWNLOAD", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.TICK_RULE_DOWNLOAD), Namespace = "")]
     public class TickRuleDownloadMessage : ClientMessage
     {
         [DataMember(Name = "market", Order = 1)]
@@ -64,7 +64,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Update an existing rule. If the specified tick rule does not exist, a new tick rule will be created with that name.
     /// </summary>
-    [DataContract(Name = "TICK_RULE_UPDATE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.TICK_RULE_UPDATE), Namespace = "")]
     public class TickRuleUpdateMessage : ClientMessage
     {
         /// <summary>

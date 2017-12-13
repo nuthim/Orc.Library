@@ -7,7 +7,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Use this in order to receive a snapshot of market data. 
     /// </summary>
-    [DataContract(Name = "PRICE_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PRICE_GET), Namespace = "")]
     public class PriceGetMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true)]

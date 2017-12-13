@@ -8,7 +8,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Broadcast price feed to all connected Orc Traders that have accepted price feed from the Orc Protocol
     /// </summary>
-    [DataContract(Name = "PRICEFEED_BROADCAST", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PRICEFEED_BROADCAST), Namespace = "")]
     public class PriceFeedBroadcastMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]

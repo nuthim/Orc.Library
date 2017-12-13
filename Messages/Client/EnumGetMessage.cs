@@ -6,7 +6,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get all possible values for an enumerator.
     /// </summary>
-    [DataContract(Name = "ENUM_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.ENUM_GET), Namespace = "")]
     public class EnumGetMessage : ClientMessage
     {
         [DataMember(Name = "enum", IsRequired = true)]

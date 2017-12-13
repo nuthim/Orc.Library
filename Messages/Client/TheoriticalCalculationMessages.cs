@@ -14,7 +14,7 @@ namespace Orc.Library.Messages.Client
     /// Make sure to subscribe to relevant contracts and base contracts before sending the first theoretical calculation request.
     /// </param>
     /// </summary>
-    [DataContract(Name = "THEORETICAL_CALCULATION", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.THEORETICAL_CALCULATION), Namespace = "")]
     public class TheoreticalCalculationMessage : ClientMessage
     {
         [DataMember(Name = "action", IsRequired = true, Order = 1)]
@@ -232,7 +232,7 @@ namespace Orc.Library.Messages.Client
     }
 
 
-    [DataContract(Name = "THEORETICAL_CALCULATION_FEED_STOP", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.THEORETICAL_CALCULATION_FEED_STOP), Namespace = "")]
     public class TheoreticalCalculationFeedStopMessage : ClientMessage
     {
         [DataMember(Name = "feed_tag", IsRequired = true)]
@@ -248,7 +248,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Do theoretical calculation on a given instrument. The upper limit for group calculations is 100 actions.
     /// </summary>
-    [DataContract(Name = "THEORETICAL_CALCULATION_GROUP", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.THEORETICAL_CALCULATION_GROUP), Namespace = "")]
     public class TheoreticalCalculationGroupMessage : ClientMessage
     {
 

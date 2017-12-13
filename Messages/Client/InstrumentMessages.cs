@@ -12,7 +12,7 @@ namespace Orc.Library.Messages.Client
     /// have unwanted effects. If this instrument is not used it should be safe to change attributes. You cannot change the asset type of an instrument.
     /// </para>
     /// </summary>
-    [DataContract(Name = "instrument_attributes_set", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.INSTRUMENT_ATTRIBUTES_SET), Namespace = "")]
     public class InstrumentAttributesSetMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
@@ -33,7 +33,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Cleans-up expired contracts. The message calls the clean-up expired contracts functionality of the CDS and uses the optional expirydate argument.
     /// </summary>
-    [DataContract(Name = "instrument_cleanup_expired", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.INSTRUMENT_CLEANUP_EXPIRED), Namespace = "")]
     public class InstrumentCleanupExpiredMessage : ClientMessage
     {
         /// <summary>
@@ -57,7 +57,7 @@ namespace Orc.Library.Messages.Client
     /// multiplier, price_multiplier, price_display, issuer, expirytype, isincode, cusip, valoren, sedol, symbol and exchange.
     /// </para>
     /// </summary>
-    [DataContract(Name = "instrument_create", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.INSTRUMENT_CREATE), Namespace = "")]
     public class InstrumentCreateMessage : ClientMessage
     {
         [DataMember(Name = "instrument_attributes", IsRequired = true, Order = 1)]
@@ -78,7 +78,7 @@ namespace Orc.Library.Messages.Client
     /// This can be done by using the message <see cref="InstrumentParametersSetMessage"/> InstrumentParametersSetMessage.
     /// </para>
     /// </summary>
-    [DataContract(Name = "instrument_delete", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.INSTRUMENT_DELETE), Namespace = "")]
     public class InstrumentDeleteMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
@@ -102,7 +102,7 @@ namespace Orc.Library.Messages.Client
     /// subsequent to the first reply will only contain the dictionary instrument_list.
     /// </para>
     /// </summary>
-    [DataContract(Name = "instrument_download", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.INSTRUMENT_DOWNLOAD), Namespace = "")]
     public class InstrumentDownloadMessage : ClientMessage
     {
         /// <summary>
@@ -249,7 +249,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Delete dynamic parameters for an instrument.
     /// </summary>
-    [DataContract(Name = "instrument_dynamic_parameter_delete", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.INSTRUMENT_DYNAMIC_PARAMETER_DELETE), Namespace = "")]
     public class InstrumentDynamicParameterDeleteMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
@@ -270,13 +270,13 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Insert dynamic parameters for an instrument.
     /// </summary>
-    [DataContract(Name = "instrument_dynamic_parameters_set", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.INSTRUMENT_DYNAMIC_PARAMETERS_SET), Namespace = "")]
     public class InstrumentDynamicParametersSetMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
         public InstrumentId InstrumentId { get; set; }
 
-        [DataMember(Name = "name", IsRequired = true, Order = 2)]
+        [DataMember(Name = "dynamic_parameters", IsRequired = true, Order = 2)]
         public DynamicParameters Parameters { get; set; }
 
         public InstrumentDynamicParametersSetMessage() : base(MessageType.INSTRUMENT_DYNAMIC_PARAMETERS_SET)
@@ -288,7 +288,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Requests all information about a given instrument
     /// </summary>
-    [DataContract(Name = "instrument_get", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.INSTRUMENT_GET), Namespace = "")]
     public class InstrumentGetMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", Order = 1)]
@@ -309,7 +309,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get min and max values for all parameters for a selection of instruments.
     /// </summary>
-    [DataContract(Name = "instrument_group_parameters_get", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.INSTRUMENT_GROUP_PARAMETERS_GET), Namespace = "")]
     public class InstrumentGroupParametersGetMessage : ClientMessage
     {
         /// <summary>
@@ -408,7 +408,7 @@ namespace Orc.Library.Messages.Client
     /// or <see cref="InstrumentMultipleFlagSetMessage"/> for best performance.
     /// </para>
     /// </summary>
-    [DataContract(Name = "instrument_group_parameters_set", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.INSTRUMENT_GROUP_PARAMETERS_SET), Namespace = "")]
     public class InstrumentGroupParametersSetMessage : ClientMessage
     {
         [DataMember(Name = "parameters", IsRequired = true, Order = 1)]
@@ -529,7 +529,7 @@ namespace Orc.Library.Messages.Client
     /// for many contracts at the same time. Also note that the contract flags use the value type boolean (true/false) and thus differ from the <see cref="InstrumentMultipleParameterSetMessage"/>.
     /// </para>
     /// </summary>
-    [DataContract(Name = "instrument_multiple_flag_set", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.INSTRUMENT_MULTIPLE_FLAG_SET), Namespace = "")]
     public class InstrumentMultipleFlagSetMessage : ClientMessage
     {
         /// <summary>
@@ -542,7 +542,7 @@ namespace Orc.Library.Messages.Client
         /// Name of the contract flag to be updated.
         /// </summary>
         [DataMember(Name = "flag", IsRequired = true, Order = 2)]
-        public Flag Flag { get; set; }
+        public Flag? Flag { get; set; }
 
         /// <summary>
         /// Value of the flag to be updated.
@@ -562,7 +562,7 @@ namespace Orc.Library.Messages.Client
     /// when it comes to updating parameters for many contracts at the same time.
     /// </para>
     /// </summary>
-    [DataContract(Name = "instrument_multiple_parameter_set", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.INSTRUMENT_MULTIPLE_PARAMETER_SET), Namespace = "")]
     public class InstrumentMultipleParameterSetMessage : ClientMessage
     {
         /// <summary>
@@ -575,7 +575,7 @@ namespace Orc.Library.Messages.Client
         /// Name of the contract parameter to be updated.
         /// </summary>
         [DataMember(Name = "parameter", IsRequired = true, Order = 2)]
-        public Parameter Parameter { get; set; }
+        public Parameter? Parameter { get; set; }
 
         /// <summary>
         /// Value of the parameter to be updated.
@@ -601,7 +601,7 @@ namespace Orc.Library.Messages.Client
     /// or <see cref="InstrumentMultipleFlagSetMessage"/> for best performance.
     /// </para>
     /// </summary>
-    [DataContract(Name = "instrument_parameters_set", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.INSTRUMENT_PARAMETERS_SET), Namespace = "")]
     public class InstrumentParametersSetMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
@@ -623,7 +623,7 @@ namespace Orc.Library.Messages.Client
     /// already existing contracts in the underlying.
     /// </para>
     /// </summary>
-    [DataContract(Name = "instrument_set_as_preferred", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.INSTRUMENT_SET_AS_PREFERRED), Namespace = "")]
     public class InstrumentSetAsPreferredMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true)]

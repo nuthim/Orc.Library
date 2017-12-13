@@ -18,7 +18,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Toggle dividend feed on or off.
     /// </summary>
-    [DataContract(Name = "DIVIDEND_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.DIVIDEND_FEED_TOGGLE), Namespace = "")]
     public class DividendFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true, Order = 1)]
@@ -43,7 +43,7 @@ namespace Orc.Library.Messages.Client
     /// you will receive instrument feeds according to all filters(logically OR, i.e.filter1 OR filter2 OR...)
     /// </para>
     /// </summary>
-    [DataContract(Name = "INSTRUMENT_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.INSTRUMENT_FEED_TOGGLE), Namespace = "")]
     public class InstrumentFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true, Order = 1)]
@@ -178,7 +178,7 @@ namespace Orc.Library.Messages.Client
     /// Set toggle to on in order to turn on the asynchronous MARKET_STATUS feed. This message will provide information on market status, e.g.connected markets.
     /// If you switch on the market status feed for a specific market, this feed can only be switched off by specifying that market
     /// </summary>
-    [DataContract(Name = "MARKET_STATUS_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.MARKET_STATUS_TOGGLE), Namespace = "")]
     public class MarketStatusToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true, Order = 1)]
@@ -199,7 +199,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get a feed of bookkeeping transactions.
     /// </summary>
-    [DataContract(Name = "MONEY_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.MONEY_FEED_TOGGLE), Namespace = "")]
     public class MoneyFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true)]
@@ -214,7 +214,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Set toggle to "true" in order to turn on the asynchronous NEWS_FEED messages. This is information originating from SFC.
     /// </summary>
-    [DataContract(Name = "NEWS_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.NEWS_FEED_TOGGLE), Namespace = "")]
     public class NewsFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true)]
@@ -229,7 +229,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Toggle order depth feed.
     /// </summary>
-    [DataContract(Name = "ORDER_DEPTH_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.ORDER_DEPTH_FEED_TOGGLE), Namespace = "")]
     public class OrderDepthFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
@@ -254,7 +254,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Toggle order feed. Note that filters are combined with logic OR.
     /// </summary>
-    [DataContract(Name = "ORDER_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.ORDER_FEED_TOGGLE), Namespace = "")]
     public class OrderFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true, Order = 1)]
@@ -296,7 +296,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Toggle portfolio position feed.
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_POSITION_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_POSITION_FEED_TOGGLE), Namespace = "")]
     public class PortfolioPositionFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true, Order = 1)]
@@ -317,7 +317,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Toggle portfolio reset feed in order to allow information about performed portfolio resets to be sent to subscribed users.
     /// </summary>
-    [DataContract(Name = "PORTFOLIO_RESET_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_RESET_FEED_TOGGLE), Namespace = "")]
     public class PortfolioResetFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         /// <summary>
@@ -339,7 +339,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Toggle price feed. You can also get a snapshot of the market data, without turning on the price feed. This is done with the <see cref="PriceGetMessage"/> message.
     /// </summary>
-    [DataContract(Name = "PRICEFEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PRICEFEED_TOGGLE), Namespace = "")]
     public class PriceFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]
@@ -383,7 +383,7 @@ namespace Orc.Library.Messages.Client
     /// Toggle quoted feed. When enabled, you will receive asynchronous QUOTED_FEED messages for all the quotations that are sent to the
     /// market by the specific Orc client that is connected to the OP(and to the market).
     /// </summary>
-    [DataContract(Name = "QUOTEDFEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.QUOTEDFEED_TOGGLE), Namespace = "")]
     public class QuoteFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true, Order = 1)]
@@ -407,7 +407,7 @@ namespace Orc.Library.Messages.Client
     /// Orc Trader when logging in to the Orc Protocol.
     /// </para>
     /// </summary>
-    [DataContract(Name = "QUOTE_REQUEST_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.QUOTE_REQUEST_FEED_TOGGLE), Namespace = "")]
     public class QuoteRequestFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true, Order = 1)]
@@ -425,7 +425,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Toggle reference price feed.
     /// </summary>
-    [DataContract(Name = "REFERENCE_PRICE_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.REFERENCE_PRICE_FEED_TOGGLE), Namespace = "")]
     public class ReferencePriceFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true)]
@@ -440,7 +440,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Toggle spread table feed.
     /// </summary>
-    [DataContract(Name = "SPREADTABLE_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.SPREADTABLE_FEED_TOGGLE), Namespace = "")]
     public class SpreadTableFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true)]
@@ -455,7 +455,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Toggle text ticker feed.
     /// </summary>
-    [DataContract(Name = "TEXT_TICKER_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.TEXT_TICKER_FEED_TOGGLE), Namespace = "")]
     public class TextTickerFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true)]
@@ -470,7 +470,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Toggle trade ticker feed with filter for one of underlying, kind or instrument_id.
     /// </summary>
-    [DataContract(Name = "TRADETICKER_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.TRADETICKER_TOGGLE), Namespace = "")]
     public class TradeTickerToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "underlying", Order = 1)]
@@ -496,7 +496,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Toggle trade feed.
     /// </summary>
-    [DataContract(Name = "TRADE_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.TRADE_FEED_TOGGLE), Namespace = "")]
     public class TradeFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true, Order = 1)]
@@ -540,7 +540,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Toggle underlying feed.
     /// </summary>
-    [DataContract(Name = "UNDERLYING_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.UNDERLYING_FEED_TOGGLE), Namespace = "")]
     public class UnderlyingFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true)]
@@ -555,7 +555,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Toggle underlying rate curve feed.
     /// </summary>
-    [DataContract(Name = "UNDERLYING_RATECURVE_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.UNDERLYING_RATECURVE_FEED_TOGGLE), Namespace = "")]
     public class UnderlyingRateCurveFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true)]
@@ -570,7 +570,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Toggle volatility raw surface feed.
     /// </summary>
-    [DataContract(Name = "VOLATILITY_RAW_SURFACE_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.VOLATILITY_RAW_SURFACE_FEED_TOGGLE), Namespace = "")]
     public class VolatilifyRawSurfaceFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true, Order = 1)]
@@ -591,7 +591,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Toggle yield curve feed.
     /// </summary>
-    [DataContract(Name = "YIELD_CURVE_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.YIELD_CURVE_FEED_TOGGLE), Namespace = "")]
     public class YieldRateCurveFeedToggleMessage : ClientMessage, ISubscriptionMessage
     {
         [DataMember(Name = "toggle", IsRequired = true)]

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 
 namespace Orc.Library.Messages.Client
 {
-    [DataContract(Name = "ping", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PING), Namespace = "")]
     public class PingMessage : ClientMessage
     {
         public PingMessage() : base(MessageType.PING)

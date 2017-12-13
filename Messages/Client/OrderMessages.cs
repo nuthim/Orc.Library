@@ -13,7 +13,7 @@ namespace Orc.Library.Messages.Client
     /// Thus message can only be used to toggle between the Inactive and Exchange states.
     /// </para>
     /// </summary>
-    [DataContract(Name = "ORDER_ACTIVATE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.ORDER_ACTIVATE), Namespace = "")]
     public class OrderActivateMessage : ClientMessage
     {
         /// <summary>
@@ -40,7 +40,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Send a message to delete an order in the Orc System.
     /// </summary>
-    [DataContract(Name = "ORDER_DELETE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.ORDER_DELETE), Namespace = "")]
     public class OrderDeleteMessage : ClientMessage
     {
         /// <summary>
@@ -65,7 +65,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Requests all information about a given order
     /// </summary>
-    [DataContract(Name = "ORDER_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.ORDER_GET), Namespace = "")]
     public class OrderGetMessage : ClientMessage
     {
         /// <summary>
@@ -83,7 +83,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Retrieve the order history.
     /// </summary>
-    [DataContract(Name = "ORDER_HISTORY_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.ORDER_HISTORY_GET), Namespace = "")]
     public class OrderHistoryGetMessage : ClientMessage
     {
         /// <summary>
@@ -106,7 +106,7 @@ namespace Orc.Library.Messages.Client
     /// successfully inserted into the Orc client.
     /// </para>
     /// </summary>
-    [DataContract(Name = "ORDER_INSERT", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.ORDER_INSERT), Namespace = "")]
     public class OrderInsertMessage : ClientMessage
     {
         [DataMember(Name = "activate", Order = 1)]
@@ -168,7 +168,7 @@ namespace Orc.Library.Messages.Client
     /// the order, you need to subscribe to the ORDER_FEED as well.
     /// </para>
     /// </summary>
-    [DataContract(Name = "ORDER_MODIFY", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.ORDER_MODIFY), Namespace = "")]
     public class OrderModifyMessage : ClientMessage
     {
         [DataMember(Name = "order", IsRequired = true, Order = 1)]
@@ -193,7 +193,7 @@ namespace Orc.Library.Messages.Client
     /// this message. Note that filters are combined with logic AND.
     /// </para>
     /// </summary>
-    [DataContract(Name = "ORDER_RANGE_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.ORDER_RANGE_GET), Namespace = "")]
     public class OrderRangeGetMessage : ClientMessage
     {
         /// <summary>

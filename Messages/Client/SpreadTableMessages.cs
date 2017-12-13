@@ -8,7 +8,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get all spread tables.
     /// </summary>
-    [DataContract(Name = "SPREADTABLE_DOWNLOAD", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.SPREADTABLE_DOWNLOAD), Namespace = "")]
     public class SpreadTableDownloadMessage : ClientMessage
     {
         /// <summary>
@@ -32,7 +32,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Delete spread table entries.
     /// </summary>
-    [DataContract(Name = "SPREADTABLE_ENTRIES_DELETE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.SPREADTABLE_ENTRIES_DELETE), Namespace = "")]
     public class SpreadTableEntriesDeleteMessage : ClientMessage
     {
         /// <summary>
@@ -54,7 +54,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Insert spread table entries.
     /// </summary>
-    [DataContract(Name = "SPREADTABLE_ENTRIES_INSERT", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.SPREADTABLE_ENTRIES_INSERT), Namespace = "")]
     public class SpreadTableEntriesInsertMessage : ClientMessage
     {
         /// <summary>
@@ -76,7 +76,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Get the values for a specified spread table.
     /// </summary>
-    [DataContract(Name = "SPREADTABLE_GET", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.SPREADTABLE_GET), Namespace = "")]
     public class SpreadTableGetMessage : ClientMessage
     {
         /// <summary>
@@ -104,7 +104,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Insert a spread table.
     /// </summary>
-    [DataContract(Name = "SPREADTABLE_INSERT", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.SPREADTABLE_INSERT), Namespace = "")]
     public class SpreadTableInsertMessage : ClientMessage
     {
         /// <summary>

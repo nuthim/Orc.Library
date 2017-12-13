@@ -7,7 +7,7 @@ namespace Orc.Library.Messages.Client
     /// <summary>
     /// Use the message in order to set feed mappings via the Orc Protocol.
     /// </summary>
-    [DataContract(Name = "sfc_feed_mapping", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.SFC_FEED_MAPPING), Namespace = "")]
     public class SfcFeedMappingMessage : ClientMessage
     {
         [DataMember(Name = "instrument_id", IsRequired = true, Order = 1)]

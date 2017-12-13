@@ -6,7 +6,7 @@ using Orc.Library.Enums;
 
 namespace Orc.Library.Messages.Server
 {
-    [DataContract(Name = "DIVIDEND_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.DIVIDEND_FEED_TOGGLE), Namespace = "")]
     public class DividendFeedToggleReply : ServerMessage
     {
         [DataMember(Name = "toggle", Order = 1)]
@@ -17,7 +17,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "INSTRUMENT_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.INSTRUMENT_FEED_TOGGLE), Namespace = "")]
     public class InstrumentFeedToggleReply : ServerMessage
     {
         [DataMember(Name = "toggle", Order = 1)]
@@ -88,7 +88,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "MARKET_STATUS_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.MARKET_STATUS_TOGGLE), Namespace = "")]
     public class MarketStatusToggleReply : ServerMessage
     {
         [DataMember(Name = "toggle", Order = 1)]
@@ -99,7 +99,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "MONEY_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.MONEY_FEED_TOGGLE), Namespace = "")]
     public class MoneyFeedToggleReply : ServerMessage
     {
         [DataMember(Name = "toggle")]
@@ -107,7 +107,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "NEWS_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.NEWS_FEED_TOGGLE), Namespace = "")]
     public class NewsFeedToggleReply : ServerMessage
     {
         [DataMember(Name = "toggle")]
@@ -115,7 +115,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "ORDER_DEPTH_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.ORDER_DEPTH_FEED_TOGGLE), Namespace = "")]
     public class OrderDepthFeedToggleReply : ServerMessage
     {
         [DataMember(Name = "instrument_id", Order = 1)]
@@ -126,7 +126,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "ORDER_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.ORDER_FEED_TOGGLE), Namespace = "")]
     public class OrderFeedToggleReply : ServerMessage
     {
         [DataMember(Name = "toggle")]
@@ -134,7 +134,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "PORTFOLIO_POSITION_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_POSITION_FEED_TOGGLE), Namespace = "")]
     public class PortfolioPositionFeedToggleReply : ServerMessage
     {
         [DataMember(Name = "toggle")]
@@ -142,7 +142,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "PORTFOLIO_RESET_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PORTFOLIO_RESET_FEED_TOGGLE), Namespace = "")]
     public class PortfolioResetFeedToggleReply : ServerMessage
     {
         [DataMember(Name = "portfolio", Order = 1)]
@@ -153,7 +153,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "PRICEFEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.PRICEFEED_TOGGLE), Namespace = "")]
     public class PriceFeedToggleReply : ServerMessage
     {
         [DataMember(Name = "instrument_id", Order = 1)]
@@ -164,7 +164,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "QUOTEDFEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.QUOTEDFEED_TOGGLE), Namespace = "")]
     public class QuoteFeedToggleReply : ServerMessage
     {
         [DataMember(Name = "instrument_id", Order = 1)]
@@ -175,7 +175,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "QUOTE_REQUEST_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.QUOTE_REQUEST_FEED_TOGGLE), Namespace = "")]
     public class QuoteRequestFeedToggleReply : ServerMessage
     {
         [DataMember(Name = "toggle")]
@@ -183,7 +183,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "REFERENCE_PRICE_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.REFERENCE_PRICE_FEED_TOGGLE), Namespace = "")]
     public class ReferencePriceFeedToggleReply : ServerMessage
     {
         [DataMember(Name = "toggle")]
@@ -191,7 +191,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "SPREADTABLE_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.SPREADTABLE_FEED_TOGGLE), Namespace = "")]
     public class SpreadTableFeedToggleReply : ServerMessage
     {
         [DataMember(Name = "toggle")]
@@ -199,7 +199,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "TEXT_TICKER_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.TEXT_TICKER_FEED_TOGGLE), Namespace = "")]
     public class TextTickerFeedToggleReply : ServerMessage
     {
         [DataMember(Name = "toggle")]
@@ -207,7 +207,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "TRADETICKER_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.TRADETICKER_TOGGLE), Namespace = "")]
     public class TradeTickerToggleReply : ServerMessage
     {
         [DataMember(Name = "underlying", Order = 1)]
@@ -224,7 +224,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "TRADE_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.TRADE_FEED_TOGGLE), Namespace = "")]
     public class TradeFeedToggleReply : ServerMessage
     {
         [DataMember(Name = "toggle")]
@@ -232,7 +232,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "UNDERLYING_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.UNDERLYING_FEED_TOGGLE), Namespace = "")]
     public class UnderlyingFeedToggleReply : ServerMessage
     {
         [DataMember(Name = "toggle")]
@@ -240,7 +240,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "UNDERLYING_RATECURVE_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.UNDERLYING_RATECURVE_FEED_TOGGLE), Namespace = "")]
     public class UnderlyingRateCurveFeedToggleReply : ServerMessage
     {
         [DataMember(Name = "toggle")]
@@ -248,7 +248,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "VOLATILITY_RAW_SURFACE_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.VOLATILITY_RAW_SURFACE_FEED_TOGGLE), Namespace = "")]
     public class VolatilifyRawSurfaceFeedToggleReply : ServerMessage
     {
         [DataMember(Name = "toggle")]
@@ -256,7 +256,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "YIELD_CURVE_FEED_TOGGLE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.YIELD_CURVE_FEED_TOGGLE), Namespace = "")]
     public class YieldRateCurveFeedToggleReply : ServerMessage
     {
         [DataMember(Name = "toggle")]

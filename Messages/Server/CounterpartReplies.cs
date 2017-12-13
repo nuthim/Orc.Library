@@ -1,11 +1,12 @@
 ﻿using System.Runtime.Serialization;
 using Orc.Library.Dictionaries;
+using Orc.Library.Enums;
 
 
 namespace Orc.Library.Messages.Server
 {
 
-    [DataContract(Name = "COUNTERPART_ADD", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.COUNTERPART_ADD), Namespace = "")]
     public class CounterpartAddReply : ServerMessage
     {
         /// <summary>
@@ -17,7 +18,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "COUNTERPART_DOWNLOAD", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.COUNTERPART_DOWNLOAD), Namespace = "")]
     public class CounterpartDownloadReply : ServerMessage
     {
         [DataMember(Name = "counterparts")]
@@ -25,7 +26,7 @@ namespace Orc.Library.Messages.Server
     }
 
 
-    [DataContract(Name = "COUNTERPART_REMOVE", Namespace = "")]
+    [DataContract(Name = nameof(MessageType.COUNTERPART_REMOVE), Namespace = "")]
     public class CounterpartRemoveReply : ServerMessage
     {
         /// <summary>
