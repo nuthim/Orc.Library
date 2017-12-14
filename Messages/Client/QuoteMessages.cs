@@ -15,7 +15,7 @@ namespace Orc.Library.Messages.Client
         public InstrumentId InstrumentId { get; set; }
 
         [DataMember(Name = "action", IsRequired = true, Order = 2)]
-        public QuoteAction? QuoteAction { get; set; }
+        public QuoteAction? Action { get; set; }
 
         /// <summary>
         /// If set to "true", quoting will be handled asynchronously. Default is "false".

@@ -3,8 +3,7 @@ using System.Runtime.Serialization;
 using Orc.Library.Dictionaries;
 using Orc.Library.Enums;
 
-
-namespace Orc.Library.Messages.Server
+namespace Orc.Library.Messages.Server.Replies
 {
     [DataContract(Name = nameof(MessageType.INSTRUMENT_ATTRIBUTES_SET), Namespace = "")]
     public class InstrumentAttributesSetReply : ServerMessage
@@ -121,7 +120,7 @@ namespace Orc.Library.Messages.Server
         /// This is contained in the first reply message and corresponds to the total number of instruments to be downloaded.
         /// </summary>
         [DataMember(Name = "total_items_count", Order = 24)]
-        public DateTime? TotalItemsCount { get; set; }
+        public int? TotalItemsCount { get; set; }
 
         [DataMember(Name = "underlying", Order = 25)]
         public string UnderlyingPattern { get; set; }

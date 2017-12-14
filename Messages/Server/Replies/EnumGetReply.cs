@@ -2,7 +2,7 @@
 using Orc.Library.Dictionaries;
 using Orc.Library.Enums;
 
-namespace Orc.Library.Messages.Server
+namespace Orc.Library.Messages.Server.Replies
 {
     /// <summary>
     /// Get all possible values for an enumerator.

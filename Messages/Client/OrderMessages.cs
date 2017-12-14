@@ -49,11 +49,7 @@ namespace Orc.Library.Messages.Client
         [DataMember(Name = "order_tag", IsRequired = true, Order = 1)]
         public int? OrcTag { get; set; }
 
-        [DataMember(Name = "auto_delete", Order = 2)]
-        [Obsolete("Do not use")]
-        public bool? AutoDelete { get; set; }
-
-        [DataMember(Name = "additional_data", Order = 3)]
+        [DataMember(Name = "additional_data", Order = 2)]
         public AdditionalData AdditionalData { get; set; }
 
         public OrderDeleteMessage() : base(MessageType.ORDER_DELETE)

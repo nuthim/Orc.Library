@@ -1,11 +1,17 @@
-﻿using Orc.Library.Enums;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
-
+using Orc.Library.Enums;
 
 namespace Orc.Library.Dictionaries
 {
-    [DataContract(Namespace = "")]
+    [CollectionDataContract(Name = "trade_replies", ItemName = "trade_reply", Namespace = "")]
+    public class TradeReplies : List<TradeReply>
+    {
+
+    }
+
+    [DataContract(Name = "trade_reply", Namespace = "")]
     public class TradeReply
     {
         [DataMember(Name = "action")]

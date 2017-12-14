@@ -1,7 +1,7 @@
-﻿using Orc.Library.Enums;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
+using Orc.Library.Enums;
 
-namespace Orc.Library.Messages.Server
+namespace Orc.Library.Messages.Server.Replies
 {
     /// <summary>
     /// The logout message is used to end a session with the Orc Protocol server.

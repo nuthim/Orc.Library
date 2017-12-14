@@ -1,25 +1,26 @@
-﻿using System.Collections.Generic;
+﻿using Orc.Library.Enums;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 
 namespace Orc.Library.Dictionaries
 {
-    [CollectionDataContract(Name = "spreadtable_entries", ItemName = "spreadtable_entry", Namespace = "")]
-    public class SpreadTableEntries : List<SpreadTableEntry>
+    [CollectionDataContract(Name = "spread_tables", ItemName = "spread_table", Namespace = "")]
+    public class SpreadTables : List<SpreadTable>
     {
 
     }
 
-    [DataContract(Name = "spreadtable_entry", Namespace = "")]
-    public class SpreadTableEntry
+    [DataContract(Name = "spread_table", Namespace = "")]
+    public class SpreadTable
     {
-        [DataMember(Name = "lower", Order = 1)]
-        public double? Lower { get; set; }
+        [DataMember(Name = "name", Order = 1)]
+        public string Name { get; set; }
 
-        [DataMember(Name = "spread", Order = 2)]
-        public double? Spread { get; set; }
+        [DataMember(Name = "boundarymode", Order = 2)]
+        public BoundaryMode? BoundaryMode { get; set; }
 
-        [DataMember(Name = "type", Order = 3)]
-        public string Type { get; set; }
+        [DataMember(Name = "direction", Order = 3)]
+        public Direction? Direction { get; set; }
     }
 }

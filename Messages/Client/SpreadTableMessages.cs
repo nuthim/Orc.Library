@@ -82,17 +82,8 @@ namespace Orc.Library.Messages.Client
         /// <summary>
         /// Name of the spreadtable.
         /// </summary>
-        [DataMember(Name = "spreadtable", IsRequired = true, Order = 1)]
+        [DataMember(Name = "spreadtable", IsRequired = true)]
         public string SpreadTable { get; set; }
-
-        [DataMember(Name = "spreadtable_entries", IsRequired = true, Order = 2)]
-        public SpreadTableEntries SpreadTableEntries { get; set; }
-
-        [DataMember(Name = "boundarymode", IsRequired = true, Order = 3)]
-        public BoundaryMode? BoundaryMode { get; set; }
-
-        [DataMember(Name = "direction", IsRequired = true, Order = 4)]
-        public Direction? Direction { get; set; }
 
         public SpreadTableGetMessage() : base(MessageType.SPREADTABLE_GET)
         {

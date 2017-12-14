@@ -288,7 +288,7 @@ namespace Orc.Library.Dictionaries
         public double? SpreadBias { get; set; }
 
         [DataMember(Name = "spread_table")]
-        public SpreadTable? SpreadTable { get; set; }
+        public string SpreadTable { get; set; }
 
         [DataMember(Name = "start_date")]
         public DateTime? StartDate { get; set; }

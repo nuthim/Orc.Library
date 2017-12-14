@@ -3,8 +3,7 @@ using System.Runtime.Serialization;
 using Orc.Library.Dictionaries;
 using Orc.Library.Enums;
 
-
-namespace Orc.Library.Messages.Server
+namespace Orc.Library.Messages.Server.Replies
 {
     [DataContract(Name = nameof(MessageType.DIVIDEND_FEED_TOGGLE), Namespace = "")]
     public class DividendFeedToggleReply : ServerMessage

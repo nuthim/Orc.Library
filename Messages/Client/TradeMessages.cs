@@ -320,7 +320,7 @@ namespace Orc.Library.Messages.Client
         /// Default is true. Verify/unverify the trade.
         /// </summary>
         [DataMember(Name = "verified", Order = 2)]
-        public bool? Verify { get; set; }
+        public bool? Verified { get; set; }
 
         public TradeVerifyMessage() : base(MessageType.TRADE_VERIFY)
         {
@@ -336,7 +336,7 @@ namespace Orc.Library.Messages.Client
     {
         [DataMember(Name = "portfolio", IsRequired = true, Order = 1)]
         [StringLength(64)]
-        public bool? UpdatePortfolio { get; set; }
+        public string Portfolio { get; set; }
 
         [DataMember(Name = "instrument_id", Order = 2)]
         public InstrumentId InstrumentId { get; set; }

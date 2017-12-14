@@ -1,7 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-
-namespace Orc.Library.Messages.Server
+namespace Orc.Library.Messages.Server.Replies
 {
     [DataContract(Name = "NEWS_ARTICLE_GET", Namespace = "")]
     public class NewsArticleGetReply : ServerMessage

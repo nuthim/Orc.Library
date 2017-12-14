@@ -96,7 +96,7 @@ namespace Orc.Library.Messages.Client
         /// </summary>
         [DataMember(Name = "currency", Order = 2)]
         [StringLength(3, MinimumLength = 3)]
-        public string DefaultCurrency { get; set; }
+        public string Currency { get; set; }
 
         /// <summary>
         /// Default: Allow orders.
@@ -404,7 +404,7 @@ namespace Orc.Library.Messages.Client
         /// <summary>
         /// The name of the portfolio in Orc.
         /// </summary>
-        [DataMember(Name = "portfolio_name", IsRequired = true, Order = 1)]
+        [DataMember(Name = "portfolio_name", IsRequired = true)]
         [StringLength(51)]
         public string PortfolioName { get; set; }
 
