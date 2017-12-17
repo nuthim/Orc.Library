@@ -226,7 +226,7 @@ namespace Orc.Library.Messages.Client
         /// Default is Containing
         /// </summary>
         [DataMember(Name = "search_mode", Order = 4)]
-        public SearchMode? Mode { get; set; }
+        public SearchMode? SearchMode { get; set; }
 
         public CustomerValueSearchMessage() : base(MessageType.CUSTOMER_VALUE_SEARCH)
         {

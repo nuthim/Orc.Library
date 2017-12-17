@@ -34,5 +34,15 @@ namespace Orc.Library.Messages
 
             return MessageType == other.MessageType && Equals(Id, other.Id);
         }
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as MessageInfo);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }

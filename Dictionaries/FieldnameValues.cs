@@ -12,10 +12,10 @@ namespace Orc.Library.Dictionaries
     [DataContract(Name = "fieldname_value", Namespace = "")]
     public class FieldNameValue
     {
-        [DataMember(Name = "fieldname")]
+        [DataMember(Name = "fieldname", IsRequired = true, Order = 1)]
         public string FieldName { get; set; }
 
-        [DataMember(Name = "name")]
+        [DataMember(Name = "value", IsRequired = true, Order = 2)]
         public string Value { get; set; }
     }
 }

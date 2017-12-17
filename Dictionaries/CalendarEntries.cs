@@ -14,17 +14,17 @@ namespace Orc.Library.Dictionaries
     [DataContract(Name = "calendar_entry", Namespace = "")]
     public class CalendarEntry
     {
-        [DataMember(Name = "repeat_mode")]
+        [DataMember(Name = "repeat_mode", IsRequired = true, Order = 1)]
         public RepeatMode? RepeatMode { get; set; }
 
         /// <summary>
         /// Mandatory for repeat_mode set to Date or Yearly
         /// </summary>
-        [DataMember(Name = "date")]
+        [DataMember(Name = "date", IsRequired = true, Order = 2)]
         public DateTime? Date { get; set; }
 
 
-        [DataMember(Name = "exclude")]
+        [DataMember(Name = "exclude", Order = 3)]
         public bool? Exclude { get; set; }
     }
 }

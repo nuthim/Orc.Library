@@ -7,7 +7,7 @@ using Orc.Library.Enums;
 namespace Orc.Library.Messages.Client
 {
     /// <summary>
-    /// Set specified yield curve as default yield curve for the currency.
+    /// Get the volatility for a given underlying, price, strikeprice and expirydate.
     /// </summary>
     [DataContract(Name = nameof(MessageType.VOLATILITY_GET), Namespace = "")]
     public class VolatilityGetMessage : ClientMessage
