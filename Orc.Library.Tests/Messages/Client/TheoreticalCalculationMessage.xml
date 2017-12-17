@@ -1,0 +1,44 @@
+<THEORETICAL_CALCULATION xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <message_info>
+    <message_type>THEORETICAL_CALCULATION</message_type>
+    <private i:nil="true" />
+  </message_info>
+  <debug i:nil="true" />
+  <log i:nil="true" />
+  <suppress_reply i:nil="true" />
+  <action i:nil="true" />
+  <instrument_id i:nil="true" />
+  <analysis_date i:nil="true" />
+  <asynch i:nil="true" />
+  <basecontract i:nil="true" />
+  <base_ytm_offset i:nil="true" />
+  <contract_price i:nil="true" />
+  <date i:nil="true" />
+  <dividendcontract i:nil="true" />
+  <dividend_percentage i:nil="true" />
+  <feed i:nil="true" />
+  <feed_minimum_hold i:nil="true" />
+  <financial_rate_offset i:nil="true" />
+  <portfolio_accrued i:nil="true" />
+  <portfolio_change_in_accrued i:nil="true" />
+  <portfolio_change_in_invested i:nil="true" />
+  <portfolio_change_in_volume i:nil="true" />
+  <portfolio_currency i:nil="true" />
+  <portfolio_invested i:nil="true" />
+  <portfolio_volume i:nil="true" />
+  <result_currency i:nil="true" />
+  <simulated_model i:nil="true" />
+  <simulated_price i:nil="true" />
+  <simulated_price_mode i:nil="true" />
+  <simulated_price_currency i:nil="true" />
+  <simulated_strikeprice i:nil="true" />
+  <simulated_strikeprice_mode i:nil="true" />
+  <simulated_volatility i:nil="true" />
+  <simulated_volatility_mode i:nil="true" />
+  <underlying i:nil="true" />
+  <underlying_rate i:nil="true" />
+  <underlying_rate_mode i:nil="true" />
+  <user_percentage i:nil="true" />
+  <volatility_surface i:nil="true" />
+  <yield_name i:nil="true" />
+</THEORETICAL_CALCULATION>

@@ -1,0 +1,12 @@
+<ORDER_ACTIVATE xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <message_info>
+    <message_type>ORDER_ACTIVATE</message_type>
+    <private i:nil="true" />
+  </message_info>
+  <debug i:nil="true" />
+  <log i:nil="true" />
+  <suppress_reply i:nil="true" />
+  <order_tag i:nil="true" />
+  <activate i:nil="true" />
+  <asynch i:nil="true" />
+</ORDER_ACTIVATE>

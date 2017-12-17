@@ -1,0 +1,11 @@
+<InstrumentFeed xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Orc.Library.Messages.Server">
+  <error xmlns="">0</error>
+  <error_description i:nil="true" xmlns="" />
+  <message_info i:nil="true" xmlns="" />
+  <reply_to i:nil="true" xmlns="" />
+  <Attributes i:nil="true" />
+  <Instrument i:nil="true" />
+  <OrcDescription i:nil="true" />
+  <Parameters i:nil="true" />
+  <TickRule i:nil="true" />
+</InstrumentFeed>

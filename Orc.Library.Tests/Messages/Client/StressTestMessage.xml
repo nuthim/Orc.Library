@@ -1,0 +1,24 @@
+<STRESSTEST xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <message_info>
+    <message_type>STRESSTEST</message_type>
+    <private i:nil="true" />
+  </message_info>
+  <debug i:nil="true" />
+  <log i:nil="true" />
+  <suppress_reply i:nil="true" />
+  <portfolio_name i:nil="true" />
+  <actions i:nil="true" />
+  <simulated_prices i:nil="true" />
+  <simulated_price_mode i:nil="true" />
+  <simulated_volatilities i:nil="true" />
+  <simulated_volatility_mode i:nil="true" />
+  <financial_rate_offset i:nil="true" />
+  <analysis_date i:nil="true" />
+  <volatility_surface i:nil="true" />
+  <result_currency i:nil="true" />
+  <group_results_by i:nil="true" />
+  <expirydate_start i:nil="true" />
+  <expirydate_end i:nil="true" />
+  <underlying_filters i:nil="true" />
+  <items_per_message i:nil="true" />
+</STRESSTEST>

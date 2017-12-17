@@ -1,0 +1,8 @@
+<CUSTOMER_FIELD_UPDATE>
+  <message_info>
+    <message_type>CUSTOMER_FIELD_UPDATE</message_type>
+  </message_info>
+  <fieldname>OldName</fieldname>
+  <new_fieldname>NewName</new_fieldname>
+  <order>1</order>
+</CUSTOMER_FIELD_UPDATE>

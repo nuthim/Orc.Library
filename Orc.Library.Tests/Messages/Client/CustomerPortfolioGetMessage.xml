@@ -1,0 +1,7 @@
+<CUSTOMER_PORTFOLIO_GET>
+  <message_info>
+    <message_type>CUSTOMER_PORTFOLIO_GET</message_type>
+  </message_info>
+  <customer_id>280781</customer_id>
+  <portfolio_name>Port1</portfolio_name>
+</CUSTOMER_PORTFOLIO_GET>

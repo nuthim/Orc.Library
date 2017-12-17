@@ -1,0 +1,7 @@
+<CALENDAR_UPDATE xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <message_info>
+    <message_type>CALENDAR_UPDATE</message_type>
+  </message_info>
+  <calendar>AsxTrading</calendar>
+  <new_calendar>NewAsxTrading</new_calendar>
+</CALENDAR_UPDATE>

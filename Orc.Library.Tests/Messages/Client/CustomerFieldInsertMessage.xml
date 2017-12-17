@@ -1,0 +1,8 @@
+<CUSTOMER_FIELD_INSERT>
+  <message_info>
+    <message_type>CUSTOMER_FIELD_INSERT</message_type>
+  </message_info>
+  <fieldname>CustomerAddress</fieldname>
+  <locked>true</locked>
+  <order>1</order>
+</CUSTOMER_FIELD_INSERT>

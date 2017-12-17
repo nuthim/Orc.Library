@@ -1,0 +1,7 @@
+<CUSTOMER_VALUE_DELETE>
+  <message_info>
+    <message_type>CUSTOMER_VALUE_DELETE</message_type>
+  </message_info>
+  <customer_id>280781</customer_id>
+  <fieldname>CustomerAddress</fieldname>
+</CUSTOMER_VALUE_DELETE>

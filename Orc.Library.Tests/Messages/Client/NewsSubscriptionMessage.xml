@@ -1,0 +1,10 @@
+<news_feed_toggle xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <message_info>
+    <message_type>news_feed_toggle</message_type>
+    <private>789fb44f-ec95-4ceb-b4cf-515aa502de0f</private>
+  </message_info>
+  <debug i:nil="true" />
+  <log i:nil="true" />
+  <suppress_reply i:nil="true" />
+  <toggle i:nil="true" />
+</news_feed_toggle>

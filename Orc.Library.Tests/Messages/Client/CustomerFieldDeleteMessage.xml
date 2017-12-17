@@ -1,0 +1,6 @@
+<CUSTOMER_FIELD_DELETE>
+  <message_info>
+    <message_type>CUSTOMER_FIELD_DELETE</message_type>
+  </message_info>
+  <fieldname>CustomerAddress</fieldname>
+</CUSTOMER_FIELD_DELETE>

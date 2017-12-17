@@ -1,0 +1,7 @@
+<CUSTOMER_GET>
+  <message_info>
+    <message_type>CUSTOMER_GET</message_type>
+  </message_info>
+  <customer_id>280781</customer_id>
+  <ignore_case>false</ignore_case>
+</CUSTOMER_GET>

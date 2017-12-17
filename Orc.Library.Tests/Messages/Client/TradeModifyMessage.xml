@@ -1,0 +1,13 @@
+<TRADE_MODIFY xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <message_info>
+    <message_type>TRADE_MODIFY</message_type>
+    <private i:nil="true" />
+  </message_info>
+  <debug i:nil="true" />
+  <log i:nil="true" />
+  <suppress_reply i:nil="true" />
+  <trade_tag i:nil="true" />
+  <trade xmlns:d2p1="http://schemas.datacontract.org/2004/07/Orc.Library.Dictionaries" i:nil="true" />
+  <update_portfolio i:nil="true" />
+  <verified i:nil="true" />
+</TRADE_MODIFY>

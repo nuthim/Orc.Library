@@ -1,0 +1,7 @@
+<CUSTOMER_VALUE_GET>
+  <message_info>
+    <message_type>CUSTOMER_VALUE_GET</message_type>
+  </message_info>
+  <customer_id>280781</customer_id>
+  <fieldname>CustomerAddress</fieldname>
+</CUSTOMER_VALUE_GET>

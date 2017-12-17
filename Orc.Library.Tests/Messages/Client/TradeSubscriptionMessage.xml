@@ -1,0 +1,15 @@
+<trade_feed_toggle xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <message_info>
+    <message_type>trade_feed_toggle</message_type>
+    <private>2c8b6845-39e1-43c2-9fd6-3e67e94affe0</private>
+  </message_info>
+  <debug i:nil="true" />
+  <log i:nil="true" />
+  <suppress_reply i:nil="true" />
+  <toggle i:nil="true" />
+  <customer_id i:nil="true" />
+  <market i:nil="true" />
+  <origin i:nil="true" />
+  <originator i:nil="true" />
+  <portfolio i:nil="true" />
+</trade_feed_toggle>

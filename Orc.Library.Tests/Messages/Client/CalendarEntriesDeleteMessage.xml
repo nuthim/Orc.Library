@@ -1,0 +1,17 @@
+<CALENDAR_ENTRIES_DELETE>
+  <message_info>
+    <message_type>CALENDAR_ENTRIES_DELETE</message_type>
+  </message_info>
+  <calendar>AsxTrading</calendar>
+  <calendar_entries>
+    <calendar_entry>
+      <repeat_mode>Date</repeat_mode>
+      <date>1980-07-28</date>
+    </calendar_entry>
+    <calendar_entry>
+      <repeat_mode>Yearly</repeat_mode>
+      <date>1983-06-15</date>
+      <exclude>true</exclude>
+    </calendar_entry>
+  </calendar_entries>
+</CALENDAR_ENTRIES_DELETE>

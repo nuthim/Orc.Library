@@ -1,0 +1,13 @@
+<THEORETICAL_CALCULATION xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <error>0</error>
+  <error_description i:nil="true" />
+  <message_info i:nil="true" />
+  <reply_to i:nil="true" />
+  <instrument_id i:nil="true" />
+  <action i:nil="true" />
+  <underlying i:nil="true" />
+  <yield_name i:nil="true" />
+  <result_currency i:nil="true" />
+  <result i:nil="true" />
+  <feed_tag i:nil="true" />
+</THEORETICAL_CALCULATION>

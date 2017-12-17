@@ -1,0 +1,32 @@
+<TRADE_RANGE_GET xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <message_info>
+    <message_type>TRADE_RANGE_GET</message_type>
+    <private i:nil="true" />
+  </message_info>
+  <debug i:nil="true" />
+  <log i:nil="true" />
+  <suppress_reply i:nil="true" />
+  <enddate i:nil="true" />
+  <endtime i:nil="true" />
+  <startdate i:nil="true" />
+  <starttime i:nil="true" />
+  <date_changed_from i:nil="true" />
+  <date_changed_to i:nil="true" />
+  <time_changed_from i:nil="true" />
+  <time_changed_to i:nil="true" />
+  <market_date_from i:nil="true" />
+  <market_date_to i:nil="true" />
+  <market_time_from i:nil="true" />
+  <market_time_to i:nil="true" />
+  <customer_id i:nil="true" />
+  <deleted i:nil="true" />
+  <instrument_id i:nil="true" />
+  <items_per_message i:nil="true" />
+  <market i:nil="true" />
+  <originator i:nil="true" />
+  <origin i:nil="true" />
+  <owner i:nil="true" />
+  <portfolio i:nil="true" />
+  <underlying i:nil="true" />
+  <verified i:nil="true" />
+</TRADE_RANGE_GET>

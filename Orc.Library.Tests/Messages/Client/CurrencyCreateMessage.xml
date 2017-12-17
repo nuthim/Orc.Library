@@ -1,0 +1,6 @@
+<CURRENCY_CREATE>
+  <message_info>
+    <message_type>CURRENCY_CREATE</message_type>
+  </message_info>
+  <currency>USD</currency>
+</CURRENCY_CREATE>

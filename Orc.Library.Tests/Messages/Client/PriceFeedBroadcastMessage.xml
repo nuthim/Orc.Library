@@ -1,0 +1,29 @@
+<PRICEFEED_BROADCAST xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <message_info>
+    <message_type>PRICEFEED_BROADCAST</message_type>
+    <private i:nil="true" />
+  </message_info>
+  <debug i:nil="true" />
+  <log i:nil="true" />
+  <suppress_reply i:nil="true" />
+  <instrument_id i:nil="true" />
+  <bid_volume i:nil="true" />
+  <bid i:nil="true" />
+  <ask_volume i:nil="true" />
+  <ask i:nil="true" />
+  <bid_ytm i:nil="true" />
+  <ask_ytm i:nil="true" />
+  <last_volume i:nil="true" />
+  <last i:nil="true" />
+  <high i:nil="true" />
+  <low i:nil="true" />
+  <close i:nil="true" />
+  <open i:nil="true" />
+  <turnover_volume i:nil="true" />
+  <turnover i:nil="true" />
+  <bid_valuation i:nil="true" />
+  <ask_valuation i:nil="true" />
+  <ask_highlight i:nil="true" />
+  <bid_highlight i:nil="true" />
+  <settlement_price i:nil="true" />
+</PRICEFEED_BROADCAST>

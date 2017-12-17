@@ -1,0 +1,11 @@
+<TRADE_ALLOCATE xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <message_info>
+    <message_type>TRADE_ALLOCATE</message_type>
+    <private i:nil="true" />
+  </message_info>
+  <debug i:nil="true" />
+  <log i:nil="true" />
+  <suppress_reply i:nil="true" />
+  <trade_tag i:nil="true" />
+  <allocateItems i:nil="true" />
+</TRADE_ALLOCATE>

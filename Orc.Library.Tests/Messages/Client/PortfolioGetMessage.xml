@@ -1,0 +1,14 @@
+<PORTFOLIO_GET xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <message_info>
+    <message_type>PORTFOLIO_GET</message_type>
+    <private i:nil="true" />
+  </message_info>
+  <debug i:nil="true" />
+  <log i:nil="true" />
+  <suppress_reply i:nil="true" />
+  <portfolio_name i:nil="true" />
+  <settlement_date_separate i:nil="true" />
+  <buy_or_sell_separate i:nil="true" />
+  <instrument_id i:nil="true" />
+  <items_per_message i:nil="true" />
+</PORTFOLIO_GET>

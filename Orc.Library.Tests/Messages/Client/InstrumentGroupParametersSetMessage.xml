@@ -1,0 +1,31 @@
+<INSTRUMENT_GROUP_PARAMETERS_SET xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <message_info>
+    <message_type>INSTRUMENT_GROUP_PARAMETERS_SET</message_type>
+    <private i:nil="true" />
+  </message_info>
+  <debug i:nil="true" />
+  <log i:nil="true" />
+  <suppress_reply i:nil="true" />
+  <parameters i:nil="true" />
+  <additional_data i:nil="true" />
+  <assettype i:nil="true" />
+  <basecontract i:nil="true" />
+  <currency i:nil="true" />
+  <customer_unique_id i:nil="true" />
+  <enforced_customer_unique_id i:nil="true" />
+  <expirydate_start i:nil="true" />
+  <expirydate_end i:nil="true" />
+  <isincode i:nil="true" />
+  <symbol i:nil="true" />
+  <exchange i:nil="true" />
+  <issuer i:nil="true" />
+  <kind i:nil="true" />
+  <market i:nil="true" />
+  <strikeprice_min i:nil="true" />
+  <strikeprice_max i:nil="true" />
+  <underlying i:nil="true" />
+  <date_changed_from i:nil="true" />
+  <date_changed_to i:nil="true" />
+  <time_changed_from i:nil="true" />
+  <time_changed_to i:nil="true" />
+</INSTRUMENT_GROUP_PARAMETERS_SET>

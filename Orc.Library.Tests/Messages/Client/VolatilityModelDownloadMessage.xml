@@ -1,0 +1,9 @@
+<VOLATILITY_MODEL_DOWNLOAD xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <message_info>
+    <message_type>VOLATILITY_MODEL_DOWNLOAD</message_type>
+    <private i:nil="true" />
+  </message_info>
+  <debug i:nil="true" />
+  <log i:nil="true" />
+  <suppress_reply i:nil="true" />
+</VOLATILITY_MODEL_DOWNLOAD>

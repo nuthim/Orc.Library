@@ -1,0 +1,9 @@
+<ORDER_RANGE_GET xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <error>0</error>
+  <error_description i:nil="true" />
+  <message_info i:nil="true" />
+  <reply_to i:nil="true" />
+  <order_replies i:nil="true" />
+  <total_items_count i:nil="true" />
+  <start_item_number i:nil="true" />
+</ORDER_RANGE_GET>

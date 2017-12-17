@@ -1,0 +1,16 @@
+<ORDER_INSERT xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <message_info>
+    <message_type>ORDER_INSERT</message_type>
+    <private i:nil="true" />
+  </message_info>
+  <debug i:nil="true" />
+  <log i:nil="true" />
+  <suppress_reply i:nil="true" />
+  <activate i:nil="true" />
+  <order i:nil="true" />
+  <asynch i:nil="true" />
+  <buy_additional_data i:nil="true" />
+  <buy_portfolio i:nil="true" />
+  <sell_additional_data i:nil="true" />
+  <sell_portfolio i:nil="true" />
+</ORDER_INSERT>

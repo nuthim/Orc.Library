@@ -1,0 +1,8 @@
+<TRADE_ALLOCATE xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <error>0</error>
+  <error_description i:nil="true" />
+  <message_info i:nil="true" />
+  <reply_to i:nil="true" />
+  <deleted_trade_tag i:nil="true" />
+  <inserted_trades i:nil="true" />
+</TRADE_ALLOCATE>

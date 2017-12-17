@@ -1,0 +1,16 @@
+<VOLATILITY_GET xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <message_info>
+    <message_type>VOLATILITY_GET</message_type>
+    <private i:nil="true" />
+  </message_info>
+  <debug i:nil="true" />
+  <log i:nil="true" />
+  <suppress_reply i:nil="true" />
+  <surface_name i:nil="true" />
+  <underlying i:nil="true" />
+  <expirydate i:nil="true" />
+  <atm_price i:nil="true" />
+  <base_price i:nil="true" />
+  <theo_spot i:nil="true" />
+  <strikeprice i:nil="true" />
+</VOLATILITY_GET>

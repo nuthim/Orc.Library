@@ -1,0 +1,20 @@
+<MONEY_INSERT xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <message_info>
+    <message_type>MONEY_INSERT</message_type>
+    <private i:nil="true" />
+  </message_info>
+  <debug i:nil="true" />
+  <log i:nil="true" />
+  <suppress_reply i:nil="true" />
+  <kind>Balance</kind>
+  <portfolio i:nil="true" />
+  <underlying i:nil="true" />
+  <instrument_id i:nil="true" />
+  <amount i:nil="true" />
+  <currency i:nil="true" />
+  <comment i:nil="true" />
+  <settlement_date i:nil="true" />
+  <customer_reference i:nil="true" />
+  <originator i:nil="true" />
+  <owner i:nil="true" />
+</MONEY_INSERT>

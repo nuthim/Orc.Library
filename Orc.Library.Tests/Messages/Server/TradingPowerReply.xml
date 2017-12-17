@@ -1,0 +1,14 @@
+<TRADING_POWER xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <error>0</error>
+  <error_description i:nil="true" />
+  <message_info i:nil="true" />
+  <reply_to i:nil="true" />
+  <portfolio i:nil="true" />
+  <instrument_id i:nil="true" />
+  <buy_or_sell i:nil="true" />
+  <order_volume i:nil="true" />
+  <order_price i:nil="true" />
+  <trading_power i:nil="true" />
+  <status i:nil="true" />
+  <currency i:nil="true" />
+</TRADING_POWER>

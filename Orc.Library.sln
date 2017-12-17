@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orc.Library", "Orc.Library.csproj", "{C9BEFCA6-9E84-4662-B862-BDF733CF5DC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orc.Library.Tests", "..\Orc.Library.Tests\Orc.Library.Tests.csproj", "{F514CC69-DC6C-470E-9018-AA9A56EFF483}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orc.Library.Tests", "Orc.Library.Tests\Orc.Library.Tests.csproj", "{F514CC69-DC6C-470E-9018-AA9A56EFF483}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

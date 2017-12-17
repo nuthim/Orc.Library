@@ -1,0 +1,7 @@
+<MONEY_RANGE_GET xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <error>0</error>
+  <error_description i:nil="true" />
+  <message_info i:nil="true" />
+  <reply_to i:nil="true" />
+  <money_replies i:nil="true" />
+</MONEY_RANGE_GET>

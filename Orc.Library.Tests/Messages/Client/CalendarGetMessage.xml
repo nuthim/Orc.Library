@@ -1,0 +1,6 @@
+<CALENDAR_GET>
+  <message_info>
+    <message_type>CALENDAR_GET</message_type>
+  </message_info>
+  <calendar>AsxTrading</calendar>
+</CALENDAR_GET>

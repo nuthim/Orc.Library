@@ -1,0 +1,11 @@
+<INSTRUMENT_ATTRIBUTES_SET xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <message_info>
+    <message_type>INSTRUMENT_ATTRIBUTES_SET</message_type>
+    <private i:nil="true" />
+  </message_info>
+  <debug i:nil="true" />
+  <log i:nil="true" />
+  <suppress_reply i:nil="true" />
+  <instrument_id i:nil="true" />
+  <instrument_attributes i:nil="true" />
+</INSTRUMENT_ATTRIBUTES_SET>

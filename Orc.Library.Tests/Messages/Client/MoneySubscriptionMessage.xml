@@ -1,0 +1,10 @@
+<money_feed_toggle xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <message_info>
+    <message_type>money_feed_toggle</message_type>
+    <private>74f74b24-acbb-4c9b-bf6d-6e15fdbd3d7e</private>
+  </message_info>
+  <debug i:nil="true" />
+  <log i:nil="true" />
+  <suppress_reply i:nil="true" />
+  <toggle i:nil="true" />
+</money_feed_toggle>

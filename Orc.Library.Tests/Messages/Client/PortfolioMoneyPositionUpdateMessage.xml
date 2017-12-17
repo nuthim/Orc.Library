@@ -1,0 +1,16 @@
+<PORTFOLIO_MONEY_POSITION_UPDATE xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <message_info>
+    <message_type>PORTFOLIO_MONEY_POSITION_UPDATE</message_type>
+    <private i:nil="true" />
+  </message_info>
+  <debug i:nil="true" />
+  <log i:nil="true" />
+  <suppress_reply i:nil="true" />
+  <kind i:nil="true" />
+  <portfolio_name i:nil="true" />
+  <underlying i:nil="true" />
+  <amount i:nil="true" />
+  <currency i:nil="true" />
+  <absolute_change i:nil="true" />
+  <settlement_date i:nil="true" />
+</PORTFOLIO_MONEY_POSITION_UPDATE>
