@@ -58,10 +58,10 @@ namespace Orc.Library.Messages.Server.Replies
         public string Exchange { get; set; }
 
         [DataMember(Name = "expirydate_end", Order = 8)]
-        public DateTime? ExpirydateEnd { get; set; }
+        public DateTime? ExpiryDateEnd { get; set; }
 
         [DataMember(Name = "expirydate_start", Order = 9)]
-        public DateTime? ExpirydateStart { get; set; }
+        public DateTime? ExpiryDateStart { get; set; }
 
         [DataMember(Name = "full_instrument_list", Order = 10)]
         public FullInstrumentList FullInstrumentList { get; set; }
@@ -206,10 +206,10 @@ namespace Orc.Library.Messages.Server.Replies
         public double? StrikePriceMax { get; set; }
 
         [DataMember(Name = "expirydate_start", Order = 12)]
-        public DateTime? ExpirydateStart { get; set; }
+        public DateTime? ExpiryDateStart { get; set; }
 
         [DataMember(Name = "expirydate_end", Order = 13)]
-        public DateTime? ExpirydateEnd { get; set; }
+        public DateTime? ExpiryDateEnd { get; set; }
 
         [DataMember(Name = "basecontract", Order = 14)]
         public int? BaseContract { get; set; }
@@ -282,10 +282,10 @@ namespace Orc.Library.Messages.Server.Replies
         public double? StrikePriceMax { get; set; }
 
         [DataMember(Name = "expirydate_start", Order = 12)]
-        public DateTime? ExpirydateStart { get; set; }
+        public DateTime? ExpiryDateStart { get; set; }
 
         [DataMember(Name = "expirydate_end", Order = 13)]
-        public DateTime? ExpirydateEnd { get; set; }
+        public DateTime? ExpiryDateEnd { get; set; }
 
         [DataMember(Name = "basecontract", Order = 14)]
         public int? BaseContract { get; set; }

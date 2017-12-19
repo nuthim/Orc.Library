@@ -67,7 +67,7 @@ namespace Orc.Library.Tests.Messages.Client
                 CustomerUniqueIdPattern = "Morgan",
                 DownloadMode = DownloadMode.FullWithDynamicParameters,
                 ItemsPerMessage = 250,
-                ExpirydateEnd = new DateTime(2018, 12, 24),
+                ExpiryDateEnd = new DateTime(2018, 12, 24),
                 StrikePriceMax = 26,
                 StrikePriceMin = 6,
                 SuggestVolumeLogic = SuggestVolumeLogic.NotFilled,

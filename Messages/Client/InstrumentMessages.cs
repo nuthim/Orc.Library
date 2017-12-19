@@ -145,13 +145,13 @@ namespace Orc.Library.Messages.Client
         /// Last expirydate to match
         /// </summary>
         [DataMember(Name = "expirydate_end", Order = 8)]
-        public DateTime? ExpirydateEnd { get; set; }
+        public DateTime? ExpiryDateEnd { get; set; }
 
         /// <summary>
         /// First expirydate to match
         /// </summary>
         [DataMember(Name = "expirydate_start", Order = 9)]
-        public DateTime? ExpirydateStart { get; set; }
+        public DateTime? ExpiryDateStart { get; set; }
 
         [DataMember(Name = "feedcode", Order = 10)]
         [StringLength(32)]
@@ -348,13 +348,13 @@ namespace Orc.Library.Messages.Client
         /// First expirydate to match
         /// </summary>
         [DataMember(Name = "expirydate_start", Order = 8)]
-        public DateTime? ExpirydateStart { get; set; }
+        public DateTime? ExpiryDateStart { get; set; }
 
         /// <summary>
         /// Last expirydate to match
         /// </summary>
         [DataMember(Name = "expirydate_end", Order = 9)]
-        public DateTime? ExpirydateEnd { get; set; }
+        public DateTime? ExpiryDateEnd { get; set; }
 
         [DataMember(Name = "isincode", Order = 10)]
         [StringLength(16)]
@@ -450,13 +450,13 @@ namespace Orc.Library.Messages.Client
         /// First expirydate to match
         /// </summary>
         [DataMember(Name = "expirydate_start", Order = 8)]
-        public DateTime? ExpirydateStart { get; set; }
+        public DateTime? ExpiryDateStart { get; set; }
 
         /// <summary>
         /// Last expirydate to match
         /// </summary>
         [DataMember(Name = "expirydate_end", Order = 9)]
-        public DateTime? ExpirydateEnd { get; set; }
+        public DateTime? ExpiryDateEnd { get; set; }
 
         [DataMember(Name = "isincode", Order = 10)]
         [StringLength(16)]

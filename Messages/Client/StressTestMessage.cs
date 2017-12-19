@@ -85,13 +85,13 @@ namespace Orc.Library.Messages.Client
         /// First expirydate to do calculations for.
         /// </summary>
         [DataMember(Name = "expirydate_start", Order = 12)]
-        public DateTime? ExpirydateStart { get; set; }
+        public DateTime? ExpiryDateStart { get; set; }
 
         /// <summary>
         /// Last expirydate to include in the calculation.
         /// </summary>
         [DataMember(Name = "expirydate_end", Order = 13)]
-        public DateTime? ExpirydateEnd { get; set; }
+        public DateTime? ExpiryDateEnd { get; set; }
 
         /// <summary>
         /// If set, only the given underlyings will be included in the calculation.
