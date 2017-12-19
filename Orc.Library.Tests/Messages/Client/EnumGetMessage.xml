@@ -1,10 +1,6 @@
-<ENUM_GET xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+<ENUM_GET>
   <message_info>
     <message_type>ENUM_GET</message_type>
-    <private i:nil="true" />
   </message_info>
-  <debug i:nil="true" />
-  <log i:nil="true" />
-  <suppress_reply i:nil="true" />
   <enum>market</enum>
 </ENUM_GET>

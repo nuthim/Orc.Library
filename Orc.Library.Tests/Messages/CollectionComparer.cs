@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -22,6 +22,13 @@ namespace Orc.Library.Tests.Messages
 
             var a = new ArrayList(x);
             var b = new ArrayList(y);
+
+            var elementType = a[0].GetType();
+            if (elementType == typeof(string) || elementType.IsEnum || elementType.IsValueType)
+            {
+                a.Sort();
+                b.Sort();
+            }
 
             for (int i = 0; i < x.Count; i++)
             {

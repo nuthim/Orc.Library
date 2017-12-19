@@ -7,7 +7,7 @@ namespace Orc.Library.Enums
     public enum SuppressReply
     {
         /// <summary>
-        /// //No replies are suppressed
+        /// Default - No replies are suppressed
         /// </summary>
         [EnumMember(Value = "none")]
         None,

@@ -1,11 +1,11 @@
-<INSTRUMENT_DELETE xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+<INSTRUMENT_DELETE>
   <message_info>
     <message_type>INSTRUMENT_DELETE</message_type>
-    <private i:nil="true" />
   </message_info>
-  <debug i:nil="true" />
-  <log i:nil="true" />
-  <suppress_reply i:nil="true" />
-  <instrument_id i:nil="true" />
-  <error_if_basecontract i:nil="true" />
+  <instrument_id>
+    <feedcode>BHP</feedcode>
+    <market>ASX</market>
+    <submarket>Sub</submarket>
+  </instrument_id>
+  <error_if_basecontract>false</error_if_basecontract>
 </INSTRUMENT_DELETE>

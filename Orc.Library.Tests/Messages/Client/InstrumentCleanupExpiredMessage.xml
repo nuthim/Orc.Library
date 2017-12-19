@@ -1,10 +1,6 @@
-<INSTRUMENT_CLEANUP_EXPIRED xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+<INSTRUMENT_CLEANUP_EXPIRED>
   <message_info>
     <message_type>INSTRUMENT_CLEANUP_EXPIRED</message_type>
-    <private i:nil="true" />
   </message_info>
-  <debug i:nil="true" />
-  <log i:nil="true" />
-  <suppress_reply i:nil="true" />
-  <expirydate i:nil="true" />
+  <expirydate>2015-12-25</expirydate>
 </INSTRUMENT_CLEANUP_EXPIRED>

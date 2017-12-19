@@ -55,6 +55,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Messages\Client\InstrumentTests.cs" />
+    <Compile Include="Messages\Client\LoginLogoutTests.cs" />
+    <Compile Include="Messages\Client\EnumTests.cs" />
+    <Compile Include="Messages\Client\DividendTests.cs" />
     <Compile Include="Messages\Client\CustomerTests.cs" />
     <Compile Include="Messages\Client\CurrencyTests.cs" />
     <Compile Include="Messages\Client\CounterpartTests.cs" />

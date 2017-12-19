@@ -10,7 +10,7 @@ namespace Orc.Library.Messages.Client
     public class EnumGetMessage : ClientMessage
     {
         [DataMember(Name = "enum", IsRequired = true)]
-        public EnumType Type { get; set; }
+        public EnumType? Type { get; set; }
 
         public EnumGetMessage() : base(MessageType.ENUM_GET)
         {

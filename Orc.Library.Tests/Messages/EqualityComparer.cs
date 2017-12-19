@@ -19,6 +19,12 @@ namespace Orc.Library.Tests.Messages
             if (x.GetType() != y.GetType())
                 return false;
 
+            if (x is string || x.GetType().IsEnum || x.GetType().IsValueType)
+            {
+                if (!x.Equals(y))
+                    return false;
+            }
+
             foreach (var property in x.GetType().GetProperties())
             {
                 var dataMember = property.GetCustomAttribute<DataMemberAttribute>();
@@ -41,11 +47,13 @@ namespace Orc.Library.Tests.Messages
                     if (!arrayEquals)
                         return false;
                 }
-                else
+                else if (property.PropertyType == typeof(string) || property.PropertyType.IsValueType)
                 {
                     if (!thisValue.Equals(otherValue))
                         return false;
                 }
+                else if (!Equals(thisValue, otherValue))
+                    return false;
             }
 
             return true;

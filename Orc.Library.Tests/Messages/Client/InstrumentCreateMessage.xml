@@ -1,11 +1,15 @@
-<INSTRUMENT_CREATE xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+<INSTRUMENT_CREATE>
   <message_info>
     <message_type>INSTRUMENT_CREATE</message_type>
-    <private i:nil="true" />
   </message_info>
-  <debug i:nil="true" />
-  <log i:nil="true" />
-  <suppress_reply i:nil="true" />
-  <instrument_attributes i:nil="true" />
-  <parameters i:nil="true" />
+  <instrument_attributes>
+    <assettype>Interest Rate</assettype>
+    <expirytype>American</expirytype>
+    <maturitydate>2000-11-16</maturitydate>
+    <multiplier>100</multiplier>
+  </instrument_attributes>
+  <parameters>
+    <custom_min_volume>1000</custom_min_volume>
+    <is_consolidated_contract>true</is_consolidated_contract>
+  </parameters>
 </INSTRUMENT_CREATE>

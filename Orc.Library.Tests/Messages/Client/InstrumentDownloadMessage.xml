@@ -1,37 +1,17 @@
-<INSTRUMENT_DOWNLOAD xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+<INSTRUMENT_DOWNLOAD>
   <message_info>
     <message_type>INSTRUMENT_DOWNLOAD</message_type>
-    <private i:nil="true" />
   </message_info>
-  <debug i:nil="true" />
-  <log i:nil="true" />
-  <suppress_reply i:nil="true" />
-  <basecontract i:nil="true" />
-  <assettype i:nil="true" />
-  <currency i:nil="true" />
-  <customer_unique_id i:nil="true" />
-  <download_mode i:nil="true" />
-  <enforced_customer_unique_id i:nil="true" />
-  <exchange i:nil="true" />
-  <expirydate_end i:nil="true" />
-  <expirydate_start i:nil="true" />
-  <feedcode i:nil="true" />
-  <ignore_case i:nil="true" />
-  <isincode i:nil="true" />
-  <issuer i:nil="true" />
-  <is_clean_quoted i:nil="true" />
-  <items_per_message i:nil="true" />
-  <kind i:nil="true" />
-  <market i:nil="true" />
-  <strikeprice_max i:nil="true" />
-  <strikeprice_min i:nil="true" />
-  <submarket i:nil="true" />
-  <suggest_volume_logic i:nil="true" />
-  <symbol i:nil="true" />
-  <tick_rule i:nil="true" />
-  <underlying i:nil="true" />
-  <date_changed_from i:nil="true" />
-  <date_changed_to i:nil="true" />
-  <time_changed_from i:nil="true" />
-  <time_changed_to i:nil="true" />
+  <basecontract>101</basecontract>
+  <assettype>Equities</assettype>
+  <currency>USD</currency>
+  <customer_unique_id>Morgan</customer_unique_id>
+  <download_mode>full with dynamic parameters</download_mode>
+  <expirydate_end>2018-12-24</expirydate_end>
+  <items_per_message>250</items_per_message>
+  <strikeprice_max>26</strikeprice_max>
+  <strikeprice_min>6</strikeprice_min>
+  <suggest_volume_logic>Not filled</suggest_volume_logic>
+  <tick_rule>tick tock</tick_rule>
+  <underlying>BHP</underlying>
 </INSTRUMENT_DOWNLOAD>

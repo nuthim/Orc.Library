@@ -78,8 +78,8 @@ namespace Orc.Library.Messages.Client
         /// <summary>
         /// Set to true to replace both dividends and observations regardless of type to be replaced.
         /// </summary>
-        [DataMember(Name = "update_for_all_kinds", IsRequired = true, Order = 3)]
-        public bool UpdateAllKinds { get; set; }
+        [DataMember(Name = "update_for_all_kinds", Order = 3)]
+        public bool? UpdateAllKinds { get; set; }
 
         public DividendUpdateMessage() : base(MessageType.DIVIDEND_UPDATE)
         {
