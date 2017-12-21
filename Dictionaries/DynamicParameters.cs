@@ -13,13 +13,13 @@ namespace Orc.Library.Dictionaries
     [DataContract(Name = "dynamic_parameter", Namespace = "")]
     public class DynamicParameter
     {
-        [DataMember(Name = "name")]
+        [DataMember(Name = "name", IsRequired = true, Order = 1)]
         public string Name { get; set; }
 
-        [DataMember(Name = "value")]
+        [DataMember(Name = "value", Order = 2)]
         public string Value { get; set; }
 
-        [DataMember(Name = "instrument_id")]
+        [DataMember(Name = "instrument_id", Order = 3)]
         public InstrumentId InstrumentId { get; set; }
     }
 }

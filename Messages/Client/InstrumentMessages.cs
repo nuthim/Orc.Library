@@ -277,7 +277,7 @@ namespace Orc.Library.Messages.Client
         public InstrumentId InstrumentId { get; set; }
 
         [DataMember(Name = "dynamic_parameters", IsRequired = true, Order = 2)]
-        public DynamicParameters Parameters { get; set; }
+        public DynamicParameters DynamicParameters { get; set; }
 
         public InstrumentDynamicParametersSetMessage() : base(MessageType.INSTRUMENT_DYNAMIC_PARAMETERS_SET)
         {
@@ -298,7 +298,7 @@ namespace Orc.Library.Messages.Client
         /// Request the Orcs description of the contract from the connected Orc. Default: false
         /// </summary>
         [DataMember(Name = "with_orc_description", Order = 2)]
-        public bool RequestOrcDescription { get; set; }
+        public bool? WithOrcDescription { get; set; }
 
         public InstrumentGetMessage() : base( MessageType.INSTRUMENT_GET)
         {
@@ -536,7 +536,7 @@ namespace Orc.Library.Messages.Client
         /// List of the instruments to be updated. The maximum number of instruments for the instrument list is 1024.
         /// </summary>
         [DataMember(Name = "instrument_list", IsRequired = true, Order = 1)]
-        public InstrumentList Instruments { get; set; }
+        public InstrumentList InstrumentList { get; set; }
 
         /// <summary>
         /// Name of the contract flag to be updated.
@@ -569,7 +569,7 @@ namespace Orc.Library.Messages.Client
         /// List of the instruments to be updated. The maximum number of instruments for the instrument list is 1024.
         /// </summary>
         [DataMember(Name = "instrument_list", IsRequired = true, Order = 1)]
-        public InstrumentList Instruments { get; set; }
+        public InstrumentList InstrumentList { get; set; }
 
         /// <summary>
         /// Name of the contract parameter to be updated.

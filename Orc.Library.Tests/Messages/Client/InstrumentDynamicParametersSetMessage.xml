@@ -1,11 +1,16 @@
-<INSTRUMENT_DYNAMIC_PARAMETERS_SET xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+<INSTRUMENT_DYNAMIC_PARAMETERS_SET>
   <message_info>
     <message_type>INSTRUMENT_DYNAMIC_PARAMETERS_SET</message_type>
-    <private i:nil="true" />
   </message_info>
-  <debug i:nil="true" />
-  <log i:nil="true" />
-  <suppress_reply i:nil="true" />
-  <instrument_id i:nil="true" />
-  <dynamic_parameters i:nil="true" />
+  <instrument_id>
+    <feedcode>BHP</feedcode>
+    <market>ASX</market>
+    <submarket>Sub</submarket>
+  </instrument_id>
+  <dynamic_parameters>
+    <dynamic_parameter>
+      <name>dynamic</name>
+      <value>value</value>
+    </dynamic_parameter>
+  </dynamic_parameters>
 </INSTRUMENT_DYNAMIC_PARAMETERS_SET>

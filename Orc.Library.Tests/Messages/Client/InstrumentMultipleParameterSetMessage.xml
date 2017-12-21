@@ -1,13 +1,20 @@
-<INSTRUMENT_MULTIPLE_PARAMETER_SET xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+<INSTRUMENT_MULTIPLE_PARAMETER_SET>
   <message_info>
     <message_type>INSTRUMENT_MULTIPLE_PARAMETER_SET</message_type>
-    <private i:nil="true" />
   </message_info>
-  <debug i:nil="true" />
-  <log i:nil="true" />
-  <suppress_reply i:nil="true" />
-  <instrument_list i:nil="true" />
-  <parameter i:nil="true" />
-  <value i:nil="true" />
-  <parameter_update_type i:nil="true" />
+  <instrument_list>
+    <instrument_id>
+      <feedcode>BHP</feedcode>
+      <market>ASX</market>
+      <submarket>Sub1</submarket>
+    </instrument_id>
+    <instrument_id>
+      <feedcode>WOW</feedcode>
+      <market>ASX</market>
+      <submarket>Sub2</submarket>
+    </instrument_id>
+  </instrument_list>
+  <parameter>quote_askbaseoffset</parameter>
+  <value>101.5</value>
+  <parameter_update_type>multiplicative</parameter_update_type>
 </INSTRUMENT_MULTIPLE_PARAMETER_SET>

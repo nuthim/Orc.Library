@@ -1,31 +1,30 @@
-<INSTRUMENT_GROUP_PARAMETERS_SET xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+<INSTRUMENT_GROUP_PARAMETERS_SET>
   <message_info>
     <message_type>INSTRUMENT_GROUP_PARAMETERS_SET</message_type>
-    <private i:nil="true" />
   </message_info>
-  <debug i:nil="true" />
-  <log i:nil="true" />
-  <suppress_reply i:nil="true" />
-  <parameters i:nil="true" />
-  <additional_data i:nil="true" />
-  <assettype i:nil="true" />
-  <basecontract i:nil="true" />
-  <currency i:nil="true" />
-  <customer_unique_id i:nil="true" />
-  <enforced_customer_unique_id i:nil="true" />
-  <expirydate_start i:nil="true" />
-  <expirydate_end i:nil="true" />
-  <isincode i:nil="true" />
-  <symbol i:nil="true" />
-  <exchange i:nil="true" />
-  <issuer i:nil="true" />
-  <kind i:nil="true" />
-  <market i:nil="true" />
-  <strikeprice_min i:nil="true" />
-  <strikeprice_max i:nil="true" />
-  <underlying i:nil="true" />
-  <date_changed_from i:nil="true" />
-  <date_changed_to i:nil="true" />
-  <time_changed_from i:nil="true" />
-  <time_changed_to i:nil="true" />
+  <parameters>
+    <custom_min_volume>1000</custom_min_volume>
+    <is_consolidated_contract>true</is_consolidated_contract>
+  </parameters>
+  <additional_data>false</additional_data>
+  <assettype>Equities</assettype>
+  <basecontract>101</basecontract>
+  <currency>USD</currency>
+  <customer_unique_id>CustomerUniqueId</customer_unique_id>
+  <enforced_customer_unique_id>EnforcedCustomerUniqueId</enforced_customer_unique_id>
+  <expirydate_start>2017-12-24</expirydate_start>
+  <expirydate_end>2018-12-24</expirydate_end>
+  <isincode>AU12345</isincode>
+  <symbol>SYMBL</symbol>
+  <exchange>ASX</exchange>
+  <issuer>Issuer</issuer>
+  <kind>Barrier down and in Call</kind>
+  <market>ASX</market>
+  <strikeprice_min>6</strikeprice_min>
+  <strikeprice_max>26</strikeprice_max>
+  <underlying>BHP</underlying>
+  <date_changed_from>2000-01-01</date_changed_from>
+  <date_changed_to>2015-01-01</date_changed_to>
+  <time_changed_from>PT0H0M0S</time_changed_from>
+  <time_changed_to>PT11H59M59S</time_changed_to>
 </INSTRUMENT_GROUP_PARAMETERS_SET>

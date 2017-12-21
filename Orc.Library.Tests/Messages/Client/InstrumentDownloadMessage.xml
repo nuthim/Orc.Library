@@ -5,13 +5,29 @@
   <basecontract>101</basecontract>
   <assettype>Equities</assettype>
   <currency>USD</currency>
-  <customer_unique_id>Morgan</customer_unique_id>
+  <customer_unique_id>CustomerUniqueId</customer_unique_id>
   <download_mode>full with dynamic parameters</download_mode>
+  <enforced_customer_unique_id>EnforcedCustomerUniqueId</enforced_customer_unique_id>
+  <exchange>ASX</exchange>
   <expirydate_end>2018-12-24</expirydate_end>
+  <expirydate_start>2017-12-24</expirydate_start>
+  <feedcode>FEED</feedcode>
+  <ignore_case>true</ignore_case>
+  <isincode>AU12345</isincode>
+  <issuer>Issuer</issuer>
+  <is_clean_quoted>true</is_clean_quoted>
   <items_per_message>250</items_per_message>
+  <kind>Barrier down and in Call</kind>
+  <market>ASX</market>
   <strikeprice_max>26</strikeprice_max>
   <strikeprice_min>6</strikeprice_min>
+  <submarket>ASX</submarket>
   <suggest_volume_logic>Not filled</suggest_volume_logic>
+  <symbol>SYMBL</symbol>
   <tick_rule>tick tock</tick_rule>
   <underlying>BHP</underlying>
+  <date_changed_from>2000-01-01</date_changed_from>
+  <date_changed_to>2015-01-01</date_changed_to>
+  <time_changed_from>PT0H0M0S</time_changed_from>
+  <time_changed_to>PT11H59M59S</time_changed_to>
 </INSTRUMENT_DOWNLOAD>
